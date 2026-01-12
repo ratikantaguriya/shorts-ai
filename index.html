@@ -2,101 +2,120 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Shorts AI – YouTube to Shorts</title>
+  <title>Shorts AI – YouTube to Viral Shorts</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-      color: #fff;
-      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .container {
-      max-width: 500px;
-      margin: auto;
-      padding: 40px 20px;
+      width: 100%;
+      max-width: 420px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+      text-align: center;
     }
     h1 {
-      font-size: 2.2rem;
-      margin-bottom: 10px;
+      margin-top: 0;
+      font-size: 2rem;
     }
     p {
-      opacity: 0.9;
+      color: #cccccc;
+      font-size: 0.95rem;
     }
     input {
       width: 100%;
-      padding: 14px;
-      margin-top: 20px;
+      padding: 12px;
+      margin-top: 15px;
       border-radius: 8px;
       border: none;
-      font-size: 16px;
+      outline: none;
+      font-size: 0.95rem;
     }
     button {
       width: 100%;
-      margin-top: 20px;
-      padding: 14px;
-      border: none;
+      margin-top: 15px;
+      padding: 12px;
       border-radius: 8px;
-      background: #ff0057;
-      color: #fff;
-      font-size: 18px;
+      border: none;
+      font-size: 1rem;
+      font-weight: bold;
       cursor: pointer;
+      background: #ff4757;
+      color: #ffffff;
     }
     button:hover {
-      background: #ff2b75;
+      background: #ff6b81;
     }
-    .card {
-      background: rgba(255,255,255,0.08);
-      margin-top: 30px;
-      padding: 20px;
-      border-radius: 12px;
+    .note {
+      margin-top: 12px;
+      font-size: 0.85rem;
+      color: #00ffcc;
     }
-    .price {
-      font-size: 20px;
-      margin: 10px 0;
+    .result {
+      margin-top: 15px;
+      font-size: 0.9rem;
+      color: #ffd369;
+      display: none;
     }
     footer {
-      margin-top: 40px;
-      font-size: 14px;
-      opacity: 0.7;
+      margin-top: 20px;
+      font-size: 0.75rem;
+      color: #aaaaaa;
     }
   </style>
 </head>
 
 <body>
   <div class="container">
-    <h1>🎬 Shorts AI</h1>
-    <p>Convert any YouTube video into viral Shorts using AI</p>
+    <h1>Shorts AI 🚀</h1>
+    <p>YouTube video link paste karo aur 3 viral shorts banao</p>
 
-    <input type="text" placeholder="Paste YouTube video link here" />
+    <input
+      id="ytLink"
+      type="text"
+      placeholder="Paste YouTube video link here..."
+    />
 
-    <button onclick="freeAlert()">Generate Shorts</button>
+    <button onclick="generateShorts()">Generate Shorts</button>
 
-    <div class="card">
-      <h3>🔥 Free Plan</h3>
-      <p>First 3 Shorts FREE</p>
+    <div id="result" class="result">
+      ✅ Processing started... <br />
+      (Demo mode – backend coming soon)
     </div>
 
-    <div class="card">
-      <h3>💎 Pro Plans</h3>
-      <p class="price">₹99 / month</p>
-      <p class="price">₹249 / 3 months</p>
-      <p class="price">₹799 / year</p>
-      <p>(Coming Soon)</p>
+    <div class="note">
+      🎁 First 3 videos FREE <br />
+      🔒 Subscription coming soon
     </div>
 
     <footer>
-      © 2026 Shorts AI • Fast • Secure • Made in India 🇮🇳
+      © 2026 Shorts AI | Made with ❤️
     </footer>
   </div>
 
   <script>
-    function freeAlert() {
-      alert("🚀 Shorts generation coming soon!\n\nFirst 3 videos will be FREE.");
+    function generateShorts() {
+      const link = document.getElementById("ytLink").value.trim();
+      if (!link) {
+        alert("Please paste a YouTube link first!");
+        return;
+      }
+      document.getElementById("result").style.display = "block";
     }
   </script>
 </body>
 </html>
-
