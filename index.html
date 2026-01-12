@@ -6,114 +6,117 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: Arial, sans-serif;
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #ffffff;
-      min-height: 100vh;
+      color: #fff;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
-    .container {
-      width: 100%;
-      max-width: 420px;
-      background: rgba(0, 0, 0, 0.6);
+
+    .card {
+      background: #111;
       border-radius: 16px;
-      padding: 25px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+      padding: 30px 20px;
+      width: 90%;
+      max-width: 420px;
       text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
     }
+
     h1 {
-      margin-top: 0;
-      font-size: 2rem;
+      margin-bottom: 10px;
     }
+
     p {
-      color: #cccccc;
-      font-size: 0.95rem;
+      font-size: 14px;
+      opacity: 0.85;
     }
+
     input {
       width: 100%;
-      padding: 12px;
+      padding: 14px;
       margin-top: 15px;
-      border-radius: 8px;
+      border-radius: 10px;
       border: none;
+      font-size: 15px;
       outline: none;
-      font-size: 0.95rem;
     }
+
     button {
       width: 100%;
       margin-top: 15px;
-      padding: 12px;
-      border-radius: 8px;
+      padding: 14px;
+      border-radius: 12px;
       border: none;
-      font-size: 1rem;
+      font-size: 16px;
       font-weight: bold;
+      background: #ff4d5a;
+      color: white;
       cursor: pointer;
-      background: #ff4757;
-      color: #ffffff;
     }
-    button:hover {
-      background: #ff6b81;
+
+    button:active {
+      transform: scale(0.98);
     }
-    .note {
-      margin-top: 12px;
-      font-size: 0.85rem;
-      color: #00ffcc;
-    }
+
     .result {
-      margin-top: 15px;
-      font-size: 0.9rem;
-      color: #ffd369;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #00ffcc;
       display: none;
     }
-    footer {
-      margin-top: 20px;
-      font-size: 0.75rem;
-      color: #aaaaaa;
+
+    .footer {
+      margin-top: 18px;
+      font-size: 12px;
+      opacity: 0.7;
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
+  <div class="card">
     <h1>Shorts AI 🚀</h1>
     <p>YouTube video link paste karo aur 3 viral shorts banao</p>
 
-    <input
-      id="ytLink"
-      type="text"
-      placeholder="Paste YouTube video link here..."
-    />
+    <input id="ytLink" placeholder="Paste YouTube video link here..." />
 
-    <button onclick="generateShorts()">Generate Shorts</button>
+    <button onclick="generate()">Generate Shorts</button>
 
-    <div id="result" class="result">
-      ✅ Processing started... <br />
-      (Demo mode – backend coming soon)
+    <div class="result" id="result">
+      ✅ 3 Viral Shorts Generated (Demo) <br/>
+      ⏱️ Best timestamps selected <br/>
+      📝 Captions ready
     </div>
 
-    <div class="note">
-      🎁 First 3 videos FREE <br />
-      🔒 Subscription coming soon
+    <div class="footer">
+      🎁 First 3 videos FREE <br/>
+      🔒 Subscription coming soon <br/><br/>
+      © 2026 Shorts AI ❤️
     </div>
-
-    <footer>
-      © 2026 Shorts AI | Made with ❤️
-    </footer>
   </div>
 
   <script>
-    function generateShorts() {
-      const link = document.getElementById("ytLink").value.trim();
-      if (!link) {
-        alert("Please paste a YouTube link first!");
+    let count = localStorage.getItem("freeCount") || 0;
+
+    function generate() {
+      if (count >= 3) {
+        alert("Free limit over 😅\nSubscription coming soon!");
         return;
       }
+
+      const link = document.getElementById("ytLink").value;
+      if (!link.includes("youtube")) {
+        alert("Valid YouTube link daalo");
+        return;
+      }
+
+      count++;
+      localStorage.setItem("freeCount", count);
       document.getElementById("result").style.display = "block";
     }
   </script>
