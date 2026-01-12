@@ -2,76 +2,101 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Shorts AI – YouTube to Viral Shorts</title>
+  <title>Shorts AI 🚀 | YouTube to Viral Shorts</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       min-height: 100vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
     }
 
     .card {
-      background: #111;
-      border-radius: 16px;
-      padding: 30px 20px;
-      width: 90%;
+      width: 100%;
       max-width: 420px;
+      background: #0b1f2a;
+      padding: 24px;
+      border-radius: 16px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.4);
       text-align: center;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
     }
 
     h1 {
-      margin-bottom: 10px;
+      margin: 0 0 8px;
+      font-size: 28px;
     }
 
-    p {
+    .subtitle {
       font-size: 14px;
-      opacity: 0.85;
+      opacity: 0.9;
+      margin-bottom: 20px;
     }
 
     input {
       width: 100%;
       padding: 14px;
-      margin-top: 15px;
       border-radius: 10px;
       border: none;
-      font-size: 15px;
       outline: none;
+      font-size: 15px;
+      margin-bottom: 12px;
     }
 
     button {
       width: 100%;
-      margin-top: 15px;
       padding: 14px;
-      border-radius: 12px;
+      border-radius: 10px;
       border: none;
-      font-size: 16px;
-      font-weight: bold;
       background: #ff4d5a;
       color: white;
+      font-size: 16px;
+      font-weight: bold;
       cursor: pointer;
     }
 
-    button:active {
-      transform: scale(0.98);
+    button:disabled {
+      background: #777;
+      cursor: not-allowed;
     }
 
-    .result {
-      margin-top: 20px;
+    .status {
+      margin-top: 16px;
       font-size: 14px;
-      color: #00ffcc;
+      min-height: 20px;
+    }
+
+    .results {
+      margin-top: 16px;
+      text-align: left;
       display: none;
     }
 
-    .footer {
-      margin-top: 18px;
+    .short {
+      background: rgba(255,255,255,0.08);
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    .note {
+      margin-top: 16px;
+      font-size: 13px;
+      color: #9be7ff;
+    }
+
+    footer {
+      margin-top: 16px;
       font-size: 12px;
       opacity: 0.7;
     }
@@ -79,46 +104,65 @@
 </head>
 
 <body>
+
   <div class="card">
     <h1>Shorts AI 🚀</h1>
-    <p>YouTube video link paste karo aur 3 viral shorts banao</p>
-
-    <input id="ytLink" placeholder="Paste YouTube video link here..." />
-
-    <button onclick="generate()">Generate Shorts</button>
-
-    <div class="result" id="result">
-      ✅ 3 Viral Shorts Generated (Demo) <br/>
-      ⏱️ Best timestamps selected <br/>
-      📝 Captions ready
+    <div class="subtitle">
+      Paste YouTube link & get viral Shorts ideas
     </div>
 
-    <div class="footer">
-      🎁 First 3 videos FREE <br/>
-      🔒 Subscription coming soon <br/><br/>
-      © 2026 Shorts AI ❤️
+    <input
+      id="ytLink"
+      type="text"
+      placeholder="Paste YouTube video link here"
+    />
+
+    <button id="generateBtn" onclick="generateShorts()">
+      Generate Shorts
+    </button>
+
+    <div id="status" class="status"></div>
+
+    <div id="results" class="results">
+      <div class="short">🔥 Short 1: 0:45 – 1:05 (High engagement moment)</div>
+      <div class="short">🔥 Short 2: 2:10 – 2:30 (Emotional peak)</div>
+      <div class="short">🔥 Short 3: 4:00 – 4:20 (Strong hook)</div>
     </div>
+
+    <div class="note">
+      🎁 First 3 videos FREE <br />
+      🔒 Subscription coming soon
+    </div>
+
+    <footer>
+      © 2026 Shorts AI | Built with ❤️
+    </footer>
   </div>
 
   <script>
-    let count = localStorage.getItem("freeCount") || 0;
+    function generateShorts() {
+      const link = document.getElementById("ytLink").value.trim();
+      const status = document.getElementById("status");
+      const results = document.getElementById("results");
+      const btn = document.getElementById("generateBtn");
 
-    function generate() {
-      if (count >= 3) {
-        alert("Free limit over 😅\nSubscription coming soon!");
+      results.style.display = "none";
+
+      if (!link.includes("youtube.com") && !link.includes("youtu.be")) {
+        status.innerHTML = "❌ Please enter a valid YouTube link";
         return;
       }
 
-      const link = document.getElementById("ytLink").value;
-      if (!link.includes("youtube")) {
-        alert("Valid YouTube link daalo");
-        return;
-      }
+      btn.disabled = true;
+      status.innerHTML = "⏳ Analyzing video...";
 
-      count++;
-      localStorage.setItem("freeCount", count);
-      document.getElementById("result").style.display = "block";
+      setTimeout(() => {
+        status.innerHTML = "✅ Preview generated (backend coming soon)";
+        results.style.display = "block";
+        btn.disabled = false;
+      }, 2000);
     }
   </script>
+
 </body>
 </html>
