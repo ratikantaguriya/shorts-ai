@@ -11,60 +11,51 @@
       font-family: Arial, sans-serif;
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      text-align: center;
       min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     .card {
-      background: rgba(0, 0, 0, 0.55);
+      background: rgba(0,0,0,0.35);
+      margin: 40px auto;
       padding: 25px;
       border-radius: 16px;
-      width: 100%;
       max-width: 420px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+      width: 90%;
     }
 
     h1 {
-      text-align: center;
       margin-bottom: 10px;
-    }
-
-    p {
-      text-align: center;
-      font-size: 14px;
-      opacity: 0.85;
     }
 
     input {
       width: 100%;
       padding: 12px;
-      border-radius: 8px;
+      border-radius: 10px;
       border: none;
-      margin-top: 15px;
+      outline: none;
       font-size: 15px;
+      margin-top: 15px;
     }
 
     button {
+      margin-top: 15px;
       width: 100%;
       padding: 14px;
-      margin-top: 15px;
-      background: #ff4d5a;
-      border: none;
-      border-radius: 8px;
-      color: #fff;
       font-size: 16px;
+      border-radius: 12px;
+      border: none;
       cursor: pointer;
+      background: #ff4d5a;
+      color: #fff;
       font-weight: bold;
-    }
-
-    button:hover {
-      opacity: 0.9;
     }
 
     .result {
       margin-top: 20px;
+      text-align: left;
     }
 
     .short {
@@ -72,105 +63,78 @@
       padding: 10px;
       border-radius: 8px;
       margin-bottom: 8px;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 20px 10px;
       font-size: 14px;
+      background: rgba(0,0,0,0.35);
     }
 
-    .free {
-      text-align: center;
-      margin-top: 15px;
-      color: #00ffcc;
-      font-size: 13px;
+    footer a {
+      color: #00ffd5;
+      text-decoration: none;
+      margin: 0 8px;
     }
 
-    .locked {
-      color: #ffcc00;
-      text-align: center;
-      margin-top: 10px;
-      font-weight: bold;
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 
 <body>
+
   <div class="card">
     <h1>Shorts AI 🚀</h1>
-    <p>YouTube link paste karo aur viral Shorts ideas pao</p>
+    <p>Paste YouTube link & get Shorts ideas</p>
 
-    <input id="ytLink" placeholder="Paste YouTube video link here..." />
+    <input id="ytLink" placeholder="https://youtube.com/..." />
     <button onclick="generate()">Generate Shorts</button>
 
-    <div class="result" id="result"></div>
-
-    <div class="free">
-      🎁 First 3 videos FREE <br />
-      🔒 Subscription coming soon
-    </div>
+    <div id="result" class="result"></div>
   </div>
 
-  <script>
-    let usage = localStorage.getItem("usageCount");
-    if (!usage) {
-      localStorage.setItem("usageCount", "0");
-      usage = 0;
-    }
+  <footer>
+    <p>
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="terms.html">Terms & Conditions</a> |
+      <a href="refund.html">Refund Policy</a>
+    </p>
+    <p>© 2026 Shorts AI. All rights reserved.</p>
+  </footer>
 
+  <script>
     function getVideoId(url) {
       try {
-        if (url.includes("youtu.be/")) {
-          return url.split("youtu.be/")[1].split("?")[0];
+        const u = new URL(url);
+        if (u.hostname.includes("youtu.be")) {
+          return u.pathname.slice(1);
         }
-        if (url.includes("v=")) {
-          return url.split("v=")[1].split("&")[0];
-        }
-      } catch (e) {}
-      return null;
-    }
-
-    function randomTime(max) {
-      const start = Math.floor(Math.random() * (max - 30));
-      return `${start}:${(start + 20)}`;
+        return u.searchParams.get("v");
+      } catch {
+        return null;
+      }
     }
 
     function generate() {
-      let count = parseInt(localStorage.getItem("usageCount"));
-
-      if (count >= 3) {
-        document.getElementById("result").innerHTML =
-          "<div class='locked'>🔒 Free limit over<br/>Please subscribe to continue</div>";
-        return;
-      }
-
-      const link = document.getElementById("ytLink").value.trim();
+      const link = document.getElementById("ytLink").value;
       const videoId = getVideoId(link);
 
       if (!videoId) {
-        alert("Valid YouTube link paste karo");
+        alert("Please enter a valid YouTube link");
         return;
       }
 
-      localStorage.setItem("usageCount", count + 1);
-
-      const maxDuration = 600; // assume 10 min video
-
-      const shorts = `
-        <div class="short">🔥 Short 1: ${randomTime(maxDuration)} (High engagement)</div>
-        <div class="short">🔥 Short 2: ${randomTime(maxDuration)} (Emotional moment)</div>
-        <div class="short">🔥 Short 3: ${randomTime(maxDuration)} (Strong hook)</div>
+      document.getElementById("result").innerHTML = `
+        <div class="short">🔥 Short 1: 0:45 – 1:05 (High engagement)</div>
+        <div class="short">🔥 Short 2: 2:10 – 2:30 (Emotional peak)</div>
+        <div class="short">🔥 Short 3: 4:00 – 4:20 (Strong hook)</div>
+        <p>✅ Shorts generated (preview)</p>
       `;
-
-      document.getElementById("result").innerHTML =
-        "<p>✅ Shorts generated (logic-based)</p>" + shorts;
     }
   </script>
-  <footer style="margin-top:40px;padding:20px;text-align:center;background:#0b1c23;color:#aaa;">
-  <p>
-    <a href="privacy.html" style="color:#4dd0e1;margin:0 10px;">Privacy Policy</a> |
-    <a href="terms.html" style="color:#4dd0e1;margin:0 10px;">Terms & Conditions</a> |
-    <a href="refund.html" style="color:#4dd0e1;margin:0 10px;">Refund Policy</a>
-  </p>
-  <p style="font-size:14px;">
-    © 2026 Shorts AI. All rights reserved.
-</footer> 
-  
+
 </body>
 </html>
