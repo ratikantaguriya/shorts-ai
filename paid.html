@@ -2,113 +2,123 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Payment Successful – Shorts AI</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+      color:#fff;
     }
-
-    .box {
-      background: #0b0b0b;
-      border-radius: 18px;
-      padding: 28px;
-      max-width: 420px;
-      width: 90%;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.5);
-      text-align: center;
+    .card{
+      background:#111;
+      max-width:420px;
+      width:92%;
+      border-radius:18px;
+      padding:28px 22px;
+      text-align:center;
+      box-shadow:0 15px 40px rgba(0,0,0,.5);
     }
-
-    h1 {
-      margin-top: 0;
-      font-size: 28px;
+    h1{
+      margin:0 0 10px;
+      font-size:30px;
     }
-
-    .success {
-      color: #00e676;
-      font-weight: bold;
-      margin-bottom: 20px;
+    p{
+      color:#ccc;
+      margin:6px 0 18px;
     }
-
-    .step {
-      background: #1c1c1c;
-      padding: 12px;
-      border-radius: 10px;
-      margin: 10px 0;
-      text-align: left;
-      font-size: 14px;
+    .step{
+      background:#1b1b1b;
+      border-radius:12px;
+      padding:12px;
+      margin:10px 0;
+      text-align:left;
+      font-size:15px;
     }
-
-    .limits {
-      margin-top: 18px;
-      font-size: 14px;
-      color: #ccc;
+    .step span{
+      color:#00e676;
+      font-weight:bold;
+      margin-right:6px;
     }
-
-    .whatsapp {
-      display: block;
-      margin-top: 20px;
-      background: #25D366;
-      color: #000;
-      text-decoration: none;
-      padding: 14px;
-      border-radius: 12px;
-      font-weight: bold;
-      font-size: 16px;
+    .limits{
+      margin:18px 0;
+      font-size:14px;
+      color:#bbb;
+      line-height:1.6;
     }
-
-    .home {
-      display: inline-block;
-      margin-top: 14px;
-      color: #00c6ff;
-      text-decoration: none;
-      font-size: 14px;
+    .btn{
+      display:block;
+      text-decoration:none;
+      margin:16px 0 10px;
+      padding:14px;
+      border-radius:12px;
+      font-weight:bold;
+      font-size:16px;
     }
-
-    .email {
-      margin-top: 12px;
-      font-size: 13px;
-      color: #aaa;
+    .btn-whatsapp{
+      background:#25D366;
+      color:#fff;
+    }
+    .btn-home{
+      color:#00d4ff;
+      font-size:14px;
+    }
+    .email{
+      font-size:14px;
+      margin-top:6px;
+    }
+    .email a{
+      color:#00d4ff;
+      text-decoration:none;
     }
   </style>
 </head>
 
 <body>
-  <div class="box">
-    <h1>Thank You 🙏</h1>
-    <div class="success">Your payment was successful</div>
 
-    <div class="step">✅ Step 1: Copy your <b>Razorpay Payment ID</b></div>
-    <div class="step">✅ Step 2: Send your <b>YouTube video / channel link</b></div>
-    <div class="step">✅ Step 3: We deliver Shorts ideas within <b>24 hours</b></div>
+  <div class="card">
+    <h1>Thank You 🙏</h1>
+    <p>Your payment was successful.</p>
+
+    <div class="step">
+      <span>✔</span> Step 1: Copy your <b>Razorpay Payment ID</b>
+    </div>
+
+    <div class="step">
+      <span>✔</span> Step 2: Send your <b>YouTube channel / video link</b>
+    </div>
+
+    <div class="step">
+      <span>✔</span> Step 3: We’ll deliver Shorts ideas within <b>24 hours</b>
+    </div>
 
     <div class="limits">
-      <b>Daily Limits:</b><br />
-      ₹99 → 2 Shorts / day<br />
-      ₹199 → 5 Shorts / day<br />
+      <b>Daily Limits</b><br>
+      ₹99 → 2 Shorts / day<br>
+      ₹199 → 5 Shorts / day<br>
       ₹499 → 15 Shorts / day
     </div>
 
-    <!-- FIXED BUSINESS WHATSAPP LINK -->
-    <a class="whatsapp"
-      href="https://wa.me/919339942448?text=Hi%20Shorts%20AI%20Team%2C%0AI%20have%20completed%20payment.%0APayment%20ID%3A%20____%0AYouTube%20Link%3A%20____"
-      target="_blank">
-      Send Details on WhatsApp
+    <!-- WHATSAPP BUTTON -->
+    <a class="btn btn-whatsapp"
+       href="https://wa.me/919339942448?text=Hi%20Shorts%20AI%20Team,%0AI%20have%20paid%20for%20Shorts%20AI.%0APayment%20ID:%20_____%0AYouTube%20Link:%20_____"
+       target="_blank">
+       Send on WhatsApp
     </a>
 
     <div class="email">
-      Or email: <b>support@shorts-ai.com</b>
+      Or email us at  
+      <a href="mailto:support@shorts-ai.com">support@shorts-ai.com</a>
     </div>
 
-    <a class="home" href="index.html">← Back to Home</a>
+    <a class="btn-home" href="index.html">← Back to Home</a>
   </div>
+
 </body>
 </html>
