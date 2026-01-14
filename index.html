@@ -1,153 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Shorts AI – Pricing</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Shorts AI – YouTube Shorts Ideas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="description" content="Paste your YouTube link and get daily viral Shorts ideas. Choose a plan and pay securely.">
+  <meta name="robots" content="index, follow">
 
   <style>
-    body {
-      margin: 0;
+    body{
+      margin:0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      text-align: center;
+      background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+      color:#fff;
+      text-align:center;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
     }
-
-    header {
-      padding: 40px 20px;
+    header{
+      padding:50px 20px 20px;
     }
-
-    header h1 {
-      font-size: 32px;
-      margin-bottom: 10px;
+    h1{margin:0 0 10px;font-size:34px;}
+    p{color:#dcdcdc;line-height:1.6;}
+    .card{
+      background: rgba(0,0,0,.35);
+      margin:30px auto;
+      padding:25px;
+      border-radius:18px;
+      max-width:520px;
+      width:92%;
+      box-shadow:0 12px 30px rgba(0,0,0,.4);
     }
-
-    header p {
-      color: #ccc;
-      font-size: 16px;
+    input{
+      width:100%;
+      padding:14px;
+      border-radius:10px;
+      border:none;
+      outline:none;
+      font-size:15px;
+      margin-top:14px;
     }
-
-    .pricing {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 40px 20px;
+    .btn{
+      display:inline-block;
+      margin-top:18px;
+      padding:14px 22px;
+      background:#ff4757;
+      color:#fff;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:bold;
+      font-size:16px;
     }
-
-    .card {
-      background: #ffffff;
-      color: #000;
-      width: 280px;
-      border-radius: 12px;
-      padding: 25px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    .btn.secondary{
+      background:#00c853;
+      margin-left:10px;
     }
-
-    .card h2 {
-      margin: 0;
-      font-size: 24px;
+    .how{
+      text-align:left;
+      margin-top:18px;
+      font-size:14px;
+      color:#eaeaea;
     }
-
-    .price {
-      font-size: 36px;
-      margin: 15px 0;
-      color: #ff4757;
+    footer{
+      margin-top:auto;
+      padding:18px 10px;
+      background: rgba(0,0,0,.35);
+      font-size:14px;
     }
-
-    .card ul {
-      list-style: none;
-      padding: 0;
-      margin: 20px 0;
-      text-align: left;
-    }
-
-    .card ul li {
-      margin-bottom: 10px;
-    }
-
-    .pay-btn {
-      display: block;
-      background: #ff4757;
-      color: #fff;
-      text-decoration: none;
-      padding: 14px;
-      border-radius: 8px;
-      font-weight: bold;
-      margin-top: 15px;
-    }
-
-    .pay-btn:hover {
-      background: #e84118;
-    }
-
-    footer {
-      padding: 30px 10px;
-      font-size: 14px;
-      color: #ccc;
-    }
-
-    footer a {
-      color: #00eaff;
-      text-decoration: none;
-      margin: 0 8px;
+    footer a{
+      color:#00eaff;
+      text-decoration:none;
+      margin:0 6px;
     }
   </style>
 </head>
+
 <body>
 
 <header>
   <h1>🚀 Shorts AI</h1>
-  <p>Paste your YouTube link & get viral Shorts instantly</p>
+  <p>Turn any YouTube video into viral Shorts ideas</p>
 </header>
 
-<section class="pricing">
+<div class="card">
+  <p><b>Paste your YouTube link</b> (preview only)</p>
+  <input placeholder="https://youtube.com/..." disabled />
 
-  <!-- ₹99 PLAN -->
-  <div class="card">
-    <h2>Starter</h2>
-    <div class="price">₹99</div>
-    <ul>
-      <li>✅ 2 Shorts per day</li>
-      <li>✅ Manual review</li>
-      <li>✅ Email support</li>
-    </ul>
-    <a class="pay-btn" href="https://razorpay.me/@ratikantaguriya3922">Pay ₹99</a>
+  <div class="how">
+    <b>How it works:</b><br>
+    1️⃣ Paste your YouTube link<br>
+    2️⃣ Choose a plan & pay securely<br>
+    3️⃣ Send Payment ID + YouTube link<br>
+    4️⃣ Get daily Shorts ideas (as per plan)
   </div>
 
-  <!-- ₹199 PLAN -->
-  <div class="card">
-    <h2>Creator</h2>
-    <div class="price">₹199</div>
-    <ul>
-      <li>✅ 5 Shorts per day</li>
-      <li>✅ Faster delivery</li>
-      <li>✅ Priority support</li>
-    </ul>
-    <a class="pay-btn" href="https://razorpay.me/@ratikantaguriya3922">Pay ₹199</a>
-  </div>
+  <a class="btn" href="pricing.html">View Pricing & Pay</a>
+  <a class="btn secondary" href="contact.html">Contact</a>
 
-  <!-- ₹499 PLAN -->
-  <div class="card">
-    <h2>Pro</h2>
-    <div class="price">₹499</div>
-    <ul>
-      <li>🔥 15 Shorts per day</li>
-      <li>🔥 Fastest delivery</li>
-      <li>🔥 Premium support</li>
-    </ul>
-    <a class="pay-btn" href="https://razorpay.me/@ratikantaguriya3922">Pay ₹499</a>
-  </div>
-
-</section>
+  <p style="margin-top:12px;font-size:13px;color:#b7f5e9;">
+    Free preview shown • Secure payments • WhatsApp support
+  </p>
+</div>
 
 <footer>
   <p>
+    <a href="pricing.html">Pricing</a> |
+    <a href="contact.html">Contact</a> |
     <a href="privacy.html">Privacy</a> |
     <a href="terms.html">Terms</a> |
-    <a href="refund.html">Refund</a> |
-    <a href="contact.html">Contact</a>
+    <a href="refund.html">Refund</a>
   </p>
   <p>© 2026 Shorts AI</p>
 </footer>
