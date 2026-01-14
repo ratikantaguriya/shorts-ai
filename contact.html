@@ -46,8 +46,8 @@
     }
 
     textarea {
-      resize: vertical;
       min-height: 100px;
+      resize: vertical;
     }
 
     button {
@@ -87,35 +87,38 @@
 
   <div class="card">
     <h1>Contact Shorts AI</h1>
-    <p>Have a question or feedback? Send us a message.</p>
+    <p>Have a question, feedback or issue? Send us a message.</p>
 
     <!-- ✅ FORMSPREE CONNECTED FORM -->
     <form action="https://formspree.io/f/xjggvqgr" method="POST">
       
-      <input 
-        type="text" 
-        name="name" 
-        placeholder="Your Name" 
+      <!-- Redirect after submit -->
+      <input type="hidden" name="_next" value="https://ratikantaguriya.github.io/shorts-ai/thanks.html">
+
+      <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
         required
       >
 
-      <input 
-        type="email" 
-        name="email" 
-        placeholder="Your Email" 
+      <input
+        type="email"
+        name="email"
+        placeholder="Your Email"
         required
       >
 
-      <textarea 
-        name="message" 
-        placeholder="Your Message" 
+      <textarea
+        name="message"
+        placeholder="Your Message"
         required
       ></textarea>
 
       <button type="submit">Send Message</button>
     </form>
 
-    <p style="margin-top:12px; font-size:13px; opacity:0.8;">
+    <p style="margin-top:12px; font-size:13px;">
       Or email us at: <b>support@shorts-ai.com</b>
     </p>
   </div>
