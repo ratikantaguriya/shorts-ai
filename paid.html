@@ -1,124 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Payment Successful – Shorts AI</title>
-
-  <style>
-    body{
-      margin:0;
-      font-family: Arial, Helvetica, sans-serif;
-      min-height:100vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-      color:#fff;
-    }
-    .card{
-      background:#111;
-      max-width:420px;
-      width:92%;
-      border-radius:18px;
-      padding:28px 22px;
-      text-align:center;
-      box-shadow:0 15px 40px rgba(0,0,0,.5);
-    }
-    h1{
-      margin:0 0 10px;
-      font-size:30px;
-    }
-    p{
-      color:#ccc;
-      margin:6px 0 18px;
-    }
-    .step{
-      background:#1b1b1b;
-      border-radius:12px;
-      padding:12px;
-      margin:10px 0;
-      text-align:left;
-      font-size:15px;
-    }
-    .step span{
-      color:#00e676;
-      font-weight:bold;
-      margin-right:6px;
-    }
-    .limits{
-      margin:18px 0;
-      font-size:14px;
-      color:#bbb;
-      line-height:1.6;
-    }
-    .btn{
-      display:block;
-      text-decoration:none;
-      margin:16px 0 10px;
-      padding:14px;
-      border-radius:12px;
-      font-weight:bold;
-      font-size:16px;
-    }
-    .btn-whatsapp{
-      background:#25D366;
-      color:#fff;
-    }
-    .btn-home{
-      color:#00d4ff;
-      font-size:14px;
-    }
-    .email{
-      font-size:14px;
-      margin-top:6px;
-    }
-    .email a{
-      color:#00d4ff;
-      text-decoration:none;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Payment Successful – Shorts AI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  color:#fff;
+}
+.card{
+  max-width:420px;
+  margin:60px auto;
+  background:#111;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 15px 40px rgba(0,0,0,.6);
+}
+h1{text-align:center}
+.step{
+  background:#1c1c1c;
+  padding:12px;
+  margin:10px 0;
+  border-radius:8px;
+}
+.green{color:#00ff99}
+.btn{
+  display:block;
+  width:100%;
+  text-align:center;
+  padding:14px;
+  margin-top:15px;
+  background:#25D366;
+  color:#fff;
+  font-size:18px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
+}
+.small{
+  text-align:center;
+  margin-top:10px;
+  font-size:14px;
+}
+a{color:#00eaff}
+</style>
 </head>
-
 <body>
 
-  <div class="card">
-    <h1>Thank You 🙏</h1>
-    <p>Your payment was successful.</p>
+<div class="card">
+<h1>Thank You 🙏</h1>
+<p style="text-align:center">Your payment was successful</p>
 
-    <div class="step">
-      <span>✔</span> Step 1: Copy your <b>Razorpay Payment ID</b>
-    </div>
+<div class="step green">✅ Step 1: Copy your Razorpay Payment ID</div>
+<div class="step green">✅ Step 2: Send your YouTube link</div>
+<div class="step green">✅ Step 3: Delivery within 24 hours</div>
 
-    <div class="step">
-      <span>✔</span> Step 2: Send your <b>YouTube channel / video link</b>
-    </div>
+<p class="small">
+Daily limits:<br>
+₹99 → 2 Shorts/day<br>
+₹199 → 5 Shorts/day<br>
+₹499 → 15 Shorts/day
+</p>
 
-    <div class="step">
-      <span>✔</span> Step 3: We’ll deliver Shorts ideas within <b>24 hours</b>
-    </div>
+<a class="btn"
+href="https://wa.me/919339942448?text=Hi%20I%20have%20paid%20for%20Shorts%20AI.%0APayment%20ID:%20_____%0AYouTube%20Link:%20_____"
+target="_blank">
+Send on WhatsApp
+</a>
 
-    <div class="limits">
-      <b>Daily Limits</b><br>
-      ₹99 → 2 Shorts / day<br>
-      ₹199 → 5 Shorts / day<br>
-      ₹499 → 15 Shorts / day
-    </div>
-
-    <!-- WHATSAPP BUTTON -->
-    <a class="btn btn-whatsapp"
-       href="https://wa.me/919339942448?text=Hi%20Shorts%20AI%20Team,%0AI%20have%20paid%20for%20Shorts%20AI.%0APayment%20ID:%20_____%0AYouTube%20Link:%20_____"
-       target="_blank">
-       Send on WhatsApp
-    </a>
-
-    <div class="email">
-      Or email us at  
-      <a href="mailto:support@shorts-ai.com">support@shorts-ai.com</a>
-    </div>
-
-    <a class="btn-home" href="index.html">← Back to Home</a>
-  </div>
+<p class="small">
+or email: <a href="mailto:support@shorts-ai.com">support@shorts-ai.com</a><br><br>
+<a href="index.html">⬅ Back to Home</a>
+</p>
+</div>
 
 </body>
 </html>
