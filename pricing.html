@@ -1,60 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Pricing – Shorts AI</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body{
-  margin:0;
-  font-family:Arial,sans-serif;
-  background:#0f2027;
-  color:#fff;
-  text-align:center;
-}
-h1{margin:30px 0;}
-.card{
-  max-width:360px;
-  margin:20px auto;
-  background:#111;
-  padding:20px;
-  border-radius:16px;
-}
-.price{font-size:26px;font-weight:bold;}
-a{
-  display:block;
-  margin-top:15px;
-  padding:12px;
-  background:#ff4d4d;
-  color:#fff;
-  text-decoration:none;
-  border-radius:10px;
-}
-</style>
+  <meta charset="UTF-8">
+  <title>Pricing – Shorts AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body{
+      margin:0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+      color:#fff;
+      text-align:center;
+    }
+    .box{
+      max-width:1000px;
+      margin:40px auto;
+      padding:20px;
+    }
+    .cards{
+      display:flex;
+      flex-wrap:wrap;
+      gap:20px;
+      justify-content:center;
+    }
+    .card{
+      background:#111;
+      border-radius:16px;
+      padding:25px;
+      width:280px;
+      box-shadow:0 10px 30px rgba(0,0,0,.5);
+    }
+    .price{
+      font-size:32px;
+      margin:15px 0;
+      color:#00ffcc;
+    }
+    .btn{
+      display:block;
+      margin-top:20px;
+      padding:15px;
+      background:#00c853;
+      color:#fff;
+      text-decoration:none;
+      border-radius:10px;
+      font-size:18px;
+      font-weight:bold;
+    }
+    .btn:hover{opacity:.9}
+    small{color:#aaa}
+  </style>
 </head>
 <body>
 
-<h1>Pricing</h1>
+  <div class="box">
+    <h1>Shorts AI Pricing</h1>
+    <p>Choose a plan & get daily Shorts ideas delivered</p>
 
-<div class="card">
-  <h3>₹99 – Starter</h3>
-  <div class="price">₹99</div>
-  <p>Basic Shorts ideas</p>
-</div>
+    <div class="cards">
 
-<div class="card">
-  <h3>₹199 – Pro</h3>
-  <div class="price">₹199</div>
-  <p>Advanced Shorts ideas</p>
-</div>
+      <!-- ₹99 -->
+      <div class="card">
+        <h2>Starter</h2>
+        <div class="price">₹99</div>
+        <p>✅ 2 Shorts / day</p>
+        <small>Best for beginners</small>
+        <a class="btn" href="https://rzp.io/rzp/l7lkH8IZ">Pay ₹99</a>
+      </div>
 
-<div class="card">
-  <h3>₹499 – Premium</h3>
-  <div class="price">₹499</div>
-  <p>Unlimited access</p>
-</div>
+      <!-- ₹199 -->
+      <div class="card">
+        <h2>Creator</h2>
+        <div class="price">₹199</div>
+        <p>🔥 5 Shorts / day</p>
+        <small>Most popular</small>
+        <a class="btn" href="REPLACE_199_LINK">Pay ₹199</a>
+      </div>
 
-<a href="index.html">Back to Home</a>
+      <!-- ₹499 -->
+      <div class="card">
+        <h2>Pro</h2>
+        <div class="price">₹499</div>
+        <p>🚀 15 Shorts / day</p>
+        <small>For serious growth</small>
+        <a class="btn" href="REPLACE_499_LINK">Pay ₹499</a>
+      </div>
+
+    </div>
+  </div>
 
 </body>
 </html>
