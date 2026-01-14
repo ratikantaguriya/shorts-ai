@@ -1,151 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta name="title" content="Shorts AI – Generate Viral YouTube Shorts Ideas">
-<meta name="description" content="Paste a YouTube link and get high-engagement Shorts ideas instantly. No login required. Free preview available.">
-<meta name="keywords" content="YouTube Shorts, Shorts AI, viral shorts ideas, youtube clips generator">
-<meta name="author" content="Shorts AI">
-<meta name="robots" content="index, follow">
-
-  <meta charset="UTF-8" />
-  <title>Shorts AI 🚀</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8">
+  <title>Shorts AI – Pricing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    body {
-      margin: 0;
+    body{
+      margin:0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      text-align: center;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+      background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+      color:#fff;
+      text-align:center;
     }
-
-    .card {
-      background: rgba(0,0,0,0.35);
-      margin: 40px auto;
-      padding: 25px;
-      border-radius: 16px;
-      max-width: 420px;
-      width: 90%;
+    .box{
+      max-width:420px;
+      margin:50px auto;
+      background:#111;
+      padding:30px 20px;
+      border-radius:18px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.5);
     }
-
-    h1 {
-      margin-bottom: 10px;
+    h1{margin-bottom:5px;}
+    p{color:#ccc;font-size:14px;}
+    .plan{
+      background:#1b1b1b;
+      margin:15px 0;
+      padding:18px;
+      border-radius:14px;
     }
-
-    input {
-      width: 100%;
-      padding: 12px;
-      border-radius: 10px;
-      border: none;
-      outline: none;
-      font-size: 15px;
-      margin-top: 15px;
+    .price{
+      font-size:28px;
+      font-weight:bold;
+      margin:8px 0;
     }
-
-    button {
-      margin-top: 15px;
-      width: 100%;
-      padding: 14px;
-      font-size: 16px;
-      border-radius: 12px;
-      border: none;
-      cursor: pointer;
-      background: #ff4d5a;
-      color: #fff;
-      font-weight: bold;
+    .btn{
+      display:block;
+      margin-top:12px;
+      padding:14px;
+      border-radius:12px;
+      text-decoration:none;
+      color:#fff;
+      font-size:18px;
+      font-weight:bold;
     }
-
-    .result {
-      margin-top: 20px;
-      text-align: left;
+    .b1{background:#0a5cff;}
+    .b2{background:#28a745;}
+    .b3{background:#ff4d4d;}
+    footer{
+      margin-top:25px;
+      font-size:14px;
     }
-
-    .short {
-      background: rgba(255,255,255,0.08);
-      padding: 10px;
-      border-radius: 8px;
-      margin-bottom: 8px;
-    }
-
-    footer {
-      margin-top: auto;
-      padding: 20px 10px;
-      font-size: 14px;
-      background: rgba(0,0,0,0.35);
-    }
-
-    footer a {
-      color: #00ffd5;
-      text-decoration: none;
-      margin: 0 8px;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
+    footer a{
+      color:#00eaff;
+      text-decoration:none;
+      margin:0 8px;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="card">
-    <h1>Shorts AI 🚀</h1>
-    <p>Paste YouTube link & get Shorts ideas</p>
+  <div class="box">
+    <h1>Shorts AI</h1>
+    <p>Choose a plan & pay securely</p>
 
-    <input id="ytLink" placeholder="https://youtube.com/..." />
-    <button onclick="generate()">Generate Shorts</button>
-<p style="margin-top:12px; font-size:13px; opacity:0.8;">
-No login required • Free preview available • AI-powered suggestions
-</p>
+    <!-- ₹99 PLAN -->
+    <div class="plan">
+      <h3>Starter Plan</h3>
+      <div class="price">₹99</div>
+      <p>Basic Shorts ideas</p>
+      <a class="btn b1"
+         href="https://razorpay.me/@ratikantaguriya3922?amount=CVDUr6Uxp2FOGZGwAHntNg%3D%3D"
+         target="_blank">
+        Pay ₹99
+      </a>
+    </div>
 
-    <div id="result" class="result"></div>
+    <!-- ₹199 PLAN -->
+    <div class="plan">
+      <h3>Pro Plan</h3>
+      <div class="price">₹199</div>
+      <p>Advanced Shorts ideas</p>
+      <a class="btn b2"
+         href="https://razorpay.me/@ratikantaguriya3922?amount=KxK8ikz%2BGFZ8lMDydVeeuA%3D%3D"
+         target="_blank">
+        Pay ₹199
+      </a>
+    </div>
+
+    <!-- ₹499 PLAN -->
+    <div class="plan">
+      <h3>Premium Plan</h3>
+      <div class="price">₹499</div>
+      <p>Unlimited ideas + priority</p>
+      <a class="btn b3"
+         href="https://razorpay.me/@ratikantaguriya3922?amount=n%2FUUsdogj%2F7sarE2WD13qg%3D%3D"
+         target="_blank">
+        Pay ₹499
+      </a>
+    </div>
+
+    <footer>
+      <a href="pricing.html">Pricing</a> |
+      <a href="privacy.html">Privacy</a> |
+      <a href="terms.html">Terms</a> |
+      <a href="refund.html">Refund</a> |
+      <a href="contact.html">Contact</a>
+    </footer>
   </div>
-<p style="font-size:13px; color:#00e6b8; margin-top:8px;">
-🎁 Free usage limited. Premium features coming soon.
-</p>
-
-  <footer>
-    <p>
-      <a href="privacy.html">Privacy Policy</a> |
-      <a href="terms.html">Terms & Conditions</a> |
-      <a href="refund.html">Refund Policy</a>
-    </p>
-    <p>© 2026 Shorts AI. All rights reserved.</p>
-  </footer>
-
-  <script>
-    function getVideoId(url) {
-      try {
-        const u = new URL(url);
-        if (u.hostname.includes("youtu.be")) {
-          return u.pathname.slice(1);
-        }
-        return u.searchParams.get("v");
-      } catch {
-        return null;
-      }
-    }
-
-    function generate() {
-      const link = document.getElementById("ytLink").value;
-      const videoId = getVideoId(link);
-
-      if (!videoId) {
-        alert("Please enter a valid YouTube link");
-        return;
-      }
-
-      document.getElementById("result").innerHTML = `
-        <div class="short">🔥 Short 1: 0:45 – 1:05 (High engagement)</div>
-        <div class="short">🔥 Short 2: 2:10 – 2:30 (Emotional peak)</div>
-        <div class="short">🔥 Short 3: 4:00 – 4:20 (Strong hook)</div>
-        <p>✅ Shorts generated (preview)</p>
-      `;
-    }
-  </script>
 
 </body>
 </html>
