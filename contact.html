@@ -10,14 +10,14 @@
       margin: 0;
       font-family: Arial, sans-serif;
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      color: #fff;
     }
 
     .card {
-      background: rgba(0,0,0,0.35);
+      background: rgba(0,0,0,0.4);
       margin: 40px auto;
       padding: 25px;
       border-radius: 16px;
@@ -46,29 +46,29 @@
     }
 
     textarea {
-      min-height: 100px;
       resize: vertical;
+      min-height: 100px;
     }
 
     button {
-      margin-top: 15px;
+      margin-top: 16px;
       width: 100%;
       padding: 14px;
       font-size: 16px;
+      font-weight: bold;
       border-radius: 12px;
       border: none;
       cursor: pointer;
       background: #ff4d5a;
       color: #fff;
-      font-weight: bold;
     }
 
     footer {
       margin-top: auto;
-      padding: 20px 10px;
-      background: rgba(0,0,0,0.35);
+      padding: 18px 10px;
       text-align: center;
       font-size: 14px;
+      background: rgba(0,0,0,0.35);
     }
 
     footer a {
@@ -92,11 +92,14 @@
     <!-- ✅ FORMSPREE FORM -->
     <form action="https://formspree.io/f/xjggvqgr" method="POST">
 
-      <!-- ✅ REDIRECT AFTER SUBMIT -->
-      <input type="hidden" name="_next" value="https://ratikantaguriya.github.io/shorts-ai/thanks.html">
+      <!-- ✅ REDIRECT TO YOUR THANKS PAGE -->
+      <input type="hidden" name="_next"
+        value="https://ratikantaguriya.github.io/shorts-ai/thanks.html">
 
       <input type="text" name="name" placeholder="Your Name" required>
+
       <input type="email" name="email" placeholder="Your Email" required>
+
       <textarea name="message" placeholder="Your Message" required></textarea>
 
       <button type="submit">Send Message</button>
@@ -108,13 +111,11 @@
   </div>
 
   <footer>
-    <p>
-      <a href="index.html">Home</a> |
-      <a href="privacy.html">Privacy</a> |
-      <a href="terms.html">Terms</a> |
-      <a href="refund.html">Refund</a>
-    </p>
-    <p>© 2026 Shorts AI. All rights reserved.</p>
+    <a href="index.html">Home</a> |
+    <a href="privacy.html">Privacy</a> |
+    <a href="terms.html">Terms</a> |
+    <a href="refund.html">Refund</a>
+    <p style="margin-top:8px;">© 2026 Shorts AI. All rights reserved.</p>
   </footer>
 
 </body>
