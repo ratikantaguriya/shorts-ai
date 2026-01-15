@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shorts AI</title>
+<title>Shorts AI – Grow Faster</title>
 
 <style>
 *{
@@ -20,149 +20,150 @@ body{
   min-height:100vh;
 }
 
-.main{
+.wrapper{
   width:100%;
-  padding:20px;
+  max-width:100%;
+  padding:40px 16px 60px;
+  text-align:center;
 }
 
-.card{
-  width:100%;
-  max-width:480px;
-  margin:0 auto;
-  background:#0f0f0f;
-  border-radius:18px;
-  padding:25px 20px;
-}
-
+/* LOGO */
 .logo{
-  display:flex;
-  justify-content:center;
-  margin-bottom:15px;
-}
-.logo img{
-  width:70px;
+  width:90px;
+  margin:0 auto 20px;
 }
 
+/* HEADINGS */
 h1{
-  text-align:center;
-  margin:10px 0;
-}
-
-.tagline{
-  text-align:center;
-  color:#ccc;
-  line-height:1.4;
-}
-
-.trust{
-  margin:15px 0;
-  text-align:center;
-  color:#00ff88;
-  font-weight:bold;
-}
-
-hr{
-  border:none;
-  height:1px;
-  background:#222;
-  margin:20px 0;
-}
-
-h2{
-  text-align:center;
+  font-size:32px;
   margin-bottom:10px;
 }
 
-.steps{
-  margin:15px 0;
+.tagline{
+  font-size:16px;
+  color:#cfcfcf;
+  line-height:1.5;
 }
+
+.trust{
+  margin-top:15px;
+  color:#00e676;
+  font-weight:600;
+}
+
+/* CARD */
+.card{
+  background:#111;
+  border-radius:20px;
+  padding:25px;
+  margin-top:35px;
+}
+
+/* HOW IT WORKS */
+.card h2{
+  margin-bottom:20px;
+}
+
+.steps{
+  text-align:left;
+  max-width:400px;
+  margin:0 auto;
+}
+
 .steps p{
-  margin:8px 0;
+  margin-bottom:12px;
   font-size:15px;
 }
 
-.youtube-box{
-  margin:18px 0;
-  background:#1a1a1a;
-  border-radius:12px;
-  padding:14px;
+/* YOUTUBE INPUT */
+.yt-box{
   display:flex;
   align-items:center;
-  gap:12px;
+  background:#1c1c1c;
+  border-radius:14px;
+  padding:14px;
+  margin:25px auto;
+  max-width:420px;
   opacity:0.6;
 }
 
-.youtube-box img{
-  width:42px;
+.yt-icon{
+  width:48px;
+  height:48px;
+  background:#ff0000;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-right:12px;
 }
 
-.youtube-box span{
-  color:#888;
+.yt-icon svg{
+  width:26px;
+  fill:#fff;
+}
+
+.yt-text{
+  color:#aaa;
   font-size:14px;
 }
 
+/* BUTTON */
 .btn{
-  display:block;
-  width:100%;
-  text-align:center;
   background:#00e676;
   color:#000;
   padding:16px;
   border-radius:14px;
   font-size:18px;
-  font-weight:bold;
+  font-weight:700;
   text-decoration:none;
-  margin-top:10px;
+  display:block;
+  max-width:420px;
+  margin:0 auto;
 }
 
+/* FOOTER */
 .footer{
-  margin-top:15px;
-  text-align:center;
-  font-size:13px;
-  color:#00e676;
+  margin-top:25px;
+  font-size:14px;
+  color:#9cffc5;
 }
 
 .links{
-  margin-top:15px;
-  text-align:center;
+  margin-top:25px;
 }
+
 .links a{
   color:#00e676;
-  margin:0 6px;
-  font-size:13px;
   text-decoration:none;
+  margin:0 6px;
+  font-size:14px;
 }
 
 .copy{
-  text-align:center;
-  margin-top:8px;
-  font-size:12px;
-  color:#666;
+  margin-top:12px;
+  font-size:13px;
+  color:#777;
 }
 </style>
 </head>
 
 <body>
 
-<div class="main">
+<div class="wrapper">
+
+  <img src="logo.png" class="logo" alt="Shorts AI">
+
+  <h1>Shorts AI</h1>
+
+  <p class="tagline">
+    Turn your YouTube videos into <b>high-engagement Shorts ideas</b>.<br>
+    No confusion. No delay. Just results.
+  </p>
+
+  <div class="trust">✔ 100% original website • Trusted by 1 lakh+ active users</div>
+
   <div class="card">
-
-    <div class="logo">
-      <img src="logo.png" alt="Shorts AI">
-    </div>
-
-    <h1>Shorts AI</h1>
-
-    <p class="tagline">
-      Turn your YouTube videos into <b>high-engagement Shorts ideas</b>.<br>
-      No confusion. No delay. Just results.
-    </p>
-
-    <div class="trust">
-      ✔ 100% original website · Trusted by 1 lakh+ active users
-    </div>
-
-    <hr>
 
     <h2>How it Works</h2>
 
@@ -173,28 +174,33 @@ h2{
       <p>📍 Get daily Shorts ideas (within 24 hours)</p>
     </div>
 
-    <div class="youtube-box">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/YouTube_social_white_squircle_%282017%29.svg">
-      <span>Paste YouTube link (available after payment)</span>
+    <div class="yt-box">
+      <div class="yt-icon">
+        <svg viewBox="0 0 24 24">
+          <path d="M23.5 6.2s-.2-1.7-.8-2.4c-.8-.8-1.7-.8-2.1-.9C17.7 2.5 12 2.5 12 2.5h0s-5.7 0-8.6.4c-.4.1-1.3.1-2.1.9C.7 4.5.5 6.2.5 6.2S0 8.1 0 10v1.9c0 1.9.5 3.8.5 3.8s.2 1.7.8 2.4c.8.8 1.9.8 2.4.9 1.7.2 7.3.4 7.3.4s5.7 0 8.6-.4c.4-.1 1.3-.1 2.1-.9.6-.7.8-2.4.8-2.4s.5-1.9.5-3.8V10c0-1.9-.5-3.8-.5-3.8zM9.5 14.5v-5l5 2.5-5 2.5z"/>
+        </svg>
+      </div>
+      <div class="yt-text">Paste YouTube link (available after payment)</div>
     </div>
 
-    <a class="btn" href="pricing.html">Plan & Buy</a>
+    <a href="pricing.html" class="btn">Plan & Buy</a>
 
     <div class="footer">
-      🔒 Secure payments · 📅 30-day plans · 💬 WhatsApp support
+      🔒 Secure payments &nbsp;•&nbsp; 📅 30-day plans &nbsp;•&nbsp; 💬 WhatsApp support
     </div>
-
-    <div class="links">
-      <a href="pricing.html">Pricing</a> |
-      <a href="contact.html">Contact</a> |
-      <a href="privacy.html">Privacy</a> |
-      <a href="terms.html">Terms</a> |
-      <a href="refund.html">Refund</a>
-    </div>
-
-    <div class="copy">© 2026 Shorts AI</div>
 
   </div>
+
+  <div class="links">
+    <a href="pricing.html">Pricing</a> |
+    <a href="contact.html">Contact</a> |
+    <a href="privacy.html">Privacy</a> |
+    <a href="terms.html">Terms</a> |
+    <a href="refund.html">Refund</a>
+  </div>
+
+  <div class="copy">© 2026 Shorts AI</div>
+
 </div>
 
 </body>
