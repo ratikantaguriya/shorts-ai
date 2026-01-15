@@ -1,195 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Shorts AI – Grow Faster</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shorts AI – Grow Faster</title>
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-    body{
-      min-height:100vh;
-      background:#000;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:#fff;
-    }
+html, body{
+  width:100%;
+  height:100%;
+  background:#000;
+  color:#fff;
+  overflow-x:hidden;
+}
 
-    .container{
-      width:100%;
-      max-width:420px;
-      padding:24px 16px;
-    }
+/* MAIN WRAPPER */
+.wrapper{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+}
 
-    .card{
-      background:#0f0f0f;
-      border-radius:20px;
-      padding:30px 20px;
-      text-align:center;
-      box-shadow:0 0 30px rgba(0,0,0,0.6);
-    }
+/* CARD */
+.card{
+  width:100%;
+  max-width:520px;
+  background:#0e0e0e;
+  border-radius:24px;
+  padding:30px 22px;
+  box-shadow:0 0 40px rgba(0,0,0,0.8);
+}
 
-    .logo img{
-      width:64px;
-      margin-bottom:12px;
-    }
+/* LOGO */
+.logo{
+  display:flex;
+  justify-content:center;
+  margin-bottom:14px;
+}
+.logo img{
+  width:70px;
+}
 
-    h1{
-      font-size:30px;
-      margin-bottom:10px;
-    }
+/* TITLE */
+h1{
+  text-align:center;
+  font-size:30px;
+  margin-bottom:10px;
+}
+.subtitle{
+  text-align:center;
+  color:#ccc;
+  font-size:15px;
+  line-height:1.6;
+}
 
-    .tagline{
-      font-size:15px;
-      color:#cfcfcf;
-      line-height:1.6;
-    }
+/* TRUST LINE */
+.trust{
+  text-align:center;
+  margin:15px 0;
+  color:#00e676;
+  font-weight:bold;
+}
 
-    .trust{
-      margin-top:14px;
-      color:#1aff6a;
-      font-size:14px;
-      font-weight:bold;
-    }
+/* SECTION */
+.section{
+  margin-top:25px;
+  padding-top:20px;
+  border-top:1px solid #222;
+}
+.section h2{
+  text-align:center;
+  margin-bottom:16px;
+}
 
-    .divider{
-      height:1px;
-      background:#222;
-      margin:26px 0;
-    }
+/* LIST */
+.steps{
+  list-style:none;
+}
+.steps li{
+  margin:12px 0;
+  font-size:15px;
+}
+.steps span{
+  margin-right:8px;
+}
 
-    h2{
-      margin-bottom:14px;
-    }
+/* YOUTUBE BOX */
+.yt-box{
+  display:flex;
+  align-items:center;
+  background:#111;
+  border-radius:16px;
+  padding:18px;
+  margin-top:18px;
+}
+.yt-icon{
+  font-size:42px;
+  margin-right:14px;
+}
+.yt-box input{
+  flex:1;
+  background:transparent;
+  border:none;
+  outline:none;
+  color:#777;
+  font-size:16px;
+}
 
-    .steps{
-      text-align:left;
-      margin-bottom:18px;
-    }
+/* BUTTON */
+.btn{
+  width:100%;
+  margin-top:22px;
+  padding:18px;
+  border-radius:16px;
+  border:none;
+  background:#00e676;
+  color:#000;
+  font-size:18px;
+  font-weight:bold;
+  cursor:pointer;
+}
+.btn:hover{
+  opacity:0.9;
+}
 
-    .steps p{
-      margin:10px 0;
-      font-size:15px;
-    }
+/* FOOTER INFO */
+.info{
+  margin-top:16px;
+  text-align:center;
+  color:#00e676;
+  font-size:14px;
+}
 
-    .yt-box{
-      display:flex;
-      align-items:center;
-      background:#1a1a1a;
-      border-radius:14px;
-      padding:12px;
-      margin:18px 0;
-      opacity:0.6;
-    }
+/* FOOTER LINKS */
+.footer{
+  margin-top:22px;
+  text-align:center;
+  font-size:14px;
+}
+.footer a{
+  color:#00e676;
+  text-decoration:none;
+  margin:0 6px;
+}
 
-    .yt-icon{
-      width:26px;
-      margin-right:10px;
-    }
-
-    .yt-box input{
-      flex:1;
-      background:transparent;
-      border:none;
-      outline:none;
-      color:#aaa;
-      font-size:15px;
-    }
-
-    .btn{
-      display:block;
-      width:100%;
-      background:#1aff6a;
-      color:#000;
-      text-decoration:none;
-      padding:15px;
-      border-radius:14px;
-      font-weight:bold;
-      font-size:18px;
-      margin-top:12px;
-    }
-
-    .bottom-info{
-      margin-top:14px;
-      font-size:14px;
-      color:#1aff6a;
-    }
-
-    footer{
-      margin-top:20px;
-      font-size:13px;
-      color:#aaa;
-    }
-
-    footer a{
-      color:#1aff6a;
-      text-decoration:none;
-      margin:0 6px;
-    }
-  </style>
+/* COPYRIGHT */
+.copy{
+  margin-top:10px;
+  text-align:center;
+  font-size:13px;
+  color:#777;
+}
+</style>
 </head>
 
 <body>
 
-  <div class="container">
-    <div class="card">
+<div class="wrapper">
+  <div class="card">
 
-      <div class="logo">
-        <img src="logo.png" alt="Shorts AI Logo">
-      </div>
-
-      <h1>Shorts AI</h1>
-
-      <p class="tagline">
-        Turn your YouTube videos into <b>high-engagement Shorts ideas</b>.<br>
-        No confusion. No delay. Just results.
-      </p>
-
-      <div class="trust">
-        ✔ 100% original website · Trusted by 1 lakh+ active users
-      </div>
-
-      <div class="divider"></div>
-
-      <h2>How it Works</h2>
-
-      <div class="steps">
-        <p>📍 Choose a plan (₹99 / ₹199 / ₹499)</p>
-        <p>📍 Complete secure payment</p>
-        <p>📍 Submit your YouTube video link</p>
-        <p>📍 Get daily Shorts ideas (within 24 hours)</p>
-      </div>
-
-      <div class="yt-box">
-        <img class="yt-icon" src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg">
-        <input type="text" placeholder="Paste YouTube link (after payment)" disabled>
-      </div>
-
-      <a href="pricing.html" class="btn">Plan & Buy</a>
-
-      <div class="bottom-info">
-        🔒 Secure payments · 📅 30-day plans · 💬 WhatsApp support
-      </div>
-
-      <footer>
-        <a href="pricing.html">Pricing</a> |
-        <a href="contact.html">Contact</a> |
-        <a href="privacy.html">Privacy</a> |
-        <a href="terms.html">Terms</a> |
-        <a href="refund.html">Refund</a>
-        <br><br>
-        © 2026 Shorts AI
-      </footer>
-
+    <!-- LOGO -->
+    <div class="logo">
+      <img src="logo.png" alt="Shorts AI Logo">
     </div>
+
+    <!-- TITLE -->
+    <h1>Shorts AI</h1>
+    <p class="subtitle">
+      Turn your YouTube videos into <b>high-engagement Shorts ideas</b>.<br>
+      No confusion. No delay. Just results.
+    </p>
+
+    <!-- TRUST -->
+    <div class="trust">
+      ✔ 100% original website • Trusted by 1 lakh+ active users
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <div class="section">
+      <h2>How it Works</h2>
+      <ul class="steps">
+        <li><span>📍</span>Choose a plan (₹99 / ₹199 / ₹499)</li>
+        <li><span>📍</span>Complete secure payment</li>
+        <li><span>📍</span>Submit your YouTube video link</li>
+        <li><span>📍</span>Get daily Shorts ideas (within 24 hours)</li>
+      </ul>
+
+      <!-- YOUTUBE INPUT -->
+      <div class="yt-box">
+        <div class="yt-icon">▶️</div>
+        <input type="text" placeholder="Paste YouTube link (available after payment)" disabled>
+      </div>
+
+      <!-- BUTTON -->
+      <button class="btn" onclick="location.href='pricing.html'">
+        Plan & Buy
+      </button>
+
+      <!-- INFO -->
+      <div class="info">
+        🔒 Secure payments • 📅 30-day plans • 💬 WhatsApp support
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <a href="pricing.html">Pricing</a> |
+      <a href="contact.html">Contact</a> |
+      <a href="privacy.html">Privacy</a> |
+      <a href="terms.html">Terms</a> |
+      <a href="refund.html">Refund</a>
+    </div>
+
+    <div class="copy">
+      © 2026 Shorts AI
+    </div>
+
   </div>
+</div>
 
 </body>
 </html>
