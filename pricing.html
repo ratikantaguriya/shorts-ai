@@ -1,122 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Pricing – Shorts AI</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Pricing – Shorts AI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body{
-      margin:0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-      color:#fff;
-      text-align:center;
-    }
-    h1{
-      margin-top:40px;
-    }
-    p{
-      color:#ccc;
-    }
-    .cards{
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:20px;
-      padding:40px 20px;
-    }
-    .card{
-      background:#111;
-      width:280px;
-      padding:25px;
-      border-radius:16px;
-      box-shadow:0 10px 30px rgba(0,0,0,.5);
-    }
-    .price{
-      font-size:34px;
-      color:#00ffcc;
-      margin:15px 0;
-    }
-    .btn{
-      display:block;
-      margin-top:20px;
-      padding:14px;
-      background:#00c853;
-      color:#fff;
-      text-decoration:none;
-      border-radius:10px;
-      font-size:18px;
-      font-weight:bold;
-    }
-    .btn:hover{
-      opacity:.9;
-    }
-    footer{
-      padding:20px;
-      font-size:14px;
-      color:#aaa;
-    }
-    footer a{
-      color:#00eaff;
-      text-decoration:none;
-      margin:0 6px;
-    }
-  </style>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.subtitle {
+  text-align: center;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+.pricing {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: #111;
+  width: 280px;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  position: relative;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 30px;
+  color: #00ff99;
+}
+
+.duration {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.card ul li {
+  margin: 10px 0;
+}
+
+.btn {
+  display: block;
+  background: #00c853;
+  padding: 12px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.popular {
+  border: 2px solid #00ff99;
+}
+
+.badge {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  background: #ff9800;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.note {
+  text-align: center;
+  font-size: 14px;
+  margin: 30px;
+  opacity: 0.9;
+}
+</style>
 </head>
 
 <body>
 
-  <h1>Shorts AI Pricing 🚀</h1>
-  <p>Choose a plan & get daily YouTube Shorts ideas</p>
+<h1>Choose Your Plan</h1>
+<p class="subtitle">
+All plans are valid for <b>30 Days</b> <br>
+Daily limits reset every 24 hours
+</p>
 
-  <div class="cards">
+<div class="pricing">
 
-    <!-- ₹99 PLAN -->
-    <div class="card">
-      <h2>Starter</h2>
-      <div class="price">₹99</div>
-      <p>✅ 2 Shorts per day</p>
-      <p>✅ Email / WhatsApp support</p>
-      <a class="btn" href="https://rzp.io/rzp/l7lkH8IZ" target="_blank">
-        Pay ₹99
-      </a>
-    </div>
-
-    <!-- ₹199 PLAN -->
-    <div class="card">
-      <h2>Creator</h2>
-      <div class="price">₹199</div>
-      <p>🔥 5 Shorts per day</p>
-      <p>🔥 Priority delivery</p>
-      <a class="btn" href="https://rzp.io/rzp/VPhmqa0" target="_blank">
-        Pay ₹199
-      </a>
-    </div>
-
-    <!-- ₹499 PLAN -->
-    <div class="card">
-      <h2>Pro</h2>
-      <div class="price">₹499</div>
-      <p>🚀 15 Shorts per day</p>
-      <p>🚀 Premium support</p>
-      <a class="btn" href="https://rzp.io/rzp/rEycRed0" target="_blank">
-        Pay ₹499
-      </a>
-    </div>
-
+  <!-- STARTER -->
+  <div class="card">
+    <h2>Starter</h2>
+    <p class="price">₹99</p>
+    <p class="duration">for 30 Days</p>
+    <ul>
+      <li>✅ 2 Shorts ideas per day</li>
+      <li>✅ WhatsApp / Email support</li>
+      <li>✅ Best for beginners</li>
+    </ul>
+    <a class="btn" href="https://rzp.io/rzp/7Ig4KhZZ">Pay ₹99</a>
   </div>
 
-  <footer>
-    <p>
-      <a href="index.html">Home</a> |
-      <a href="contact.html">Contact</a> |
-      <a href="privacy.html">Privacy</a> |
-      <a href="terms.html">Terms</a> |
-      <a href="refund.html">Refund</a>
-    </p>
-    <p>© 2026 Shorts AI</p>
-  </footer>
+  <!-- CREATOR -->
+  <div class="card popular">
+    <div class="badge">Most Popular</div>
+    <h2>Creator</h2>
+    <p class="price">₹199</p>
+    <p class="duration">for 30 Days</p>
+    <ul>
+      <li>🔥 5 Shorts ideas per day</li>
+      <li>🔥 Priority delivery</li>
+      <li>🔥 Faster support</li>
+    </ul>
+    <a class="btn" href="https://rzp.io/rzp/VPhmqa0">Pay ₹199</a>
+  </div>
+
+  <!-- PRO -->
+  <div class="card">
+    <h2>Pro</h2>
+    <p class="price">₹499</p>
+    <p class="duration">for 30 Days</p>
+    <ul>
+      <li>🚀 15 Shorts ideas per day</li>
+      <li>🚀 Premium support</li>
+      <li>🚀 Best for growth</li>
+    </ul>
+    <a class="btn" href="https://rzp.io/rzp/rEycRed0">Pay ₹499</a>
+  </div>
+
+</div>
+
+<p class="note">
+⚠️ After payment, submit your <b>Razorpay Payment ID</b> and <b>YouTube link</b><br>
+Delivery within 24 hours
+</p>
 
 </body>
 </html>
