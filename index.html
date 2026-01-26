@@ -1,122 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Shorts AI – Home</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Shorts AI – Turn Videos into Viral Shorts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #0f0f0f;
-      font-family: Arial, sans-serif;
-    }
-
-    .card {
-      background: #111;
-      padding: 25px;
-      border-radius: 18px;
-      width: 90%;
-      max-width: 420px;
-      text-align: center;
-      box-shadow: 0 0 25px rgba(0,0,0,0.6);
-    }
-
-    h1 {
-      color: #00ff88;
-      margin-bottom: 8px;
-    }
-
-    p {
-      color: #ccc;
-      font-size: 14px;
-      margin-bottom: 20px;
-    }
-
-    .btn {
-      display: block;
-      width: 100%;
-      padding: 14px;
-      margin: 12px 0;
-      border-radius: 10px;
-      font-weight: bold;
-      text-decoration: none;
-      text-align: center;
-      font-size: 15px;
-    }
-
-    .form-btn {
-      background: #00ff88;
-      color: #000;
-    }
-
-    .wa-btn {
-      background: #25D366;
-      color: #fff;
-    }
-
-    .note {
-      font-size: 12px;
-      color: #888;
-      margin-top: 10px;
-    }
-
-    /* Floating WhatsApp */
-    .float-wa {
-      position: fixed;
-      bottom: 18px;
-      right: 18px;
-      background: #25D366;
-      color: #fff;
-      padding: 14px 18px;
-      border-radius: 50px;
-      font-weight: bold;
-      text-decoration: none;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-      z-index: 999;
-    }
-  </style>
+<style>
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:linear-gradient(180deg,#0b2b2f,#0f3d44);
+  color:#fff;
+}
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:40px 16px;
+}
+.card{
+  background:#111;
+  border-radius:18px;
+  padding:28px;
+  box-shadow:0 0 30px rgba(0,0,0,.6);
+}
+.center{text-align:center;}
+h1{font-size:36px;margin:10px 0;}
+h2{font-size:26px;margin-bottom:15px;}
+p{color:#cfcfcf;}
+.btn{
+  display:inline-block;
+  padding:14px 26px;
+  border-radius:10px;
+  font-weight:bold;
+  text-decoration:none;
+  margin-top:16px;
+}
+.btn-green{background:#00ff88;color:#000;}
+.section{margin-top:60px;}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+.price{
+  font-size:34px;
+  color:#00ff88;
+}
+ul{list-style:none;padding:0;}
+ul li{margin:8px 0;}
+.footer{
+  text-align:center;
+  font-size:14px;
+  color:#9a9a9a;
+  margin-top:60px;
+}
+.whatsapp{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  background:#25D366;
+  color:#fff;
+  padding:14px 18px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
+}
+</style>
 </head>
 
 <body>
 
+<!-- HERO -->
+<div class="container center">
+  <h1>🚀 Shorts AI</h1>
+  <p>Turn your YouTube videos into <b>high-engagement Shorts ideas</b><br>
+  No confusion. No delay. Just results.</p>
+  <p>✅ 100% original website • Trusted by creators</p>
+  <a class="btn btn-green" href="#pricing">Plan & Buy</a>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="container section">
   <div class="card">
-    <h1>🚀 Shorts AI</h1>
-    <p>
-      Payment ke baad apni details submit karo  
-      ya direct WhatsApp par contact karo.
-    </p>
+    <h2 class="center">How it Works</h2>
+    <ul>
+      <li>✅ Choose a plan (₹99 / ₹199 / ₹499)</li>
+      <li>✅ Complete secure payment</li>
+      <li>✅ Submit your YouTube video link</li>
+      <li>✅ Get daily Shorts ideas (within 24 hours)</li>
+    </ul>
+  </div>
+</div>
 
-    <!-- Google Form -->
-    <a class="btn form-btn"
-       href="https://docs.google.com/forms/d/e/1FAIpQLSeOUY5zl64AYcbbmADnMMyN0H_rqTg_Dcvu05xpbFvHg-_V_w/viewform"
-       target="_blank">
-       📋 Submit Details (Google Form)
-    </a>
+<!-- PRICING -->
+<div id="pricing" class="container section">
+  <h2 class="center">Pricing Plans</h2>
 
-    <!-- WhatsApp -->
-    <a class="btn wa-btn"
-       href="https://wa.me/919339942448?text=Hi%20I%20want%20Shorts%20AI%20service"
-       target="_blank">
-       💬 Chat on WhatsApp
-    </a>
+  <div class="grid">
+    <div class="card center">
+      <h3>Starter</h3>
+      <div class="price">₹99</div>
+      <ul>
+        <li>2 Shorts / day</li>
+        <li>Email / WhatsApp support</li>
+      </ul>
+      <a class="btn btn-green" href="https://wa.me/919339942448?text=I%20want%20Starter%20plan">Pay ₹99</a>
+    </div>
 
-    <div class="note">
-      🔒 Your data is safe. We never spam.
+    <div class="card center">
+      <h3>Creator</h3>
+      <div class="price">₹199</div>
+      <ul>
+        <li>5 Shorts / day</li>
+        <li>Priority delivery</li>
+      </ul>
+      <a class="btn btn-green" href="https://wa.me/919339942448?text=I%20want%20Creator%20plan">Pay ₹199</a>
+    </div>
+
+    <div class="card center">
+      <h3>Pro</h3>
+      <div class="price">₹499</div>
+      <ul>
+        <li>15 Shorts / day</li>
+        <li>Premium support</li>
+      </ul>
+      <a class="btn btn-green" href="https://wa.me/919339942448?text=I%20want%20Pro%20plan">Pay ₹499</a>
     </div>
   </div>
+</div>
 
-  <!-- Floating WhatsApp Button -->
-  <a class="float-wa"
-     href="https://wa.me/919339942448?text=Hi%20I%20want%20Shorts%20AI%20service"
-     target="_blank">
-     💬 WhatsApp
-  </a>
+<!-- FOOTER -->
+<div class="container footer">
+  Secure payments • 30-day plans • WhatsApp support<br><br>
+  Pricing | Contact | Privacy | Terms | Refund<br>
+  © 2026 Shorts AI
+</div>
+
+<!-- WHATSAPP FLOAT -->
+<a class="whatsapp" href="https://wa.me/919339942448?text=Hi%20I%20want%20Shorts%20AI%20service">💬 WhatsApp</a>
 
 </body>
 </html>
