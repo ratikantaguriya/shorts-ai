@@ -1,81 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Shorts AI</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="favicon.ico">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0b2b2e;
-      color: #ffffff;
-      text-align: center;
-    }
-    .container {
-      padding: 40px 20px;
-    }
-    h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 16px;
-      opacity: 0.9;
-    }
-    .box {
-      background: #111;
-      margin: 30px auto;
-      padding: 25px;
-      max-width: 420px;
-      border-radius: 12px;
-    }
-    .btn {
-      display: block;
-      margin: 20px auto 0;
-      padding: 14px;
-      background: #00ff8f;
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 8px;
-    }
-    footer {
-      margin-top: 40px;
-      font-size: 14px;
-    }
-    footer a {
-      color: #00ff8f;
-      text-decoration: none;
-      margin: 0 6px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shorts AI</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#062a2a;
+  color:#fff;
+  text-align:center;
+}
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:30px 15px;
+}
+.logo{
+  width:80px;
+  margin:10px auto 20px;
+  display:block;
+}
+h1{margin-bottom:10px;}
+.tagline{opacity:0.9;margin-bottom:20px;}
+
+.card{
+  background:#0b3c3c;
+  border-radius:18px;
+  padding:25px;
+  box-shadow:0 0 25px rgba(0,0,0,0.4);
+  margin-top:25px;
+}
+
+.input-box{
+  margin-top:15px;
+}
+input{
+  width:100%;
+  max-width:420px;
+  padding:14px;
+  border-radius:30px;
+  border:none;
+  font-size:15px;
+}
+
+.btn{
+  margin-top:20px;
+  background:#00ff8c;
+  border:none;
+  padding:14px 30px;
+  border-radius:40px;
+  font-size:17px;
+  cursor:pointer;
+}
+.btn:hover{opacity:0.85;}
+
+.plans{
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  justify-content:center;
+  margin-top:35px;
+}
+.plan{
+  background:#0b3c3c;
+  width:260px;
+  padding:25px;
+  border-radius:16px;
+}
+.price{
+  font-size:28px;
+  color:#00ff8c;
+  margin:10px 0;
+}
+ul{list-style:none;padding:0;}
+ul li{margin:8px 0;}
+
+.footer{
+  margin-top:40px;
+  font-size:14px;
+}
+.footer a{
+  color:#00ff8c;
+  margin:0 8px;
+  text-decoration:none;
+}
+</style>
 </head>
+
 <body>
+<div class="container">
 
-  <div class="container">
-    <h1>Shorts AI</h1>
-    <p>Turn your YouTube videos into high-engagement Shorts ideas</p>
+<img src="logo.png" class="logo" alt="Shorts AI Logo">
 
-    <div class="box">
-      <h2>How it Works</h2>
-      <p>📌 Choose a plan (₹99 / ₹199 / ₹499)</p>
-      <p>🔒 Secure payment</p>
-      <p>🔗 Submit YouTube link</p>
-      <p>⚡ Get Shorts ideas in 24 hours</p>
+<h1>Shorts AI</h1>
+<p class="tagline">
+Turn your YouTube videos into <b>high-engagement Shorts ideas</b><br>
+No confusion. No delay. Just results.
+</p>
 
-      <a class="btn" href="./pricing.html">Plan & Buy</a>
-    </div>
+<div class="card">
+<h2>How it Works</h2>
+<p>📌 Choose a plan (₹99 / ₹199 / ₹499)</p>
+<p>🔒 Secure payment</p>
+<p>🔗 Submit YouTube link</p>
+<p>⚡ Get Shorts ideas within 24 hours</p>
 
-    <footer>
-      <a href="./pricing.html">Pricing</a> |
-      <a href="./contact.html">Contact</a> |
-      <a href="./privacy.html">Privacy</a> |
-      <a href="./refund.html">Refund</a>
-      <p>© 2026 Shorts AI</p>
-    </footer>
-  </div>
+<div class="input-box">
+<input type="text" placeholder="Paste YouTube video link (after payment)">
+</div>
 
+<button class="btn" onclick="location.href='pricing.html'">Plan & Buy</button>
+</div>
+
+<div class="plans">
+<div class="plan">
+<h2>Starter</h2>
+<div class="price">₹99</div>
+<ul>
+<li>✔ 5 Shorts ideas</li>
+<li>✔ 24h delivery</li>
+<li>✔ Basic support</li>
+</ul>
+<button class="btn" onclick="location.href='paid.html'">Buy Now</button>
+</div>
+
+<div class="plan">
+<h2>Creator</h2>
+<div class="price">₹199</div>
+<ul>
+<li>✔ 15 Shorts ideas</li>
+<li>✔ Fast delivery</li>
+<li>✔ Priority support</li>
+</ul>
+<button class="btn" onclick="location.href='paid.html'">Buy Now</button>
+</div>
+
+<div class="plan">
+<h2>Pro</h2>
+<div class="price">₹499</div>
+<ul>
+<li>✔ 50 Shorts ideas</li>
+<li>✔ Daily ideas</li>
+<li>✔ WhatsApp support</li>
+</ul>
+<button class="btn" onclick="location.href='paid.html'">Buy Now</button>
+</div>
+</div>
+
+<div class="footer">
+<a href="pricing.html">Pricing</a> |
+<a href="contact.html">Contact</a> |
+<a href="privacy.html">Privacy</a> |
+<a href="refund.html">Refund</a>
+<p>© 2026 Shorts AI</p>
+</div>
+
+</div>
 </body>
 </html>
