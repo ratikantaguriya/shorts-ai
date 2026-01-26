@@ -9,91 +9,100 @@
 body{
   margin:0;
   font-family:Arial, sans-serif;
-  background:#062a2a;
+  background:#000;
   color:#fff;
+}
+.main{
+  max-width:420px;
+  margin:30px auto;
+  padding:25px;
+  background:linear-gradient(180deg,#0b2f2f,#062424);
+  border-radius:22px;
+  box-shadow:0 0 30px rgba(0,0,0,0.7);
   text-align:center;
 }
-.container{
-  max-width:900px;
-  margin:auto;
-  padding:30px 15px;
-}
 .logo{
-  width:80px;
-  margin:10px auto 20px;
-  display:block;
+  width:70px;
+  margin:10px auto 15px;
 }
-h1{margin-bottom:10px;}
-.tagline{opacity:0.9;margin-bottom:20px;}
-
-.card{
-  background:#0b3c3c;
-  border-radius:18px;
-  padding:25px;
-  box-shadow:0 0 25px rgba(0,0,0,0.4);
-  margin-top:25px;
-}
-
-.input-box{
-  margin-top:15px;
-}
-input{
-  width:100%;
-  max-width:420px;
-  padding:14px;
-  border-radius:30px;
-  border:none;
-  font-size:15px;
-}
-
-.btn{
-  margin-top:20px;
-  background:#00ff8c;
-  border:none;
-  padding:14px 30px;
-  border-radius:40px;
-  font-size:17px;
-  cursor:pointer;
-}
-.btn:hover{opacity:0.85;}
-
-.plans{
-  display:flex;
-  flex-wrap:wrap;
-  gap:20px;
-  justify-content:center;
-  margin-top:35px;
-}
-.plan{
-  background:#0b3c3c;
-  width:260px;
-  padding:25px;
-  border-radius:16px;
-}
-.price{
-  font-size:28px;
-  color:#00ff8c;
+h1{
   margin:10px 0;
 }
-ul{list-style:none;padding:0;}
-ul li{margin:8px 0;}
-
+.tagline{
+  opacity:0.85;
+  font-size:15px;
+}
+.green{
+  color:#00ff8c;
+  margin:15px 0;
+  font-weight:bold;
+}
+.hr{
+  height:1px;
+  background:#1e4b4b;
+  margin:20px 0;
+}
+.work{
+  text-align:left;
+}
+.work h2{
+  text-align:center;
+}
+.work p{
+  margin:10px 0;
+  font-size:15px;
+}
+.input-box{
+  margin:18px 0;
+  background:#111;
+  border-radius:14px;
+  padding:12px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.input-box img{
+  width:30px;
+}
+.input-box input{
+  background:none;
+  border:none;
+  outline:none;
+  color:#777;
+  width:100%;
+}
+.btn{
+  width:100%;
+  padding:16px;
+  background:#00ff8c;
+  border:none;
+  border-radius:16px;
+  font-size:18px;
+  font-weight:bold;
+  cursor:pointer;
+}
+.sub{
+  margin-top:12px;
+  font-size:14px;
+  color:#00ff8c;
+}
 .footer{
-  margin-top:40px;
+  margin-top:18px;
   font-size:14px;
 }
 .footer a{
   color:#00ff8c;
-  margin:0 8px;
   text-decoration:none;
+  margin:0 6px;
 }
 </style>
 </head>
 
 <body>
-<div class="container">
 
-<img src="logo.png" class="logo" alt="Shorts AI Logo">
+<div class="main">
+
+<img src="logo.png" class="logo" alt="Shorts AI">
 
 <h1>Shorts AI</h1>
 <p class="tagline">
@@ -101,54 +110,26 @@ Turn your YouTube videos into <b>high-engagement Shorts ideas</b><br>
 No confusion. No delay. Just results.
 </p>
 
-<div class="card">
+<p class="green">✔ 100% original website · Trusted by 1 lakh+ active users</p>
+
+<div class="hr"></div>
+
+<div class="work">
 <h2>How it Works</h2>
-<p>📌 Choose a plan (₹99 / ₹199 / ₹499)</p>
-<p>🔒 Secure payment</p>
-<p>🔗 Submit YouTube link</p>
-<p>⚡ Get Shorts ideas within 24 hours</p>
+<p>📍 Choose a plan (₹99 / ₹199 / ₹499)</p>
+<p>🔒 Complete secure payment</p>
+<p>🔗 Submit your YouTube video link</p>
+<p>⚡ Get daily Shorts ideas (within 24 hours)</p>
+</div>
 
 <div class="input-box">
-<input type="text" placeholder="Paste YouTube video link (after payment)">
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg">
+<input type="text" placeholder="Paste YouTube link (available after payment)" disabled>
 </div>
 
 <button class="btn" onclick="location.href='pricing.html'">Plan & Buy</button>
-</div>
 
-<div class="plans">
-<div class="plan">
-<h2>Starter</h2>
-<div class="price">₹99</div>
-<ul>
-<li>✔ 5 Shorts ideas</li>
-<li>✔ 24h delivery</li>
-<li>✔ Basic support</li>
-</ul>
-<button class="btn" onclick="location.href='paid.html'">Buy Now</button>
-</div>
-
-<div class="plan">
-<h2>Creator</h2>
-<div class="price">₹199</div>
-<ul>
-<li>✔ 15 Shorts ideas</li>
-<li>✔ Fast delivery</li>
-<li>✔ Priority support</li>
-</ul>
-<button class="btn" onclick="location.href='paid.html'">Buy Now</button>
-</div>
-
-<div class="plan">
-<h2>Pro</h2>
-<div class="price">₹499</div>
-<ul>
-<li>✔ 50 Shorts ideas</li>
-<li>✔ Daily ideas</li>
-<li>✔ WhatsApp support</li>
-</ul>
-<button class="btn" onclick="location.href='paid.html'">Buy Now</button>
-</div>
-</div>
+<p class="sub">🔒 Secure payments · 📅 30-day plans · 💬 WhatsApp support</p>
 
 <div class="footer">
 <a href="pricing.html">Pricing</a> |
@@ -159,5 +140,6 @@ No confusion. No delay. Just results.
 </div>
 
 </div>
+
 </body>
 </html>
