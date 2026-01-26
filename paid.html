@@ -2,80 +2,79 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Payment Successful – Shorts AI</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Submit YouTube Link | Shorts AI</title>
+
 <style>
 body{
   margin:0;
   font-family:Arial, sans-serif;
-  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  background:#062a2a;
   color:#fff;
 }
-.card{
+.box{
   max-width:420px;
   margin:60px auto;
-  background:#111;
+  background:#0b3c3c;
   padding:25px;
-  border-radius:15px;
-  box-shadow:0 15px 40px rgba(0,0,0,.6);
+  border-radius:18px;
+  box-shadow:0 0 25px rgba(0,0,0,.5);
+  text-align:center;
 }
-h1{text-align:center}
-.step{
-  background:#1c1c1c;
-  padding:12px;
-  margin:10px 0;
-  border-radius:8px;
-}
-.green{color:#00ff99}
-.btn{
-  display:block;
+input,button{
   width:100%;
-  text-align:center;
   padding:14px;
-  margin-top:15px;
-  background:#25D366;
+  border:none;
+  border-radius:30px;
+  margin-top:12px;
+  font-size:16px;
+}
+input{
+  background:#062a2a;
   color:#fff;
-  font-size:18px;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:bold;
 }
+button{
+  background:#00ff8c;
+  cursor:pointer;
+}
+button:hover{opacity:.9}
 .small{
-  text-align:center;
+  font-size:13px;
+  opacity:.8;
   margin-top:10px;
-  font-size:14px;
 }
-a{color:#00eaff}
 </style>
 </head>
+
 <body>
 
-<div class="card">
-<h1>Thank You 🙏</h1>
-<p style="text-align:center">Your payment was successful</p>
+<div class="box">
+  <img src="logo.png" width="70"><br><br>
+  <h2>Payment Successful 🎉</h2>
+  <p>Submit your YouTube video link</p>
 
-<div class="step green">✅ Step 1: Copy your Razorpay Payment ID</div>
-<div class="step green">✅ Step 2: Send your YouTube link</div>
-<div class="step green">✅ Step 3: Delivery within 24 hours</div>
+  <form id="ytForm">
+    <input type="text" name="youtube" placeholder="Paste YouTube link" required>
+    <button type="submit">Submit</button>
+  </form>
 
-<p class="small">
-Daily limits:<br>
-₹99 → 2 Shorts/day<br>
-₹199 → 5 Shorts/day<br>
-₹499 → 15 Shorts/day
-</p>
-
-<a class="btn"
-href="https://wa.me/919339942448?text=Hi%20I%20have%20paid%20for%20Shorts%20AI.%0APayment%20ID:%20_____%0AYouTube%20Link:%20_____"
-target="_blank">
-Send on WhatsApp
-</a>
-
-<p class="small">
-or email: <a href="mailto:support@shorts-ai.com">support@shorts-ai.com</a><br><br>
-<a href="index.html">⬅ Back to Home</a>
-</p>
+  <p class="small">You will receive Shorts ideas within 24 hours.</p>
 </div>
+
+<script>
+const form = document.getElementById("ytForm");
+form.addEventListener("submit", e => {
+  e.preventDefault();
+
+  fetch("YOUR_GOOGLE_SCRIPT_URL", {
+    method: "POST",
+    body: new FormData(form)
+  }).then(() => {
+    alert("Submitted successfully!");
+    form.reset();
+  });
+});
+</script>
 
 </body>
 </html>
