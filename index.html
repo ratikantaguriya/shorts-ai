@@ -1,190 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shorts AI</title>
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
-
-body{
-  background:linear-gradient(180deg,#0a2a2f,#020b0d);
-  color:#fff;
-}
-
-.container{
-  max-width:420px;
-  margin:auto;
-  padding:20px;
-}
-
-.logo{
-  text-align:center;
-  margin-top:20px;
-}
-.logo img{width:60px}
-
-h1{text-align:center;margin:15px 0}
-
-.sub{
-  text-align:center;
-  opacity:.9;
-  font-size:14px;
-}
-
-.trust{
-  text-align:center;
-  color:#2dff8f;
-  margin:12px 0 20px;
-  font-size:13px;
-}
-
-.card{
-  background:#0e0e0e;
-  border-radius:16px;
-  padding:20px;
-  margin-bottom:20px;
-  box-shadow:0 0 25px rgba(0,0,0,.5);
-}
-
-.card h2{text-align:center;margin-bottom:14px}
-
-.steps div{
-  margin-bottom:8px;
-  font-size:14px;
-}
-
-input{
-  width:100%;
-  padding:12px;
-  border-radius:10px;
-  border:none;
-  background:#1a1a1a;
-  color:#777;
-  margin:14px 0;
-}
-
-.btn{
-  width:100%;
-  background:#1bff78;
-  border:none;
-  padding:14px;
-  border-radius:12px;
-  font-size:16px;
-  font-weight:bold;
-  cursor:pointer;
-}
-
-.btn:active{transform:scale(.98)}
-
-.secure{
-  text-align:center;
-  margin-top:12px;
-  font-size:13px;
-  color:#7dffb0;
-}
-
-.footer{
-  text-align:center;
-  margin-top:22px;
-  font-size:13px;
-}
-
-.footer a{
-  color:#2dff8f;
-  text-decoration:none;
-  margin:0 6px;
-}
-.section{
-  display:none;
-  margin-top:10px;
-  font-size:13px;
-  opacity:.85;
-}
-</style>
+  <meta charset="UTF-8">
+  <title>Shorts AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b2b2e;
+      color: #ffffff;
+      text-align: center;
+    }
+    .container {
+      padding: 40px 20px;
+    }
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 16px;
+      opacity: 0.9;
+    }
+    .box {
+      background: #111;
+      margin: 30px auto;
+      padding: 25px;
+      max-width: 420px;
+      border-radius: 12px;
+    }
+    .btn {
+      display: block;
+      margin: 20px auto 0;
+      padding: 14px;
+      background: #00ff8f;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+    }
+    footer a {
+      color: #00ff8f;
+      text-decoration: none;
+      margin: 0 6px;
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="container">
+  <div class="container">
+    <h1>Shorts AI</h1>
+    <p>Turn your YouTube videos into high-engagement Shorts ideas</p>
 
-  <div class="logo">
-    <img src="https://i.imgur.com/4AiXzf8.png" alt="logo">
+    <div class="box">
+      <h2>How it Works</h2>
+      <p>📌 Choose a plan (₹99 / ₹199 / ₹499)</p>
+      <p>🔒 Secure payment</p>
+      <p>🔗 Submit YouTube link</p>
+      <p>⚡ Get Shorts ideas in 24 hours</p>
+
+      <a class="btn" href="./pricing.html">Plan & Buy</a>
+    </div>
+
+    <footer>
+      <a href="./pricing.html">Pricing</a> |
+      <a href="./contact.html">Contact</a> |
+      <a href="./privacy.html">Privacy</a> |
+      <a href="./refund.html">Refund</a>
+      <p>© 2026 Shorts AI</p>
+    </footer>
   </div>
-
-  <h1>Shorts AI</h1>
-
-  <div class="sub">
-    Turn your YouTube videos into <b>high-engagement Shorts ideas</b><br>
-    No confusion. No delay. Just results.
-  </div>
-
-  <div class="trust">
-    ✅ 100% original website · Trusted by 1 lakh+ active users
-  </div>
-
-  <div class="card">
-    <h2>How it Works</h2>
-    <div class="steps">
-      <div>📍 Choose a plan (₹99 / ₹199 / ₹499)</div>
-      <div>🔒 Complete secure payment</div>
-      <div>📎 Submit your YouTube video link</div>
-      <div>⚡ Get daily Shorts ideas (within 24 hours)</div>
-    </div>
-
-    <input type="text" placeholder="Paste YouTube link (available after payment)" disabled>
-
-    <button class="btn" onclick="goPricing()">Plan & Buy</button>
-
-    <div class="secure">
-      🔒 Secure payments · 📅 30-day plans · 💬 WhatsApp support
-    </div>
-  </div>
-
-  <div class="footer">
-    <a onclick="toggle('pricing')">Pricing</a> |
-    <a onclick="toggle('contact')">Contact</a> |
-    <a onclick="toggle('privacy')">Privacy</a> |
-    <a onclick="toggle('terms')">Terms</a> |
-    <a onclick="toggle('refund')">Refund</a>
-
-    <div id="pricing" class="section">
-      ₹99 → 2 Shorts/day<br>
-      ₹199 → 5 Shorts/day<br>
-      ₹499 → 15 Shorts/day
-    </div>
-
-    <div id="contact" class="section">
-      WhatsApp support available after payment
-    </div>
-
-    <div id="privacy" class="section">
-      We never share your data. 100% safe.
-    </div>
-
-    <div id="terms" class="section">
-      Service based digital product. Delivery within 24 hours.
-    </div>
-
-    <div id="refund" class="section">
-      Refund only if service not delivered.
-    </div>
-
-    <br><br>© 2026 Shorts AI
-  </div>
-
-</div>
-
-<script>
-function goPricing(){
-  window.location.href="pricing.html";
-}
-function toggle(id){
-  document.querySelectorAll('.section').forEach(s=>s.style.display="none");
-  document.getElementById(id).style.display="block";
-}
-</script>
 
 </body>
 </html>
