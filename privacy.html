@@ -6,95 +6,106 @@
 <title>Privacy Policy | Shorts AI</title>
 
 <style>
-body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:linear-gradient(145deg,#062f2f,#041e1e);
-  color:#eafff9;
+:root{
+  --bg:#062f2f;
+  --card:#0e3a3a;
+  --accent:#00ff9c;
+  --text:#e8ffff;
+  --muted:#9fdede;
 }
 
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+body{
+  background:linear-gradient(145deg,#041f1f,#073a3a);
+  color:var(--text);
+  min-height:100vh;
+}
+
+/* CONTAINER */
 .container{
   max-width:900px;
-  margin:auto;
-  padding:40px 18px 60px;
+  margin:40px auto;
+  padding:28px;
 }
 
-.logo{
-  text-align:center;
-  margin-bottom:20px;
+/* CARD */
+.card{
+  background:linear-gradient(160deg,#0c3a3a,#062f2f);
+  border-radius:20px;
+  padding:34px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.45);
+  border:1px solid rgba(0,255,156,0.12);
 }
 
-.logo img{
-  width:60px;
-}
-
+/* TITLE */
 h1{
-  text-align:center;
-  font-size:32px;
-  color:#00ffb3;
-  margin-bottom:8px;
+  font-size:36px;
+  color:var(--accent);
+  margin-bottom:10px;
 }
 
 .updated{
-  text-align:center;
+  color:var(--muted);
   font-size:14px;
-  color:#a8fff0;
-  margin-bottom:30px;
+  margin-bottom:28px;
 }
 
-.card{
-  background:rgba(8,55,55,0.85);
-  border-radius:18px;
-  padding:30px;
-  box-shadow:0 0 30px rgba(0,0,0,0.45);
-}
-
+/* SECTION */
 h2{
-  color:#ff7b7b;
-  margin-top:28px;
+  margin-top:34px;
+  margin-bottom:14px;
   font-size:22px;
+  color:#ff7b7b;
 }
 
 p{
-  line-height:1.7;
-  font-size:15.5px;
-  color:#e9fffb;
+  line-height:1.8;
+  font-size:16px;
+  color:#e3ffff;
 }
 
+/* LIST */
 ul{
+  margin-top:12px;
   margin-left:18px;
 }
 
-ul li{
-  margin:10px 0;
-  font-size:15.2px;
+li{
+  margin-bottom:10px;
+  line-height:1.6;
 }
 
-.trust-box{
-  margin-top:30px;
-  padding:18px;
-  background:#0b3f3f;
-  border-radius:14px;
-  text-align:center;
-  color:#bafff0;
-  font-size:14.5px;
-}
-
+/* FOOTER */
 .footer{
   margin-top:40px;
+  padding-top:22px;
+  border-top:1px solid rgba(255,255,255,0.12);
   text-align:center;
-  font-size:13px;
-  color:#9fffe0;
+  font-size:14px;
+  color:var(--muted);
 }
 
 .footer a{
-  color:#00ffb3;
+  color:var(--accent);
   text-decoration:none;
-  font-weight:600;
+  margin:0 8px;
 }
 
 .footer a:hover{
   text-decoration:underline;
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  h1{font-size:28px}
+  h2{font-size:20px}
+  .card{padding:24px}
 }
 </style>
 </head>
@@ -102,18 +113,13 @@ ul li{
 <body>
 
 <div class="container">
-
-  <div class="logo">
-    <img src="https://i.imgur.com/Z8kQZQp.png" alt="Shorts AI Logo">
-  </div>
-
-  <h1>Privacy Policy</h1>
-  <div class="updated">Last updated: January 2026</div>
-
   <div class="card">
 
+    <h1>Privacy Policy</h1>
+    <div class="updated">Last updated: January 2026</div>
+
     <p>
-      Welcome to <strong>Shorts AI</strong>. Your privacy is extremely important to us.
+      Welcome to <strong>Shorts AI</strong>. Your privacy is very important to us.
       This Privacy Policy explains how we collect, use, and protect your information
       when you use our services.
     </p>
@@ -122,54 +128,50 @@ ul li{
     <p>We may collect the following limited information:</p>
     <ul>
       <li>YouTube video links submitted by users</li>
-      <li>Basic usage data (non-personal & anonymous)</li>
+      <li>Basic non-personal usage data for service improvement</li>
     </ul>
 
-    <h2>2. How We Use Your Information</h2>
-    <p>Your information is used only to:</p>
+    <h2>2. How We Use Information</h2>
+    <p>The collected information is used only to:</p>
     <ul>
       <li>Analyze YouTube video content</li>
-      <li>Generate high-engagement Shorts ideas</li>
-      <li>Improve platform performance and quality</li>
+      <li>Generate Shorts ideas</li>
+      <li>Improve platform quality and performance</li>
     </ul>
 
-    <h2>3. Payments & Transactions</h2>
+    <h2>3. Payments & Security</h2>
     <p>
-      All payments are processed securely via <strong>Razorpay</strong>.
-      We do <strong>not</strong> store any card, UPI, or payment details on our servers.
+      All payments are processed securely through <strong>Razorpay</strong>.
+      We do not store any card details, UPI IDs, or payment credentials on our servers.
     </p>
 
-    <h2>4. Data Security</h2>
+    <h2>4. Data Protection</h2>
     <p>
-      We follow industry-standard security practices to protect your data.
-      However, no online service can guarantee absolute security.
+      We implement reasonable security measures to protect user data.
+      However, no method of online transmission is 100% secure.
     </p>
 
     <h2>5. Third-Party Services</h2>
     <p>
-      Shorts AI may use trusted third-party tools (such as payment gateways)
-      strictly to provide core services.
+      Shorts AI may rely on trusted third-party services such as payment providers
+      for smooth operation. These services follow their own privacy policies.
     </p>
 
-    <h2>6. Policy Updates</h2>
+    <h2>6. Changes to This Policy</h2>
     <p>
-      This Privacy Policy may be updated occasionally.
-      Continued use of the service indicates acceptance of any changes.
+      We may update this Privacy Policy from time to time.
+      Any changes will be reflected on this page with an updated date.
     </p>
 
-    <div class="trust-box">
-      🔒 100% Secure Payments · 💬 WhatsApp Support Available · 🇮🇳 Trusted by 1,00,000+ Creators
+    <div class="footer">
+      <a href="index.html">Home</a> |
+      <a href="terms.html">Terms</a> |
+      <a href="refund.html">Refund</a>
+      <br><br>
+      © 2026 <strong>Shorts AI</strong> • Built for Serious YouTube Creators
     </div>
 
   </div>
-
-  <div class="footer">
-    <a href="index.html">Home</a> ·
-    <a href="terms.html">Terms</a> ·
-    <a href="refund.html">Refund</a><br><br>
-    © 2026 <strong>Shorts AI</strong> — Built for Serious YouTube Creators 🚀
-  </div>
-
 </div>
 
 </body>
