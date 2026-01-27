@@ -1,74 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Pricing Plans – Shorts AI</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing – Shorts AI</title>
 
 <style>
 :root{
-  --bg:#062a26;
+  --bg:#051f1c;
   --card:#0b3b35;
   --neon:#19ffb5;
-  --text:#e9fff8;
+  --text:#eafff9;
 }
-
 *{box-sizing:border-box}
 body{
   margin:0;
-  font-family:system-ui,-apple-system,BlinkMacSystemFont;
-  background:radial-gradient(circle at top,#0f4c45,#041d1a 70%);
+  font-family:system-ui,-apple-system;
+  background:radial-gradient(circle at top,#0f4c45,#041a17 70%);
   color:var(--text);
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 header{
   text-align:center;
-  padding:50px 20px 30px;
+  padding:40px 20px 20px;
 }
-header h1{
-  margin:10px 0;
-  font-size:32px;
-}
-header p{
-  opacity:.8;
-}
+header h1{margin:0;font-size:30px}
+header p{opacity:.75}
 
-/* ===== PLANS ===== */
+/* PLANS */
 .plans{
-  display:grid;
-  gap:26px;
-  padding:20px;
   max-width:420px;
   margin:auto;
+  padding:20px;
+  display:grid;
+  gap:26px;
 }
-
 .card{
   position:relative;
-  background:linear-gradient(180deg,#0e4a42,#072e29);
+  background:linear-gradient(180deg,#0f4a42,#072e29);
   border-radius:22px;
-  padding:28px 22px 30px;
+  padding:28px 22px;
   box-shadow:0 0 0 1px rgba(25,255,181,.25);
 }
-
-/* glow (non blocking) */
 .card::before{
   content:"";
   position:absolute;
   inset:-2px;
   border-radius:22px;
   background:linear-gradient(120deg,transparent,rgba(25,255,181,.4),transparent);
-  filter:blur(18px);
-  z-index:0;
+  filter:blur(16px);
   pointer-events:none;
 }
+.card *{position:relative;z-index:2}
 
-.card *{
-  position:relative;
-  z-index:2;
-}
-
-/* MOST POPULAR */
 .badge{
   position:absolute;
   top:-14px;
@@ -82,27 +67,17 @@ header p{
   border-radius:20px;
 }
 
-/* PRICE */
 .price{
   font-size:36px;
   font-weight:800;
   color:var(--neon);
   margin:8px 0 14px;
 }
+ul{list-style:none;padding:0;margin:0 0 18px}
+li{margin:8px 0}
 
-/* FEATURES */
-ul{
-  list-style:none;
-  padding:0;
-  margin:0 0 20px;
-}
-li{
-  margin:10px 0;
-  opacity:.95;
-}
-
-/* ===== BUTTON (REAL CLICKABLE) ===== */
-.pay-btn{
+/* BUTTON – REAL CLICK */
+.pay{
   display:block;
   text-align:center;
   padding:16px;
@@ -112,32 +87,26 @@ li{
   color:#022;
   background:linear-gradient(90deg,#1dffb0,#16e9ff);
   box-shadow:0 0 25px rgba(25,255,181,.6);
-  transition:transform .15s ease, box-shadow .15s ease;
 }
-.pay-btn:active{
-  transform:scale(.97);
-  box-shadow:0 0 14px rgba(25,255,181,.4);
-}
+.pay:active{transform:scale(.97)}
 
 .sub{
   text-align:center;
-  margin-top:10px;
   font-size:13px;
   opacity:.7;
+  margin-top:8px;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer{
   text-align:center;
-  padding:35px 20px 50px;
-  font-size:14px;
+  padding:35px 20px 45px;
 }
 footer a{
   color:var(--neon);
   text-decoration:none;
-  margin:0 10px;
+  margin:0 8px;
 }
-footer a:active{opacity:.7}
 </style>
 </head>
 
@@ -145,68 +114,69 @@ footer a:active{opacity:.7}
 
 <header>
   <h1>Pricing Plans</h1>
-  <p>Choose a plan & pay securely via Razorpay</p>
+  <p>Pay securely via Razorpay</p>
 </header>
 
 <section class="plans">
 
-  <!-- ₹99 -->
-  <div class="card">
-    <div class="badge">MOST POPULAR</div>
-    <h2>Starter</h2>
-    <div class="price">₹99</div>
-    <ul>
-      <li>✔ 2 YouTube links</li>
-      <li>✔ 5 Shorts ideas / day</li>
-      <li>✔ 24h delivery</li>
-      <li>✔ WhatsApp support</li>
-    </ul>
-    <a class="pay-btn" href="https://rzp.io/rzp/ycxj3Zb">Pay Securely</a>
-    <div class="sub">Low risk • Best for beginners</div>
-  </div>
+<!-- ₹99 -->
+<div class="card">
+  <div class="badge">MOST POPULAR</div>
+  <h2>Starter</h2>
+  <div class="price">₹99</div>
+  <ul>
+    <li>✔ 2 YouTube links</li>
+    <li>✔ 5 Shorts ideas / day</li>
+    <li>✔ 24h delivery</li>
+    <li>✔ WhatsApp support</li>
+  </ul>
+  <!-- 🔴 ₹99 LINK -->
+  <a class="pay" href="https://rzp.io/rzp/ycxj3Zb">Pay Securely</a>
+  <div class="sub">Low risk • Try & test</div>
+</div>
 
-  <!-- ₹199 -->
-  <div class="card">
-    <h2>Creator</h2>
-    <div class="price">₹199</div>
-    <ul>
-      <li>✔ 4 YouTube links</li>
-      <li>✔ 15 Shorts ideas / day</li>
-      <li>✔ Faster delivery</li>
-      <li>✔ Priority WhatsApp support</li>
-    </ul>
-    <a class="pay-btn" href="https://rzp.io/rzp/CREATOR_LINK">Pay Securely</a>
-    <div class="sub">Best value upgrade</div>
-  </div>
+<!-- ₹199 -->
+<div class="card">
+  <h2>Creator</h2>
+  <div class="price">₹199</div>
+  <ul>
+    <li>✔ 4 YouTube links</li>
+    <li>✔ 15 Shorts ideas / day</li>
+    <li>✔ Faster delivery</li>
+    <li>✔ Priority WhatsApp support</li>
+  </ul>
+  <!-- 🔴 ₹199 LINK -->
+  <a class="pay" href="https://rzp.io/rzp/YOUR_199_LINK">Pay Securely</a>
+  <div class="sub">Best value upgrade</div>
+</div>
 
-  <!-- ₹499 -->
-  <div class="card">
-    <h2>Pro</h2>
-    <div class="price">₹499</div>
-    <ul>
-      <li>✔ Unlimited YouTube links</li>
-      <li>✔ 30+ Shorts ideas / day</li>
-      <li>✔ Fastest delivery</li>
-      <li>✔ Dedicated WhatsApp support</li>
-    </ul>
-    <a class="pay-btn" href="https://rzp.io/rzp/PRO_LINK">Pay Securely</a>
-    <div class="sub">Maximum growth</div>
-  </div>
+<!-- ₹499 -->
+<div class="card">
+  <h2>Pro</h2>
+  <div class="price">₹499</div>
+  <ul>
+    <li>✔ Unlimited YouTube links</li>
+    <li>✔ 30+ Shorts ideas / day</li>
+    <li>✔ Fastest delivery</li>
+    <li>✔ Dedicated WhatsApp support</li>
+  </ul>
+  <!-- 🔴 ₹499 LINK -->
+  <a class="pay" href="https://rzp.io/rzp/YOUR_499_LINK">Pay Securely</a>
+  <div class="sub">Maximum growth</div>
+</div>
 
 </section>
 
 <footer>
-  <div>
-    <a href="contact.html">📩 Contact</a>
-    <a href="privacy.html">🔒 Privacy</a>
-    <a href="terms.html">📜 Terms</a>
-    <a href="refund.html">💸 Refund</a>
-  </div>
-  <div style="margin-top:14px;">
+  <a href="contact.html">📩 Contact</a>
+  <a href="privacy.html">🔒 Privacy</a>
+  <a href="terms.html">📜 Terms</a>
+  <a href="refund.html">💸 Refund</a>
+  <div style="margin-top:14px">
     <a href="index.html">← Back to Home</a>
   </div>
-  <div style="margin-top:14px;opacity:.6">
-    © 2026 Shorts AI • Built for Serious YouTube Creators 🚀
+  <div style="margin-top:12px;opacity:.6">
+    © 2026 Shorts AI • Built for Serious Creators 🚀
   </div>
 </footer>
 
