@@ -1,53 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Payment Successful – Shorts AI</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Payment Successful | Shorts AI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body{
-      margin:0;
-      font-family:Arial,sans-serif;
-      background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-      color:#fff;
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-    }
-    .box{
-      background:#111;
-      padding:30px;
-      border-radius:18px;
-      max-width:420px;
-      width:90%;
-    }
-    h1{margin-bottom:10px;}
-    p{color:#ccc;}
-    a{
-      display:inline-block;
-      margin-top:15px;
-      padding:12px 22px;
-      background:#0a5cff;
-      color:#fff;
-      text-decoration:none;
-      border-radius:12px;
-      font-weight:bold;
-    }
-  </style>
+<style>
+:root{
+  --neon:#00ffb2;
+  --neon2:#00e0ff;
+  --bg1:#061f1b;
+  --bg2:#02110e;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
+  background:
+    radial-gradient(900px 400px at top,var(--bg1),var(--bg2));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#eafff7;
+}
+
+/* MAIN CARD */
+.card{
+  width:92%;
+  max-width:440px;
+  padding:42px 26px 36px;
+  border-radius:26px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(0,255,200,.25);
+  backdrop-filter:blur(12px);
+  box-shadow:
+    0 0 35px rgba(0,255,200,.25),
+    inset 0 0 18px rgba(0,255,200,.08);
+  text-align:center;
+  animation:fadeUp .9s ease;
+}
+
+/* LOGO */
+.logo{
+  width:78px;
+  margin:0 auto 18px;
+  filter:drop-shadow(0 0 18px rgba(0,255,200,.8));
+  animation:float 4s ease-in-out infinite;
+}
+
+/* TITLE */
+h1{
+  margin:0;
+  font-size:28px;
+  color:var(--neon);
+  letter-spacing:.3px;
+}
+
+/* SUB TEXT */
+.desc{
+  margin:12px 0 26px;
+  line-height:1.55;
+  font-size:15px;
+  opacity:.9;
+}
+
+/* CTA BUTTON */
+.btn{
+  display:block;
+  margin:0 auto;
+  padding:18px 24px;
+  width:100%;
+  max-width:340px;
+  border-radius:50px;
+  background:linear-gradient(90deg,var(--neon),var(--neon2));
+  color:#00332b;
+  font-weight:800;
+  text-decoration:none;
+  font-size:16px;
+  box-shadow:
+    0 0 28px rgba(0,255,200,.75),
+    inset 0 0 10px rgba(255,255,255,.25);
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.btn:hover{
+  transform:scale(1.03);
+  box-shadow:0 0 40px rgba(0,255,200,1);
+}
+
+/* TRUST LINE */
+.trust{
+  margin-top:18px;
+  font-size:13px;
+  opacity:.75;
+}
+
+/* ANIMATIONS */
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-8px)}
+}
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+</style>
 </head>
 
 <body>
-  <div class="box">
-    <h1>Thank You 🙏</h1>
-    <p>Your payment was successful.</p>
-    <p>Please continue to activate your access.</p>
 
-    <a href="paid.html">Go to Paid Access</a>
-    <br><br>
-    <a href="index.html">Back to Home</a>
+<div class="card">
+
+  <!-- LOGO (optional – same folder me logo.png ho) -->
+  <img src="logo.png" alt="Shorts AI" class="logo"
+       onerror="this.style.display='none'">
+
+  <h1>Payment Successful</h1>
+
+  <div class="desc">
+    Thank you for choosing <b>Shorts AI</b> 🚀<br>
+    Your order is confirmed and our team is ready to
+    start working on your Shorts immediately.
   </div>
+
+  <a id="wa" class="btn">
+    Continue on WhatsApp
+  </a>
+
+  <div class="trust">
+    🔒 Secure payment verified • 💬 Priority WhatsApp support
+  </div>
+
+</div>
+
+<script>
+/* ===== WHATSAPP AUTO MESSAGE ===== */
+const phone = "9339942448";   // WhatsApp number
+const msg =
+`Hi Shorts AI 👋
+
+My payment is successful.
+Please start my Shorts service.
+
+Thank you! 🚀`;
+
+document.getElementById("wa").href =
+  "https://wa.me/91"+phone+"?text="+encodeURIComponent(msg);
+</script>
+
 </body>
 </html>
