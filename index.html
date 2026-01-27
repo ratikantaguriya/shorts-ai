@@ -1,190 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<!-- ================= SEO & GOOGLE INDEX ================= -->
+<title>Shorts AI – Viral Shorts Ideas for YouTube Growth</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shorts AI – Grow Faster with Viral Shorts</title>
 
+<meta name="description" content="Shorts AI helps YouTube creators turn videos into viral Shorts ideas. Trusted by 100,000+ creators. Secure payments via Razorpay.">
+<meta name="keywords" content="YouTube Shorts ideas, viral shorts, Shorts AI, YouTube growth, Shorts content">
+<meta name="author" content="Shorts AI">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Shorts AI – Grow Faster with Viral Shorts">
+<meta property="og:description" content="Turn your YouTube videos into high-engagement Shorts ideas. Trusted by 100K+ creators.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ratikantaguriya.github.io/">
+<meta property="og:image" content="https://ratikantaguriya.github.io/logo.png">
+
+<!-- ================= STYLE ================= -->
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,Arial,sans-serif}
 body{
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: radial-gradient(circle at top,#0b4b4b,#031818);
-  color:#ffffff;
+  background:radial-gradient(circle at top,#0e3a3a,#021818);
+  color:#eaffff;
+  min-height:100vh;
 }
 
-/* CONTAINER */
+/* ---------- MAIN CARD ---------- */
 .container{
-  max-width:440px;
+  max-width:420px;
   margin:40px auto;
-  padding:28px 22px 30px;
-  background:rgba(10,60,60,0.95);
-  border-radius:26px;
-  box-shadow:0 25px 60px rgba(0,0,0,.6);
+  padding:28px;
+  background:linear-gradient(180deg,#073b3b,#032323);
+  border-radius:22px;
+  box-shadow:0 20px 60px rgba(0,255,156,.15);
+  animation:fadeUp 1s ease;
 }
 
-/* LOGO */
 .logo{
-  display:flex;
-  justify-content:center;
-  margin-bottom:14px;
+  text-align:center;
+  margin-bottom:15px;
 }
 .logo img{
-  width:78px;
+  width:64px;
 }
 
-/* HERO */
 h1{
   text-align:center;
-  font-size:32px;
-  margin-bottom:8px;
-}
-.tagline{
-  text-align:center;
-  font-size:15px;
-  opacity:.9;
-  line-height:1.4;
+  font-size:28px;
+  margin-bottom:10px;
 }
 
-/* TRUST BADGE */
+.sub{
+  text-align:center;
+  color:#9fffe0;
+  font-size:14px;
+  margin-bottom:18px;
+}
+
 .trust{
-  margin:16px auto 22px;
+  background:rgba(0,255,156,.1);
+  border:1px solid rgba(0,255,156,.3);
+  padding:10px;
+  border-radius:12px;
   text-align:center;
   font-size:14px;
-  color:#00ff9c;
-  font-weight:600;
+  margin-bottom:20px;
 }
 
-/* FEATURES */
 .features{
-  margin:18px 0;
   font-size:15px;
+  line-height:1.8;
+  margin-bottom:22px;
 }
-.features div{
-  margin:10px 0;
+.features span{color:#00ff9c}
+
+/* ---------- CTA BUTTON ---------- */
+.btn{
+  display:block;
+  text-align:center;
+  background:#00ff9c;
+  color:#003333;
+  padding:15px;
+  border-radius:30px;
+  font-weight:700;
+  text-decoration:none;
+  box-shadow:0 10px 30px rgba(0,255,156,.45);
+  transition:.3s;
+}
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 15px 40px rgba(0,255,156,.7);
 }
 
-/* INPUT */
-.input-box{
+.secure{
+  text-align:center;
+  font-size:13px;
+  margin-top:12px;
+  color:#9fffe0;
+}
+
+/* ---------- PREMIUM FOOTER ---------- */
+footer{
+  position:relative;
+  z-index:9999;
+  margin-top:40px;
+  padding:30px 15px 90px;
+  text-align:center;
+  background:linear-gradient(180deg,#062f2f,#021818);
+}
+
+.footer-trust{
+  color:#8fffe9;
+  font-size:14px;
+  margin-bottom:14px;
+}
+
+.footer-links{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-bottom:15px;
+}
+
+.footer-links a{
+  pointer-events:auto;
+  color:#00ff9c;
+  text-decoration:none;
+  font-weight:600;
+  padding:8px 14px;
+  border-radius:20px;
+  background:rgba(0,255,156,.08);
+  transition:.3s;
+}
+
+.footer-links a:hover{
+  background:#00ff9c;
+  color:#003333;
+  transform:translateY(-3px);
+}
+
+.footer-bottom{
+  font-size:13px;
+  color:#9fdede;
+}
+
+/* ---------- WHATSAPP FLOAT ---------- */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:18px;
+  width:60px;
+  height:60px;
+  background:#25D366;
+  color:#fff;
+  font-size:30px;
   display:flex;
   align-items:center;
-  gap:10px;
-  background:#0f4545;
-  padding:13px 16px;
-  border-radius:32px;
-  margin:18px 0;
-  opacity:.55;
-}
-.input-box img{width:26px}
-.input-box input{
-  background:transparent;
-  border:none;
-  outline:none;
-  color:#fff;
-  font-size:15px;
-  flex:1;
-}
-
-/* CTA */
-.cta{
-  display:block;
-  width:100%;
-  text-align:center;
-  background:linear-gradient(135deg,#00ff9c,#00c97b);
-  color:#002;
-  font-weight:700;
-  font-size:17px;
-  padding:16px;
-  border-radius:40px;
+  justify-content:center;
+  border-radius:50%;
+  box-shadow:0 0 20px rgba(37,211,102,.6);
+  z-index:10000;
+  animation:pulse 1.8s infinite;
   text-decoration:none;
-  margin-top:12px;
 }
 
-/* SECURITY */
-.security{
-  margin-top:14px;
-  text-align:center;
-  font-size:14px;
-  color:#aaffd8;
+/* ---------- ANIMATIONS ---------- */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(25px)}
+  to{opacity:1;transform:translateY(0)}
 }
-
-/* FOOTER LINKS */
-.footer{
-  margin-top:22px;
-  text-align:center;
-}
-.footer a{
-  color:#00ff9c;
-  text-decoration:none;
-  font-size:14px;
-  margin:0 6px;
-}
-.copy{
-  margin-top:12px;
-  font-size:13px;
-  opacity:.65;
-  text-align:center;
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}
+  70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}
+  100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
 }
 </style>
 </head>
 
 <body>
 
+<!-- ================= MAIN ================= -->
 <div class="container">
 
-  <!-- LOGO -->
   <div class="logo">
-    <img src="https://ratikantaguriya.github.io/logo.png" alt="Shorts AI">
+    <img src="logo.png" alt="Shorts AI">
   </div>
 
-  <!-- HERO -->
   <h1>Shorts AI</h1>
-  <div class="tagline">
-    Turn your YouTube videos into<br>
-    <b>viral-ready Shorts ideas</b> that boost views & growth
-  </div>
+  <div class="sub">Turn YouTube videos into <b>viral Shorts ideas</b></div>
 
-  <!-- TRUST -->
   <div class="trust">
-    ✔ 100% Original Platform • Trusted by 1,00,000+ Active Creators
+    ✅ 100% Original Platform <br>
+    🚀 Trusted by <b>100,000+ Active Creators</b>
   </div>
 
-  <!-- FEATURES -->
   <div class="features">
-    🚀 Choose a plan – ₹99 / ₹199 / ₹499<br>
-    🔐 Pay securely via Razorpay (UPI / PhonePe / GPay)<br>
-    🔗 Submit your YouTube video link<br>
-    ⚡ Get daily Shorts ideas within 24 hours
+    🔹 Choose a plan <span>₹99 / ₹199 / ₹499</span><br>
+    🔹 Secure payment via Razorpay<br>
+    🔹 Submit your YouTube video link<br>
+    🔹 Get daily Shorts ideas within <span>24 hours</span>
   </div>
 
-  <!-- YOUTUBE INPUT -->
-  <div class="input-box">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg">
-    <input type="text" placeholder="Paste YouTube link (after payment)" disabled>
-  </div>
+  <a href="pricing.html" class="btn">View Plans & Start Growing</a>
 
-  <!-- CTA -->
-  <a href="pricing.html" class="cta">View Plans & Start Growing</a>
-
-  <!-- SECURITY -->
-  <div class="security">
-    🔒 Secure payments • 💬 WhatsApp support available
-  </div>
-
-  <!-- FOOTER -->
-  <div class="footer">
-    <a href="pricing.html">Pricing</a> |
-    <a href="contact.html">Contact</a> |
-    <a href="privacy.html">Privacy</a> |
-    <a href="terms.html">Terms</a> |
-    <a href="refund.html">Refund</a>
-  </div>
-
-  <div class="copy">
-    © 2026 Shorts AI • Built for Serious YouTube Creators
+  <div class="secure">
+    🔒 Secure Payments • 💬 WhatsApp Support
   </div>
 
 </div>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="footer-trust">
+    🔒 Secure Payments via Razorpay • 💬 WhatsApp Support
+  </div>
+
+  <div class="footer-links">
+    <a href="index.html">🏠 Home</a>
+    <a href="contact.html">📩 Contact</a>
+    <a href="privacy.html">🔐 Privacy</a>
+    <a href="terms.html">📜 Terms</a>
+    <a href="refund.html">💸 Refund</a>
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 <strong>Shorts AI</strong> • Built for Serious YouTube Creators 🚀
+  </div>
+</footer>
+
+<!-- ================= WHATSAPP FLOAT ================= -->
+<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX" target="_blank">💬</a>
 
 </body>
 </html>
