@@ -9,114 +9,86 @@
 body{
   margin:0;
   font-family:Arial, sans-serif;
-  background:#062a2a;
+  background:linear-gradient(180deg,#062f2f,#042222);
   color:#fff;
 }
 
-.wrapper{
-  max-width:420px;
-  margin:30px auto;
-  padding:20px;
-}
-
+/* MAIN CARD */
 .card{
-  background:#0b3c3c;
-  border-radius:25px;
-  padding:25px 20px;
-  box-shadow:0 0 25px rgba(0,0,0,0.45);
+  max-width:420px;
+  margin:40px auto;
+  background:#0b3a3a;
+  border-radius:24px;
+  padding:30px 20px;
+  box-shadow:0 0 30px rgba(0,0,0,.45);
   text-align:center;
 }
 
-/* Logo */
+/* LOGO */
 .logo{
-  width:55px;
+  width:60px;
   margin-bottom:10px;
 }
 
-/* Title */
-h1{
-  margin:10px 0;
-  font-size:28px;
-}
+/* HEADINGS */
+h1{margin:10px 0;font-size:30px;}
+.tagline{opacity:.9;margin-bottom:10px;}
+.trust{color:#00ff8c;font-weight:bold;margin-bottom:20px;}
 
-.tagline{
-  font-size:14px;
-  opacity:0.85;
-  margin-bottom:15px;
-}
-
-.trust{
-  color:#00ff8c;
-  font-size:14px;
-  margin-bottom:20px;
-}
-
-/* How it works */
+/* HOW IT WORKS */
 .how{
   text-align:left;
   margin:20px 0;
-  font-size:15px;
 }
+.how p{margin:8px 0;}
 
-.how p{
-  margin:10px 0;
-}
-
-/* YouTube input */
+/* YOUTUBE INPUT */
 .yt-box{
   display:flex;
   align-items:center;
   gap:12px;
-  background:#072727;
-  padding:14px 18px;
+  background:#124545;
+  padding:14px 16px;
   border-radius:30px;
-  opacity:0.6;
-  margin:15px 0 20px;
+  margin:20px 0;
 }
-
-.yt-box img{
-  width:30px;
-  height:30px;
-}
-
+.yt-box img{width:30px;}
 .yt-box input{
   flex:1;
   background:transparent;
   border:none;
   outline:none;
-  color:#bbb;
-  font-size:14px;
+  color:#fff;
 }
+.yt-box input::placeholder{color:#9fdede;}
 
-/* Button */
-.buy-btn{
+/* BUTTON */
+.btn{
+  display:block;
   width:100%;
   background:#00ff8c;
+  color:#003333;
   border:none;
-  padding:15px;
+  padding:16px;
   border-radius:35px;
   font-size:18px;
   font-weight:bold;
   cursor:pointer;
 }
+.btn:hover{opacity:.9}
 
-.buy-btn:hover{
-  opacity:0.9;
-}
-
-/* Support text */
+/* SUPPORT */
 .support{
-  margin-top:15px;
-  font-size:13px;
-  color:#9fffdc;
+  margin-top:12px;
+  color:#00ff8c;
+  font-size:14px;
 }
 
-/* Footer */
+/* FOOTER */
 .footer{
   margin-top:20px;
-  font-size:13px;
+  font-size:14px;
 }
-
 .footer a{
   color:#00ff8c;
   text-decoration:none;
@@ -127,58 +99,48 @@ h1{
 
 <body>
 
-<div class="wrapper">
-  <div class="card">
+<div class="card">
 
-    <img src="logo.png" class="logo" alt="Shorts AI">
+  <img src="logo.png" class="logo" alt="Shorts AI">
 
-    <h1>Shorts AI</h1>
-    <div class="tagline">
-      Turn your YouTube videos into <b>high-engagement Shorts ideas</b><br>
-      No confusion. No delay. Just results.
-    </div>
+  <h1>Shorts AI</h1>
+  <p class="tagline">Turn your YouTube videos into <b>high-engagement Shorts ideas</b></p>
+  <div class="trust">✅ 100% original website · Trusted by 1 lakh+ users</div>
 
-    <div class="trust">
-      ✅ 100% original website · Trusted by 1 lakh+ users
-    </div>
-
-    <hr style="opacity:0.2">
-
-    <h2>How it Works</h2>
-
-    <div class="how">
-      <p>📌 Choose a plan (₹99 / ₹199 / ₹499)</p>
-      <p>🔒 Complete secure payment</p>
-      <p>🔗 Submit your YouTube video link</p>
-      <p>⚡ Get daily Shorts ideas (within 24 hours)</p>
-    </div>
-
-    <!-- YouTube input -->
-    <div class="yt-box">
-      <img src="youtube.png" alt="YouTube">
-      <input type="text" placeholder="Paste YouTube link (available after payment)" disabled>
-    </div>
-
-    <!-- Plan & Buy -->
-    <button class="buy-btn" onclick="window.location.href='pricing.html'">
-      Plan & Buy
-    </button>
-
-    <div class="support">
-      🔒 Secure payments · 📅 30-day plans · 💬 WhatsApp support
-    </div>
-
-    <div class="footer">
-      <a href="pricing.html">Pricing</a> |
-      <a href="contact.html">Contact</a> |
-      <a href="privacy.html">Privacy</a> |
-      <a href="terms.html">Terms</a> |
-      <a href="refund.html">Refund</a>
-      <br><br>
-      © 2026 Shorts AI
-    </div>
-
+  <div class="how">
+    <p>📌 Choose a plan (₹99 / ₹199 / ₹499)</p>
+    <p>🔒 Complete secure payment</p>
+    <p>🔗 Submit your YouTube video link</p>
+    <p>⚡ Get daily Shorts ideas (within 24 hours)</p>
   </div>
+
+  <!-- YOUTUBE INPUT -->
+  <div class="yt-box">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg">
+    <input type="text" placeholder="Paste YouTube link (after payment)">
+  </div>
+
+  <!-- PLAN BUTTON -->
+  <button class="btn" onclick="location.href='pricing.html'">
+    Plan & Buy
+  </button>
+
+  <div class="support">
+    🔐 Secure payments · 💬 WhatsApp support
+  </div>
+
+  <div class="footer">
+    <a href="pricing.html">Pricing</a> |
+    <a href="contact.html">Contact</a> |
+    <a href="privacy.html">Privacy</a> |
+    <a href="terms.html">Terms</a> |
+    <a href="refund.html">Refund</a>
+  </div>
+
+  <p style="opacity:.6;font-size:12px;margin-top:10px;">
+    © 2026 Shorts AI
+  </p>
+
 </div>
 
 </body>
