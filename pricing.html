@@ -6,11 +6,10 @@
 <title>Pricing Plans | Shorts AI</title>
 
 <!-- SEO -->
-<meta name="description" content="Shorts AI – Turn YouTube videos into viral Shorts ideas. Trusted by 100,000+ creators. Secure Razorpay payments.">
-<meta name="keywords" content="YouTube Shorts ideas, Shorts AI, viral shorts, creator tools">
+<meta name="description" content="Shorts AI pricing – Turn YouTube videos into viral Shorts ideas. Trusted by 100,000+ creators. Secure Razorpay payments.">
+<meta name="keywords" content="Shorts AI pricing, YouTube Shorts ideas, viral shorts, creator tools">
 
 <style>
-/* ================= ROOT ================= */
 :root{
   --bg:#062b29;
   --card:#0d3f3b;
@@ -20,8 +19,8 @@
   --muted:#9de6d9;
 }
 
-/* ================= BASE ================= */
 *{box-sizing:border-box}
+
 body{
   margin:0;
   font-family:system-ui,-apple-system,Segoe UI,Roboto;
@@ -29,65 +28,66 @@ body{
   color:var(--text);
 }
 
-/* ================= HEADER ================= */
+/* HEADER */
 .header{
   text-align:center;
-  padding:48px 16px 28px;
+  padding:48px 16px 30px;
 }
 .header img{
-  width:70px;
-  filter:drop-shadow(0 0 20px rgba(0,255,180,.5));
+  width:78px;
+  margin-bottom:12px;
+  filter:drop-shadow(0 0 18px rgba(0,255,180,.6));
 }
 .header h1{
-  font-size:34px;
-  margin:16px 0 6px;
+  font-size:36px;
+  margin:10px 0 6px;
   font-weight:900;
 }
 .header p{
   color:var(--muted);
   font-size:15px;
 }
-.trust-pill{
+.trust-bar{
   margin-top:14px;
   display:inline-block;
-  padding:8px 18px;
+  padding:10px 20px;
   border-radius:999px;
-  background:rgba(0,255,180,.15);
-  border:1px solid rgba(0,255,180,.3);
+  background:rgba(0,255,180,.12);
+  border:1px solid rgba(0,255,180,.35);
   font-size:13px;
 }
 
-/* ================= CONTAINER ================= */
+/* CONTAINER */
 .container{
-  max-width:520px;
+  max-width:560px;
   margin:auto;
-  padding:12px;
+  padding:10px 14px 40px;
 }
 
-/* ================= PRICING CARD ================= */
+/* CARD */
 .card{
   position:relative;
   background:var(--card);
-  border-radius:28px;
+  border-radius:30px;
   padding:26px;
-  margin:24px 0;
-  box-shadow:0 25px 80px rgba(0,0,0,.5);
+  margin:30px 0;
+  box-shadow:0 25px 90px rgba(0,0,0,.55);
   overflow:hidden;
   opacity:0;
-  transform:translateY(30px);
-  transition:.6s ease;
+  transform:translateY(35px);
+  transition:.7s ease;
 }
 .card.show{
   opacity:1;
   transform:none;
 }
 
-/* 💎 Animated Gradient Border */
+/* Animated border */
 .card::before{
   content:"";
   position:absolute;
   inset:0;
-  border-radius:28px;
+  border-radius:30px;
   padding:2px;
   background:linear-gradient(120deg,var(--accent),var(--accent2),var(--accent));
   background-size:300% 300%;
@@ -111,29 +111,33 @@ body{
   transform:translateX(-50%);
   background:linear-gradient(90deg,var(--accent),var(--accent2));
   color:#002b24;
-  padding:6px 20px;
+  padding:6px 22px;
   font-size:12px;
   font-weight:900;
   border-radius:999px;
   box-shadow:0 10px 40px rgba(0,255,180,.7);
 }
 
+.card h2{
+  margin:6px 0 8px;
+  font-size:22px;
+}
 .price{
-  font-size:40px;
+  font-size:42px;
   font-weight:900;
   color:var(--accent);
 }
+
 .card ul{
   list-style:none;
   padding:0;
-  margin:16px 0;
+  margin:18px 0;
 }
 .card li{
   margin:10px 0;
   font-size:14px;
 }
 
-/* BUTTON */
 .btn{
   width:100%;
   margin-top:18px;
@@ -145,19 +149,19 @@ body{
   cursor:pointer;
   background:linear-gradient(90deg,var(--accent),var(--accent2));
   color:#002b24;
-  box-shadow:0 12px 40px rgba(0,255,180,.6);
+  box-shadow:0 14px 40px rgba(0,255,180,.6);
 }
 
-/* ================= WHY ₹99 ================= */
+/* WHY SECTION */
 .why{
   background:rgba(0,255,180,.08);
   border:1px solid rgba(0,255,180,.25);
   border-radius:22px;
   padding:22px;
-  margin:26px 0;
+  margin-top:-10px;
 }
 .why h3{
-  margin:0 0 10px;
+  margin:0 0 8px;
   font-size:18px;
 }
 .why p{
@@ -165,10 +169,10 @@ body{
   color:var(--muted);
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 .footer{
   text-align:center;
-  padding:30px 10px 80px;
+  padding:30px 12px 90px;
   font-size:13px;
   color:var(--muted);
 }
@@ -176,15 +180,16 @@ body{
   margin:0 8px;
   color:var(--accent);
   text-decoration:none;
+  font-weight:600;
 }
 
-/* ================= WHATSAPP FLOAT ================= */
+/* WHATSAPP FLOAT */
 .whatsapp{
   position:fixed;
   bottom:18px;
   right:18px;
-  width:58px;
-  height:58px;
+  width:60px;
+  height:60px;
   background:#25d366;
   border-radius:50%;
   display:flex;
@@ -192,7 +197,7 @@ body{
   justify-content:center;
   font-size:28px;
   color:#fff;
-  box-shadow:0 10px 30px rgba(0,0,0,.4);
+  box-shadow:0 10px 30px rgba(0,0,0,.45);
   animation:pulse 2s infinite;
 }
 @keyframes pulse{
@@ -206,10 +211,13 @@ body{
 
 <!-- HEADER -->
 <div class="header">
-  <img src="assets/logo.png" alt="Shorts AI">
+  <!-- 🔴 LOGO PNG PATH FIX -->
+  <img src="assets/logo.png" alt="Shorts AI Logo">
   <h1>Pricing Plans</h1>
   <p>Choose a plan & pay securely via Razorpay</p>
-  <div class="trust-pill">🔒 Secure Payments • 💬 WhatsApp Support • ⚡ Fast Delivery</div>
+  <div class="trust-bar">
+    🔒 Secure Payments • 💬 WhatsApp Support • ⚡ Fast Delivery
+  </div>
 </div>
 
 <div class="container">
@@ -227,16 +235,45 @@ body{
     <li>✔ Perfect for beginners</li>
   </ul>
   <button class="btn">Pay Securely (UPI / GPay / PhonePe)</button>
+
+  <div class="why">
+    <h3>📈 Why creators choose ₹99</h3>
+    <p>
+      Low risk, instant value.  
+      Try Shorts AI with real results before upgrading.  
+      Ideal for new creators who want consistency without high cost.
+    </p>
+  </div>
 </div>
 
-<!-- WHY 99 -->
-<div class="why reveal">
-  <h3>📈 Why creators choose ₹99</h3>
-  <p>
-    Low risk, instant value.  
-    Test Shorts AI with real results before upgrading.  
-    Ideal for new & growing creators who want consistency without high cost.
-  </p>
+<!-- CREATOR -->
+<div class="card reveal">
+  <h2>Creator <span style="color:var(--accent)">(Best Value)</span></h2>
+  <div class="price">₹199</div>
+  <ul>
+    <li>✔ 4 YouTube video links</li>
+    <li>✔ 15 Shorts ideas per day</li>
+    <li>✔ Faster delivery</li>
+    <li>✔ Priority WhatsApp support</li>
+    <li>✔ Growth-focused creators</li>
+  </ul>
+  <button class="btn">Pay Securely (UPI / GPay / PhonePe)</button>
+</div>
+
+<!-- PRO -->
+<div class="card reveal">
+  <h2>Pro</h2>
+  <div class="price">₹499</div>
+  <ul>
+    <li>✔ Unlimited YouTube links</li>
+    <li>✔ 30+ Shorts ideas per day</li>
+    <li>✔ Fastest delivery</li>
+    <li>✔ Dedicated WhatsApp support</li>
+    <li>✔ Growth Boost features</li>
+    <li>✔ Viral hook & trend analysis</li>
+    <li>✔ Best for agencies & brands</li>
+  </ul>
+  <button class="btn">Pay Securely (UPI / GPay / PhonePe)</button>
 </div>
 
 </div>
@@ -256,14 +293,13 @@ body{
 <a class="whatsapp" href="https://wa.me/919339942448" target="_blank">💬</a>
 
 <script>
-/* SCROLL ANIMATION */
-const reveals=document.querySelectorAll('.reveal');
-const obs=new IntersectionObserver(entries=>{
+const cards=document.querySelectorAll('.reveal');
+const observer=new IntersectionObserver(entries=>{
   entries.forEach(e=>{
     if(e.isIntersecting) e.target.classList.add('show');
   });
 },{threshold:.15});
-reveals.forEach(r=>obs.observe(r));
+cards.forEach(c=>observer.observe(c));
 </script>
 
 </body>
