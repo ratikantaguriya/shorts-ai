@@ -3,132 +3,175 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shorts AI – Daily Shorts Ideas</title>
+<title>Shorts AI – Grow Faster with Viral Shorts</title>
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box}
 body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:linear-gradient(180deg,#062f2f,#042222);
-  color:#fff;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: radial-gradient(circle at top,#0b4b4b,#031818);
+  color:#ffffff;
 }
 
-/* MAIN CARD */
-.card{
-  max-width:420px;
+/* CONTAINER */
+.container{
+  max-width:440px;
   margin:40px auto;
-  background:#0b3a3a;
-  border-radius:24px;
-  padding:30px 20px;
-  box-shadow:0 0 30px rgba(0,0,0,.45);
-  text-align:center;
+  padding:28px 22px 30px;
+  background:rgba(10,60,60,0.95);
+  border-radius:26px;
+  box-shadow:0 25px 60px rgba(0,0,0,.6);
 }
 
 /* LOGO */
 .logo{
-  width:60px;
-  margin-bottom:10px;
+  display:flex;
+  justify-content:center;
+  margin-bottom:14px;
+}
+.logo img{
+  width:78px;
 }
 
-/* HEADINGS */
-h1{margin:10px 0;font-size:30px;}
-.tagline{opacity:.9;margin-bottom:10px;}
-.trust{color:#00ff8c;font-weight:bold;margin-bottom:20px;}
-
-/* HOW IT WORKS */
-.how{
-  text-align:left;
-  margin:20px 0;
+/* HERO */
+h1{
+  text-align:center;
+  font-size:32px;
+  margin-bottom:8px;
 }
-.how p{margin:8px 0;}
+.tagline{
+  text-align:center;
+  font-size:15px;
+  opacity:.9;
+  line-height:1.4;
+}
 
-/* YOUTUBE INPUT */
-.yt-box{
+/* TRUST BADGE */
+.trust{
+  margin:16px auto 22px;
+  text-align:center;
+  font-size:14px;
+  color:#00ff9c;
+  font-weight:600;
+}
+
+/* FEATURES */
+.features{
+  margin:18px 0;
+  font-size:15px;
+}
+.features div{
+  margin:10px 0;
+}
+
+/* INPUT */
+.input-box{
   display:flex;
   align-items:center;
-  gap:12px;
-  background:#124545;
-  padding:14px 16px;
-  border-radius:30px;
-  margin:20px 0;
+  gap:10px;
+  background:#0f4545;
+  padding:13px 16px;
+  border-radius:32px;
+  margin:18px 0;
+  opacity:.55;
 }
-.yt-box img{width:30px;}
-.yt-box input{
-  flex:1;
+.input-box img{width:26px}
+.input-box input{
   background:transparent;
   border:none;
   outline:none;
   color:#fff;
+  font-size:15px;
+  flex:1;
 }
-.yt-box input::placeholder{color:#9fdede;}
 
-/* BUTTON */
-.btn{
+/* CTA */
+.cta{
   display:block;
   width:100%;
-  background:#00ff8c;
-  color:#003333;
-  border:none;
+  text-align:center;
+  background:linear-gradient(135deg,#00ff9c,#00c97b);
+  color:#002;
+  font-weight:700;
+  font-size:17px;
   padding:16px;
-  border-radius:35px;
-  font-size:18px;
-  font-weight:bold;
-  cursor:pointer;
-}
-.btn:hover{opacity:.9}
-
-/* SUPPORT */
-.support{
+  border-radius:40px;
+  text-decoration:none;
   margin-top:12px;
-  color:#00ff8c;
-  font-size:14px;
 }
 
-/* FOOTER */
-.footer{
-  margin-top:20px;
+/* SECURITY */
+.security{
+  margin-top:14px;
+  text-align:center;
   font-size:14px;
+  color:#aaffd8;
+}
+
+/* FOOTER LINKS */
+.footer{
+  margin-top:22px;
+  text-align:center;
 }
 .footer a{
-  color:#00ff8c;
+  color:#00ff9c;
   text-decoration:none;
+  font-size:14px;
   margin:0 6px;
+}
+.copy{
+  margin-top:12px;
+  font-size:13px;
+  opacity:.65;
+  text-align:center;
 }
 </style>
 </head>
 
 <body>
 
-<div class="card">
+<div class="container">
 
-  <img src="logo.png" class="logo" alt="Shorts AI">
+  <!-- LOGO -->
+  <div class="logo">
+    <img src="https://ratikantaguriya.github.io/logo.png" alt="Shorts AI">
+  </div>
 
+  <!-- HERO -->
   <h1>Shorts AI</h1>
-  <p class="tagline">Turn your YouTube videos into <b>high-engagement Shorts ideas</b></p>
-  <div class="trust">✅ 100% original website · Trusted by 1 lakh+ users</div>
+  <div class="tagline">
+    Turn your YouTube videos into<br>
+    <b>viral-ready Shorts ideas</b> that boost views & growth
+  </div>
 
-  <div class="how">
-    <p>📌 Choose a plan (₹99 / ₹199 / ₹499)</p>
-    <p>🔒 Complete secure payment</p>
-    <p>🔗 Submit your YouTube video link</p>
-    <p>⚡ Get daily Shorts ideas (within 24 hours)</p>
+  <!-- TRUST -->
+  <div class="trust">
+    ✔ 100% Original Platform • Trusted by 1,00,000+ Active Creators
+  </div>
+
+  <!-- FEATURES -->
+  <div class="features">
+    🚀 Choose a plan – ₹99 / ₹199 / ₹499<br>
+    🔐 Pay securely via Razorpay (UPI / PhonePe / GPay)<br>
+    🔗 Submit your YouTube video link<br>
+    ⚡ Get daily Shorts ideas within 24 hours
   </div>
 
   <!-- YOUTUBE INPUT -->
-  <div class="yt-box">
+  <div class="input-box">
     <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg">
-    <input type="text" placeholder="Paste YouTube link (after payment)">
+    <input type="text" placeholder="Paste YouTube link (after payment)" disabled>
   </div>
 
-  <!-- PLAN BUTTON -->
-  <button class="btn" onclick="location.href='pricing.html'">
-    Plan & Buy
-  </button>
+  <!-- CTA -->
+  <a href="pricing.html" class="cta">View Plans & Start Growing</a>
 
-  <div class="support">
-    🔐 Secure payments · 💬 WhatsApp support
+  <!-- SECURITY -->
+  <div class="security">
+    🔒 Secure payments • 💬 WhatsApp support available
   </div>
 
+  <!-- FOOTER -->
   <div class="footer">
     <a href="pricing.html">Pricing</a> |
     <a href="contact.html">Contact</a> |
@@ -137,9 +180,9 @@ h1{margin:10px 0;font-size:30px;}
     <a href="refund.html">Refund</a>
   </div>
 
-  <p style="opacity:.6;font-size:12px;margin-top:10px;">
-    © 2026 Shorts AI
-  </p>
+  <div class="copy">
+    © 2026 Shorts AI • Built for Serious YouTube Creators
+  </div>
 
 </div>
 
