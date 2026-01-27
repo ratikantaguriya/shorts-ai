@@ -2,268 +2,81 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<title>Shorts AI – Grow Faster with Shorts</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shorts AI – Pricing</title>
-
-<!-- SEO -->
-<meta name="description" content="Shorts AI helps YouTube creators generate viral Shorts ideas. Secure payments via Razorpay.">
-<meta name="keywords" content="Shorts AI, YouTube Shorts, viral shorts ideas">
-<meta name="robots" content="index, follow">
-
+<meta name="description" content="Turn YouTube videos into viral Shorts ideas with Shorts AI. Trusted by creators.">
 <style>
-/* ================= ROOT & THEME ================= */
-:root{
-  --bg:#071f1c;
-  --card:#0c2f2b;
-  --text:#eafff8;
-  --muted:#9fffe3;
-  --accent:#1aff9c;
-  --accent2:#00ffd5;
-}
-@media (prefers-color-scheme: light){
-  :root{
-    --bg:#f4fffb;
-    --card:#ffffff;
-    --text:#04322c;
-    --muted:#2f7f73;
-  }
-}
-
-*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,-apple-system,sans-serif}
 body{
-  background:radial-gradient(circle at top,var(--card),var(--bg));
-  color:var(--text);
-}
-
-/* ================= LOGO ================= */
-.logo{
-  width:88px;
-  margin:28px auto 10px;
-  display:block;
-  filter:drop-shadow(0 0 25px var(--accent));
-  animation:float 3s ease-in-out infinite;
-}
-@keyframes float{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-6px)}
-}
-
-/* ================= HEADER ================= */
-h1{text-align:center;font-size:32px}
-.sub{text-align:center;color:var(--muted);margin:6px 0 18px}
-
-/* ================= SEARCH ================= */
-.search{
-  max-width:360px;
-  margin:0 auto 26px;
-  display:flex;
-  align-items:center;
-  background:var(--card);
-  border-radius:50px;
-  padding:10px 14px;
-  box-shadow:0 0 20px rgba(26,255,156,.25);
-}
-.search input{
-  flex:1;
-  background:none;border:none;outline:none;
-  color:var(--text);
-  padding-left:10px;
-}
-
-/* ================= PLANS ================= */
-.wrap{max-width:420px;margin:auto;padding:10px 18px 100px}
-
-.plan{
-  background:linear-gradient(180deg,rgba(26,255,156,.12),transparent);
-  border:2px solid rgba(26,255,156,.45);
-  border-radius:24px;
-  padding:22px;
-  margin-bottom:28px;
-  position:relative;
-  overflow:hidden;
-}
-.plan.popular{
-  animation:glow 2.8s infinite;
-}
-@keyframes glow{
-  0%{box-shadow:0 0 18px var(--accent)}
-  50%{box-shadow:0 0 40px var(--accent2)}
-  100%{box-shadow:0 0 18px var(--accent)}
-}
-.badge{
-  position:absolute;
-  top:-14px;left:50%;
-  transform:translateX(-50%);
-  background:linear-gradient(90deg,var(--accent),var(--accent2));
-  color:#003b32;
-  padding:6px 18px;
-  border-radius:20px;
-  font-weight:800;
-  font-size:13px;
-}
-
-.plan h2{font-size:22px}
-.price{font-size:38px;color:var(--accent);margin:8px 0}
-
-ul{list-style:none;margin:14px 0}
-li{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  margin:8px 0;
-  color:var(--text);
-}
-
-/* SVG ICON */
-.icon{
-  width:18px;height:18px;
-  fill:var(--accent);
-}
-
-/* ================= BUTTON ================= */
-.pay{
-  display:block;
-  margin-top:14px;
+  margin:0;
+  background:radial-gradient(circle at top,#0f3d35,#041b18);
+  font-family:system-ui;
+  color:#eafff8;
   text-align:center;
-  padding:14px;
+}
+.logo{
+  width:110px;
+  margin:40px auto 10px;
+  filter:drop-shadow(0 0 30px #1aff9c);
+}
+h1{font-size:34px;margin:10px 0}
+p{color:#9fffe3}
+
+.hero{
+  max-width:420px;
+  margin:30px auto;
+  background:#0b2f2a;
+  border-radius:26px;
+  padding:26px;
+  box-shadow:0 0 40px rgba(26,255,156,.35);
+}
+ul{list-style:none;padding:0;text-align:left}
+li{margin:10px 0}
+
+.btn{
+  display:block;
+  margin-top:22px;
+  padding:16px;
   border-radius:50px;
   font-weight:900;
   color:#003b32;
   text-decoration:none;
-  background:linear-gradient(90deg,var(--accent),var(--accent2));
-  position:relative;
-  overflow:hidden;
-}
-.pay::after{
-  content:"";
-  position:absolute;top:0;left:-100%;
-  width:100%;height:100%;
-  background:linear-gradient(120deg,transparent,rgba(255,255,255,.4),transparent);
-  animation:shimmer 2.8s infinite;
-}
-@keyframes shimmer{
-  0%{left:-100%}
-  100%{left:100%}
+  background:linear-gradient(90deg,#1aff9c,#00ffd5);
 }
 
-/* ================= WHY 99 ================= */
-.micro{
-  margin-top:14px;
-  background:rgba(0,0,0,.2);
-  border-radius:16px;
-  padding:14px;
-  font-size:14px;
-  color:var(--muted);
+.footer{
+  margin:40px 0 20px;
 }
-
-/* ================= FOOTER ================= */
-footer{
-  position:fixed;
-  bottom:0;left:0;
-  width:100%;
-  background:rgba(7,31,28,.9);
-  backdrop-filter:blur(10px);
-  transition:transform .3s ease;
-}
-.footer-inner{
-  max-width:420px;
-  margin:auto;
-  padding:10px 14px;
-  display:flex;
-  justify-content:space-around;
-}
-footer a{
-  color:var(--accent);
+.footer a{
+  margin:0 10px;
+  color:#1aff9c;
   text-decoration:none;
-  font-weight:600;
-}
-
-/* ================= WHATSAPP ================= */
-.whatsapp{
-  position:fixed;
-  right:18px;
-  bottom:80px;
-  background:#25D366;
-  width:58px;height:58px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  box-shadow:0 0 30px rgba(37,211,102,.6);
 }
 </style>
 </head>
 
 <body>
 
-<img src="logo.png" class="logo" alt="Shorts AI">
+<img src="logo.png" class="logo">
+<h1>Shorts AI</h1>
+<p>Turn YouTube videos into <b>viral Shorts ideas</b></p>
 
-<h1>Pricing Plans</h1>
-<div class="sub">Choose a plan & pay securely via Razorpay</div>
+<div class="hero">
+<ul>
+<li>✔ Choose a plan ₹99 / ₹199 / ₹499</li>
+<li>✔ Secure Razorpay payments</li>
+<li>✔ Submit YouTube link</li>
+<li>✔ Get Shorts ideas in 24 hours</li>
+</ul>
 
-<div class="search">
-  <svg class="icon" viewBox="0 0 24 24"><path d="M21 20l-5.6-5.6a7 7 0 1 0-1.4 1.4L20 21z"/></svg>
-  <input placeholder="Paste YouTube video link">
+<a href="pricing.html" class="btn">View Plans & Start Growing</a>
 </div>
 
-<div class="wrap">
-
-<!-- ₹99 -->
-<div class="plan popular">
-  <div class="badge">MOST POPULAR</div>
-  <h2>Starter</h2>
-  <div class="price">₹99</div>
-  <ul>
-    <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2l5 5 11-11-1.5-1.5z"/></svg>2 YouTube links</li>
-    <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2l5 5 11-11-1.5-1.5z"/></svg>5 Shorts ideas/day</li>
-    <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2l5 5 11-11-1.5-1.5z"/></svg>24h delivery</li>
-  </ul>
-  <a class="pay" href="https://rzp.io/rzp/99">Pay Securely</a>
-  <div class="micro">Low risk. Instant value. Perfect for new creators.</div>
+<div class="footer">
+<a href="contact.html">Contact</a>
+<a href="privacy.html">Privacy</a>
+<a href="terms.html">Terms</a>
+<a href="refund.html">Refund</a>
 </div>
-
-<!-- ₹199 -->
-<div class="plan">
-  <h2>Creator</h2>
-  <div class="price">₹199</div>
-  <a class="pay" href="https://rzp.io/rzp/199">Pay Securely</a>
-</div>
-
-<!-- ₹499 -->
-<div class="plan">
-  <h2>Pro</h2>
-  <div class="price">₹499</div>
-  <a class="pay" href="https://rzp.io/rzp/499">Pay Securely</a>
-</div>
-
-</div>
-
-<!-- FOOTER -->
-<footer id="footer">
-  <div class="footer-inner">
-    <a href="contact.html">Contact</a>
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Terms</a>
-    <a href="refund.html">Refund</a>
-  </div>
-</footer>
-
-<!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/9339942448" target="_blank">
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff">
-    <path d="M20 3.9A11.9 11.9 0 0 0 2.1 17.8L1 23l5.3-1.1A11.9 11.9 0 1 0 20 3.9z"/>
-  </svg>
-</a>
-
-<script>
-let lastScroll=0;
-window.addEventListener("scroll",()=>{
-  const f=document.getElementById("footer");
-  let curr=window.pageYOffset;
-  f.style.transform=curr>lastScroll?"translateY(100%)":"translateY(0)";
-  lastScroll=curr;
-});
-</script>
 
 </body>
 </html>
