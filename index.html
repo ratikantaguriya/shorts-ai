@@ -3,250 +3,267 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shorts AI – Turn Videos into Viral Shorts</title>
+<title>Shorts AI – Pricing</title>
 
 <!-- SEO -->
-<meta name="description" content="Shorts AI helps YouTube creators generate viral Shorts ideas. Trusted, secure, fast delivery.">
-<meta name="keywords" content="YouTube Shorts, Shorts AI, viral shorts, YouTube growth">
+<meta name="description" content="Shorts AI helps YouTube creators generate viral Shorts ideas. Secure payments via Razorpay.">
+<meta name="keywords" content="Shorts AI, YouTube Shorts, viral shorts ideas">
 <meta name="robots" content="index, follow">
 
 <style>
-*{box-sizing:border-box}
+/* ================= ROOT & THEME ================= */
+:root{
+  --bg:#071f1c;
+  --card:#0c2f2b;
+  --text:#eafff8;
+  --muted:#9fffe3;
+  --accent:#1aff9c;
+  --accent2:#00ffd5;
+}
+@media (prefers-color-scheme: light){
+  :root{
+    --bg:#f4fffb;
+    --card:#ffffff;
+    --text:#04322c;
+    --muted:#2f7f73;
+  }
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,-apple-system,sans-serif}
 body{
-  margin:0;
-  font-family:Inter, Arial, sans-serif;
-  background:radial-gradient(circle at top,#0b3d36,#041c19);
-  color:#eaffff;
+  background:radial-gradient(circle at top,var(--card),var(--bg));
+  color:var(--text);
 }
 
-/* ---------- HERO ---------- */
-.hero{
-  text-align:center;
-  padding:60px 18px 40px;
-}
-
-/* LOGO */
+/* ================= LOGO ================= */
 .logo{
-  width:110px;
-  margin:0 auto 18px;
-  animation:float 4s ease-in-out infinite;
+  width:88px;
+  margin:28px auto 10px;
+  display:block;
+  filter:drop-shadow(0 0 25px var(--accent));
+  animation:float 3s ease-in-out infinite;
 }
 @keyframes float{
   0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-8px)}
+  50%{transform:translateY(-6px)}
 }
 
-/* TITLE */
-.hero h1{
-  font-size:34px;
-  margin:10px 0;
-}
-.hero h1 span{
-  color:#1aff9c;
-}
+/* ================= HEADER ================= */
+h1{text-align:center;font-size:32px}
+.sub{text-align:center;color:var(--muted);margin:6px 0 18px}
 
-/* SUBTITLE */
-.hero p{
-  font-size:15px;
-  color:#b9fff1;
-  margin-bottom:22px;
-}
-
-/* TRUST BADGE */
-.trust{
-  display:inline-block;
-  padding:10px 18px;
-  border-radius:14px;
-  background:rgba(26,255,156,.12);
-  border:1px solid rgba(26,255,156,.4);
-  box-shadow:0 0 18px rgba(26,255,156,.25);
-  margin-bottom:26px;
-  font-weight:600;
-}
-
-/* ---------- YOUTUBE SEARCH ---------- */
-.search-box{
-  max-width:420px;
+/* ================= SEARCH ================= */
+.search{
+  max-width:360px;
   margin:0 auto 26px;
   display:flex;
   align-items:center;
-  background:#062925;
-  border-radius:14px;
+  background:var(--card);
+  border-radius:50px;
   padding:10px 14px;
-  border:1px solid rgba(26,255,156,.4);
+  box-shadow:0 0 20px rgba(26,255,156,.25);
 }
-.search-box img{
-  width:26px;
-  margin-right:10px;
-}
-.search-box input{
+.search input{
   flex:1;
-  background:transparent;
-  border:none;
-  outline:none;
-  color:#eaffff;
-  font-size:14px;
+  background:none;border:none;outline:none;
+  color:var(--text);
+  padding-left:10px;
 }
 
-/* ---------- CTA ---------- */
-.cta{
-  display:inline-block;
-  padding:16px 28px;
-  border-radius:40px;
-  background:linear-gradient(135deg,#00ffcc,#1aff9c);
-  color:#00332b;
-  font-size:17px;
-  font-weight:800;
-  text-decoration:none;
-  box-shadow:0 0 25px rgba(26,255,156,.55);
-  transition:.25s ease;
-}
-.cta:hover{
-  transform:scale(1.05);
-  box-shadow:0 0 40px rgba(26,255,156,.9);
-}
+/* ================= PLANS ================= */
+.wrap{max-width:420px;margin:auto;padding:10px 18px 100px}
 
-/* ---------- FEATURES ---------- */
-.features{
-  max-width:520px;
-  margin:30px auto 10px;
-  text-align:left;
-  padding:0 10px;
-}
-.features li{
-  list-style:none;
-  margin:10px 0;
-  font-size:14px;
-}
-.features li::before{
-  content:"✔ ";
-  color:#1aff9c;
-  font-weight:700;
-}
-
-/* ---------- FOOTER ---------- */
-.footer{
-  margin:50px auto 30px;
-  text-align:center;
-}
-
-/* TEXT LINKS (SIMPLE STYLE) */
-.footer-links{
-  display:flex;
-  justify-content:center;
-  gap:18px;
-  flex-wrap:wrap;
-}
-.footer-links a{
+.plan{
+  background:linear-gradient(180deg,rgba(26,255,156,.12),transparent);
+  border:2px solid rgba(26,255,156,.45);
+  border-radius:24px;
+  padding:22px;
+  margin-bottom:28px;
   position:relative;
-  font-size:15px;
-  font-weight:600;
-  color:#9fffe3;
-  text-decoration:none;
-  padding:6px 2px;
-  transition:.3s;
+  overflow:hidden;
 }
-.footer-links a::after{
-  content:"";
+.plan.popular{
+  animation:glow 2.8s infinite;
+}
+@keyframes glow{
+  0%{box-shadow:0 0 18px var(--accent)}
+  50%{box-shadow:0 0 40px var(--accent2)}
+  100%{box-shadow:0 0 18px var(--accent)}
+}
+.badge{
   position:absolute;
-  left:0;
-  bottom:-4px;
-  width:0%;
-  height:2px;
-  background:linear-gradient(90deg,#00ffcc,#1aff9c);
-  box-shadow:0 0 10px #1aff9c;
-  transition:.3s;
-}
-.footer-links a:hover{
-  color:#fff;
-  text-shadow:0 0 8px #1aff9c;
-}
-.footer-links a:hover::after{
-  width:100%;
-}
-
-.footer-copy{
-  margin-top:14px;
+  top:-14px;left:50%;
+  transform:translateX(-50%);
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  color:#003b32;
+  padding:6px 18px;
+  border-radius:20px;
+  font-weight:800;
   font-size:13px;
-  color:#7fcfc4;
 }
 
-/* ---------- WHATSAPP FLOAT ---------- */
+.plan h2{font-size:22px}
+.price{font-size:38px;color:var(--accent);margin:8px 0}
+
+ul{list-style:none;margin:14px 0}
+li{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin:8px 0;
+  color:var(--text);
+}
+
+/* SVG ICON */
+.icon{
+  width:18px;height:18px;
+  fill:var(--accent);
+}
+
+/* ================= BUTTON ================= */
+.pay{
+  display:block;
+  margin-top:14px;
+  text-align:center;
+  padding:14px;
+  border-radius:50px;
+  font-weight:900;
+  color:#003b32;
+  text-decoration:none;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  position:relative;
+  overflow:hidden;
+}
+.pay::after{
+  content:"";
+  position:absolute;top:0;left:-100%;
+  width:100%;height:100%;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,.4),transparent);
+  animation:shimmer 2.8s infinite;
+}
+@keyframes shimmer{
+  0%{left:-100%}
+  100%{left:100%}
+}
+
+/* ================= WHY 99 ================= */
+.micro{
+  margin-top:14px;
+  background:rgba(0,0,0,.2);
+  border-radius:16px;
+  padding:14px;
+  font-size:14px;
+  color:var(--muted);
+}
+
+/* ================= FOOTER ================= */
+footer{
+  position:fixed;
+  bottom:0;left:0;
+  width:100%;
+  background:rgba(7,31,28,.9);
+  backdrop-filter:blur(10px);
+  transition:transform .3s ease;
+}
+.footer-inner{
+  max-width:420px;
+  margin:auto;
+  padding:10px 14px;
+  display:flex;
+  justify-content:space-around;
+}
+footer a{
+  color:var(--accent);
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* ================= WHATSAPP ================= */
 .whatsapp{
   position:fixed;
   right:18px;
-  bottom:18px;
-  width:58px;
-  height:58px;
+  bottom:80px;
   background:#25D366;
+  width:58px;height:58px;
   border-radius:50%;
   display:flex;
   align-items:center;
   justify-content:center;
-  box-shadow:0 0 25px rgba(37,211,102,.7);
-  animation:pulse 1.8s infinite;
-  z-index:999;
-}
-.whatsapp img{width:30px}
-@keyframes pulse{
-  0%{box-shadow:0 0 0 0 rgba(37,211,102,.7)}
-  70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}
-  100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
+  box-shadow:0 0 30px rgba(37,211,102,.6);
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<div class="hero">
+<img src="logo.png" class="logo" alt="Shorts AI">
 
-  <!-- LOGO -->
-  <img src="logo.png" alt="Shorts AI Logo" class="logo">
+<h1>Pricing Plans</h1>
+<div class="sub">Choose a plan & pay securely via Razorpay</div>
 
-  <h1>Shorts <span>AI</span></h1>
-  <p>Turn your YouTube videos into <b>viral Shorts ideas</b></p>
+<div class="search">
+  <svg class="icon" viewBox="0 0 24 24"><path d="M21 20l-5.6-5.6a7 7 0 1 0-1.4 1.4L20 21z"/></svg>
+  <input placeholder="Paste YouTube video link">
+</div>
 
-  <div class="trust">
-    ✔ 100% Original Platform • 🚀 Trusted by 100,000+ Creators
-  </div>
+<div class="wrap">
 
-  <!-- YOUTUBE SEARCH -->
-  <div class="search-box">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg">
-    <input type="text" placeholder="Paste YouTube video link here…">
-  </div>
-
-  <!-- FEATURES -->
-  <ul class="features">
-    <li>Choose a plan ₹99 / ₹199 / ₹499</li>
-    <li>Secure payment via Razorpay</li>
-    <li>Submit YouTube video link</li>
-    <li>Get daily Shorts ideas within 24 hours</li>
+<!-- ₹99 -->
+<div class="plan popular">
+  <div class="badge">MOST POPULAR</div>
+  <h2>Starter</h2>
+  <div class="price">₹99</div>
+  <ul>
+    <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2l5 5 11-11-1.5-1.5z"/></svg>2 YouTube links</li>
+    <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2l5 5 11-11-1.5-1.5z"/></svg>5 Shorts ideas/day</li>
+    <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2l5 5 11-11-1.5-1.5z"/></svg>24h delivery</li>
   </ul>
+  <a class="pay" href="https://rzp.io/rzp/99">Pay Securely</a>
+  <div class="micro">Low risk. Instant value. Perfect for new creators.</div>
+</div>
 
-  <!-- CTA -->
-  <a href="pricing.html" class="cta">View Plans & Start Growing</a>
+<!-- ₹199 -->
+<div class="plan">
+  <h2>Creator</h2>
+  <div class="price">₹199</div>
+  <a class="pay" href="https://rzp.io/rzp/199">Pay Securely</a>
+</div>
+
+<!-- ₹499 -->
+<div class="plan">
+  <h2>Pro</h2>
+  <div class="price">₹499</div>
+  <a class="pay" href="https://rzp.io/rzp/499">Pay Securely</a>
+</div>
 
 </div>
 
 <!-- FOOTER -->
-<div class="footer">
-  <div class="footer-links">
+<footer id="footer">
+  <div class="footer-inner">
     <a href="contact.html">Contact</a>
     <a href="privacy.html">Privacy</a>
     <a href="terms.html">Terms</a>
     <a href="refund.html">Refund</a>
   </div>
-  <div class="footer-copy">
-    © 2026 Shorts AI • Built for Serious YouTube Creators 🚀
-  </div>
-</div>
+</footer>
 
 <!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/919339942448" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+<a class="whatsapp" href="https://wa.me/9339942448" target="_blank">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff">
+    <path d="M20 3.9A11.9 11.9 0 0 0 2.1 17.8L1 23l5.3-1.1A11.9 11.9 0 1 0 20 3.9z"/>
+  </svg>
 </a>
+
+<script>
+let lastScroll=0;
+window.addEventListener("scroll",()=>{
+  const f=document.getElementById("footer");
+  let curr=window.pageYOffset;
+  f.style.transform=curr>lastScroll?"translateY(100%)":"translateY(0)";
+  lastScroll=curr;
+});
+</script>
 
 </body>
 </html>
