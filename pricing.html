@@ -6,113 +6,109 @@
 <title>Pricing Plans – Shorts AI</title>
 
 <style>
+*{
+  box-sizing:border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 body{
   margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  background:linear-gradient(180deg,#052c2c,#031818);
+  background:linear-gradient(180deg,#062f2f,#041c1c);
   color:#fff;
 }
+
 .container{
-  max-width:900px;
+  max-width:1100px;
   margin:auto;
-  padding:40px 15px;
+  padding:40px 16px;
+  text-align:center;
 }
+
 .logo{
-  text-align:center;
-  margin-bottom:15px;
+  font-size:26px;
+  font-weight:800;
+  margin-bottom:10px;
 }
-.logo img{
-  width:60px;
-}
+
 h1{
-  text-align:center;
+  font-size:34px;
   margin:10px 0;
 }
-.subtitle{
-  text-align:center;
-  color:#9beee0;
+
+.sub{
+  color:#9fffe0;
   margin-bottom:40px;
 }
+
 .plans{
   display:grid;
-  grid-template-columns:1fr;
-  gap:25px;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:24px;
 }
+
 .plan{
-  background:#0b3a3a;
-  border-radius:22px;
-  padding:30px 25px;
-  box-shadow:0 15px 35px rgba(0,0,0,.4);
+  background:#083838;
+  border-radius:18px;
+  padding:30px 24px;
+  box-shadow:0 0 30px rgba(0,0,0,.4);
   position:relative;
 }
+
 .plan.popular{
-  border:2px solid #19ff9a;
+  border:2px solid #1dff9b;
+  transform:scale(1.03);
 }
+
 .badge{
   position:absolute;
   top:-14px;
   left:50%;
   transform:translateX(-50%);
-  background:#19ff9a;
-  color:#003b2d;
+  background:#1dff9b;
+  color:#003b2f;
   padding:6px 16px;
   border-radius:20px;
-  font-weight:bold;
+  font-weight:700;
   font-size:13px;
 }
-.plan h2{
-  margin:0;
-}
+
 .price{
-  font-size:42px;
-  font-weight:bold;
-  color:#19ff9a;
-  margin:10px 0 20px;
+  font-size:40px;
+  color:#1dff9b;
+  margin:10px 0;
 }
+
 ul{
   list-style:none;
   padding:0;
+  text-align:left;
 }
+
 ul li{
   margin:10px 0;
-  font-size:15px;
 }
-ul li::before{
-  content:"✔ ";
-  color:#19ff9a;
-  font-weight:bold;
-}
-.pay-btn{
+
+.btn{
   display:block;
-  margin-top:25px;
-  text-align:center;
-  padding:15px;
-  background:#19ff9a;
-  color:#003b2d;
-  font-weight:bold;
+  margin-top:20px;
+  padding:14px;
+  background:#1dff9b;
+  color:#003b2f;
   border-radius:30px;
   text-decoration:none;
+  font-weight:700;
 }
-.secure{
-  text-align:center;
-  margin-top:12px;
-  font-size:13px;
-  color:#b9fff1;
+
+.trust{
+  margin-top:14px;
+  font-size:14px;
+  color:#b9ffe9;
 }
+
 .footer{
-  text-align:center;
   margin-top:40px;
   font-size:14px;
-}
-.footer a{
-  color:#19ff9a;
-  text-decoration:none;
-  margin:0 8px;
-}
-@media(min-width:768px){
-  .plans{
-    grid-template-columns:repeat(3,1fr);
-  }
+  color:#9fffe0;
 }
 </style>
 </head>
@@ -121,12 +117,9 @@ ul li::before{
 
 <div class="container">
 
-  <div class="logo">
-    <img src="https://i.imgur.com/WxkGJ8P.png" alt="Shorts AI">
-  </div>
-
+  <div class="logo">🚀 Shorts AI</div>
   <h1>Pricing Plans</h1>
-  <p class="subtitle">Choose a plan & pay securely via Razorpay</p>
+  <p class="sub">Choose a plan & pay securely via Razorpay (UPI / PhonePe / GPay)</p>
 
   <div class="plans">
 
@@ -136,29 +129,29 @@ ul li::before{
       <h2>Starter</h2>
       <div class="price">₹99</div>
       <ul>
-        <li>2 YouTube video links</li>
-        <li>5 Shorts ideas per day</li>
-        <li>Delivery within 24 hours</li>
-        <li>Basic WhatsApp support</li>
-        <li>Best for new creators</li>
+        <li>✅ 2 YouTube video links</li>
+        <li>✅ 5 Shorts ideas per day</li>
+        <li>✅ Delivery within 24 hours</li>
+        <li>✅ Basic WhatsApp support</li>
+        <li>✅ Best for new creators</li>
       </ul>
-      <a class="pay-btn" href="https://rzp.io/rzp/ycxj3Zb">Pay Securely (UPI / PhonePe / GPay)</a>
-      <div class="secure">✔ PhonePe / GPay supported<br>✔ 100% Secure via Razorpay</div>
+      <a href="https://rzp.io/rzp/ycxj3Zb" class="btn">Pay Securely (UPI / PhonePe / GPay)</a>
+      <div class="trust">✔ PhonePe / GPay supported<br>✔ 100% Secure via Razorpay</div>
     </div>
 
     <!-- ₹199 PLAN -->
     <div class="plan">
-      <h2>Creator <span style="color:#19ff9a;">(Best Value)</span></h2>
+      <h2>Creator <span style="color:#1dff9b">(BEST VALUE)</span></h2>
       <div class="price">₹199</div>
       <ul>
-        <li>4 YouTube video links</li>
-        <li>15 Shorts ideas per day</li>
-        <li>Faster delivery</li>
-        <li>Priority WhatsApp support</li>
-        <li>Growth-focused creators</li>
+        <li>✅ 4 YouTube video links</li>
+        <li>✅ 15 Shorts ideas per day</li>
+        <li>✅ Faster delivery</li>
+        <li>✅ Priority WhatsApp support</li>
+        <li>✅ Growth-focused creators</li>
       </ul>
-      <a class="pay-btn" href="https://rzp.io/rzp/ycxj3Zb">Pay Securely (UPI / PhonePe / GPay)</a>
-      <div class="secure">✔ PhonePe / GPay supported<br>✔ 100% Secure via Razorpay</div>
+      <a href="https://rzp.io/rzp/VPhmqa0" class="btn">Pay Securely (UPI / PhonePe / GPay)</a>
+      <div class="trust">✔ PhonePe / GPay supported<br>✔ 100% Secure via Razorpay</div>
     </div>
 
     <!-- ₹499 PLAN -->
@@ -166,31 +159,24 @@ ul li::before{
       <h2>Pro</h2>
       <div class="price">₹499</div>
       <ul>
-        <li>Unlimited YouTube links</li>
-        <li>30+ Shorts ideas per day</li>
-        <li>Fastest delivery</li>
-        <li>Dedicated WhatsApp support</li>
-        <li>Best for agencies & brands</li>
-        <li><b>Growth Boost Features Included</b></li>
-        <li>Viral hook lines (first 2–3 sec)</li>
-        <li>Trend-based Shorts ideas</li>
-        <li>High-retention content structure</li>
-        <li>Multi-platform optimization</li>
+        <li>✅ Unlimited YouTube links</li>
+        <li>✅ 30+ Shorts ideas per day</li>
+        <li>✅ Fastest delivery</li>
+        <li>✅ Dedicated WhatsApp support</li>
+        <li>🚀 Growth Boost Features</li>
+        <li>📈 Viral hook & trend analysis</li>
+        <li>🏆 Best for agencies & brands</li>
       </ul>
-      <a class="pay-btn" href="https://rzp.io/rzp/ycxj3Zb">Pay Securely (UPI / PhonePe / GPay)</a>
-      <div class="secure">✔ PhonePe / GPay supported<br>✔ 100% Secure via Razorpay</div>
+      <a href="https://rzp.io/rzp/rEycRed0" class="btn">Pay Securely (UPI / PhonePe / GPay)</a>
+      <div class="trust">✔ PhonePe / GPay supported<br>✔ 100% Secure via Razorpay</div>
     </div>
 
   </div>
 
   <div class="footer">
-    <p>🔒 Secure payments • 💬 WhatsApp support</p>
-    <a href="index.html">Home</a> |
-    <a href="contact.html">Contact</a> |
-    <a href="privacy.html">Privacy</a> |
-    <a href="terms.html">Terms</a> |
-    <a href="refund.html">Refund</a>
-    <p>© 2026 Shorts AI • Built for serious YouTube creators</p>
+    🔒 Secure payments • 💬 WhatsApp support <br><br>
+    Home | Contact | Privacy | Terms | Refund <br>
+    © 2026 Shorts AI
   </div>
 
 </div>
