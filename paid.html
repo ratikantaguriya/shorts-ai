@@ -2,94 +2,184 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Payment Successful | Shorts AI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+:root{
+  --neon:#00ffb2;
+  --neon2:#00e0ff;
+  --bg1:#0f3f36;
+  --bg2:#021b17;
+}
+
+*{box-sizing:border-box}
+
 body{
   margin:0;
-  font-family: Arial, sans-serif;
-  background:#062a2a;
-  color:#fff;
+  min-height:100vh;
+  font-family:system-ui,-apple-system,BlinkMacSystemFont;
+  background:
+    radial-gradient(60% 40% at top,rgba(0,255,200,.15),transparent 60%),
+    radial-gradient(circle at top,var(--bg1),var(--bg2));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#eafff7;
 }
-.box{
-  max-width:420px;
-  margin:80px auto;
-  background:#0b3c3c;
-  padding:30px 20px;
-  border-radius:18px;
+
+.card{
+  width:92%;
+  max-width:460px;
+  padding:34px 22px 36px;
+  border-radius:26px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(0,255,200,.25);
+  box-shadow:0 0 45px rgba(0,255,200,.25);
   text-align:center;
-  box-shadow:0 0 25px rgba(0,0,0,.5);
+  animation:fadeUp .8s ease;
 }
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(18px)}
+  to{opacity:1;transform:none}
+}
+
 .logo{
-  width:70px;
+  width:92px;
   margin-bottom:10px;
+  filter:drop-shadow(0 0 18px rgba(0,255,200,.8));
+  animation:float 4s ease-in-out infinite;
 }
-input{
-  width:100%;
-  padding:14px;
-  border-radius:30px;
-  border:none;
-  margin:20px 0;
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-6px)}
+}
+
+h1{
+  margin:8px 0 6px;
+  font-size:28px;
+  color:var(--neon);
+}
+
+.sub{
+  opacity:.9;
   font-size:15px;
+  margin-bottom:22px;
 }
-button{
+
+.input{
   width:100%;
-  padding:14px;
+  padding:16px 18px;
+  border-radius:14px;
+  border:1px solid rgba(0,255,200,.35);
+  background:rgba(0,0,0,.35);
+  color:#eafff7;
+  outline:none;
+  font-size:15px;
+  box-shadow:inset 0 0 0 rgba(0,0,0,0);
+}
+.input:focus{
+  box-shadow:0 0 0 2px rgba(0,255,200,.25);
+}
+
+.btn{
+  margin-top:18px;
+  width:100%;
+  padding:16px;
+  border-radius:40px;
   border:none;
-  border-radius:30px;
-  background:#00ff8c;
-  font-size:16px;
   cursor:pointer;
+  font-size:16px;
+  font-weight:700;
+  color:#00332b;
+  background:linear-gradient(90deg,var(--neon),var(--neon2));
+  box-shadow:0 0 28px rgba(0,255,200,.6);
+  transition:.25s ease;
 }
-.whatsapp{
-  margin-top:20px;
-}
-.whatsapp a{
-  color:#00ff8c;
-  text-decoration:none;
-  font-size:15px;
-}
-small{
-  display:block;
-  margin-top:12px;
+.btn:active{transform:scale(.97)}
+
+.note{
+  margin-top:14px;
+  font-size:13px;
   opacity:.8;
+}
+
+.wa{
+  margin-top:16px;
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  color:var(--neon);
+  font-weight:600;
+}
+
+.footer{
+  margin-top:26px;
+  font-size:12px;
+  opacity:.65;
 }
 </style>
 </head>
 
 <body>
 
-<div class="box">
-  <img src="logo.png" class="logo">
-  <h2>Payment Successful 🎉</h2>
-  <p>Submit your YouTube video link</p>
+<div class="card">
+  <img src="logo.png" class="logo" alt="Shorts AI">
 
-  <form id="ytForm">
-    <input type="url" name="youtube" placeholder="Paste YouTube video link" required>
-    <button type="submit">Submit</button>
-  </form>
+  <h1>Payment Successful 🎉</h1>
+  <div class="sub">
+    Submit your <b>YouTube video link</b><br>
+    We’ll start working immediately
+  </div>
 
-  <small>You will receive Shorts ideas within 24 hours.</small>
+  <input id="yt" class="input"
+         placeholder="Paste YouTube video link"
+         inputmode="url">
 
-  <div class="whatsapp">
-    📲 <a href="https://wa.me/919339942448" target="_blank">
-    WhatsApp Support
-    </a>
+  <button class="btn" onclick="send()">Submit</button>
+
+  <div class="note">
+    You’ll receive Shorts ideas within <b>24 hours</b>
+  </div>
+
+  <a id="wa" class="wa">💬 WhatsApp Support</a>
+
+  <div class="footer">
+    🔒 Secure payment verified • Priority WhatsApp support
   </div>
 </div>
 
 <script>
-document.getElementById("ytForm").addEventListener("submit", function(e){
-  e.preventDefault();
-  fetch("YOUR_GOOGLE_SCRIPT_URL",{
-    method:"POST",
-    body:new FormData(this)
-  }).then(()=>{
-    alert("Link submitted successfully ✅");
-    this.reset();
-  });
-});
+const phone = "9339942448";
+
+function send(){
+  const link = document.getElementById("yt").value.trim();
+  if(!link){
+    alert("Please paste your YouTube video link");
+    return;
+  }
+
+  const msg =
+`Hi Shorts AI 👋
+Payment completed successfully ✅
+
+YouTube Video Link:
+${link}
+
+Please start my Shorts service.
+Thank you 🚀`;
+
+  const url =
+    "https://wa.me/91"+phone+"?text="+encodeURIComponent(msg);
+
+  window.location.href = url;
+}
+
+document.getElementById("wa").href =
+  "https://wa.me/91"+phone;
 </script>
 
 </body>
