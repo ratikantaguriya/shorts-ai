@@ -9,16 +9,12 @@
 :root{
   --green:#00ffb2;
   --cyan:#00e0ff;
-  --dark:#031f1a;
 }
-
 *{box-sizing:border-box}
-
 body{
   margin:0;
-  font-family:system-ui,-apple-system,BlinkMacSystemFont;
-  background:
-    radial-gradient(circle at top,#0f3f36 0%,#031f1a 55%,#021412 100%);
+  font-family:system-ui,-apple-system;
+  background:radial-gradient(circle at top,#0f3f36,#021b17);
   color:#eafff7;
   min-height:100vh;
   display:flex;
@@ -26,107 +22,60 @@ body{
   justify-content:center;
   padding:20px;
 }
-
-/* MAIN CARD */
 .card{
   width:100%;
   max-width:440px;
-  background:rgba(255,255,255,0.05);
+  background:rgba(255,255,255,.05);
   border:1px solid rgba(0,255,200,.25);
   border-radius:26px;
   padding:34px 24px 38px;
   text-align:center;
-  box-shadow:
-    0 0 30px rgba(0,255,200,.25),
-    inset 0 0 40px rgba(0,255,200,.05);
-  backdrop-filter:blur(10px);
-  animation:fadeUp .7s ease;
+  box-shadow:0 0 40px rgba(0,255,200,.35);
 }
-
-/* LOGO */
 .logo{
-  width:90px;
-  margin:0 auto 14px;
-  animation:float 3s ease-in-out infinite;
-  filter:drop-shadow(0 0 18px rgba(0,255,200,.7));
+  width:88px;
+  margin-bottom:12px;
+  filter:drop-shadow(0 0 18px rgba(0,255,200,.8));
 }
-
 h1{
-  margin:10px 0 8px;
-  font-size:28px;
   color:var(--green);
+  margin:10px 0 6px;
 }
-
 .sub{
   font-size:15px;
   opacity:.9;
-  line-height:1.5;
-  margin-bottom:22px;
+  margin-bottom:14px;
 }
-
-/* INPUT */
+.plan{
+  font-size:14px;
+  margin-bottom:18px;
+  opacity:.85;
+}
 input{
   width:100%;
   padding:16px 18px;
   border-radius:14px;
   border:1px solid rgba(0,255,200,.35);
-  background:rgba(0,0,0,.35);
+  background:rgba(0,0,0,.3);
   color:#eafff7;
-  outline:none;
-  font-size:15px;
-  margin-bottom:18px;
+  margin-bottom:16px;
 }
-
-input::placeholder{
-  color:#9adfd1;
-}
-
-/* BUTTON */
 button{
   width:100%;
   padding:16px;
-  border-radius:40px;
   border:none;
+  border-radius:40px;
   font-size:16px;
   font-weight:700;
-  color:#00332b;
   cursor:pointer;
+  color:#00332b;
   background:linear-gradient(90deg,var(--green),var(--cyan));
-  box-shadow:0 0 25px rgba(0,255,200,.7);
-  transition:.25s;
+  box-shadow:0 0 30px rgba(0,255,200,.6);
 }
-
-button:hover{
-  transform:translateY(-1px);
-  box-shadow:0 0 40px rgba(0,255,200,.9);
-}
-
 .note{
   margin-top:14px;
   font-size:13px;
-  opacity:.8;
-}
-
-/* WHATSAPP */
-.wa{
-  margin-top:16px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-  color:var(--green);
-  font-size:14px;
-}
-
-/* ANIMATIONS */
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(20px)}
-  to{opacity:1;transform:none}
-}
-
-@keyframes float{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-6px)}
+  opacity:.75;
 }
 </style>
 </head>
@@ -134,40 +83,52 @@ button:hover{
 <body>
 
 <div class="card">
-
-  <!-- LOGO -->
-  <img src="logo.png" alt="Shorts AI Logo" class="logo">
+  <img src="logo.png" class="logo" alt="Shorts AI">
 
   <h1>Payment Successful 🎉</h1>
 
   <div class="sub">
     Submit your <b>YouTube video link</b><br>
-    We’ll start working immediately 🚀
+    We’ll start immediately 🚀
   </div>
 
-  <input type="text" placeholder="Paste YouTube video link">
+  <div class="plan" id="planText"></div>
 
-  <button>Submit & Continue</button>
+  <input id="yt" placeholder="Paste YouTube video link">
+
+  <button id="submitBtn">Submit & Continue</button>
 
   <div class="note">
-    You’ll receive Shorts ideas within <b>24 hours</b>
+    🔒 Secure payment verified • 💬 Priority WhatsApp support
   </div>
-
-  <div class="wa">
-    💬 Priority WhatsApp Support
-  </div>
-
 </div>
 
-<!-- SCRIPT (DO NOT TOUCH) -->
 <script>
+/* ===== CONFIG ===== */
 const phone = "9339942448";
 
-const btn = document.querySelector("button");
-const input = document.querySelector("input");
+/* ===== PLAN DETECT ===== */
+const params = new URLSearchParams(window.location.search);
+const plan = params.get("plan") || "99";
 
-btn.addEventListener("click", () => {
-  const link = input.value.trim();
+let planName = "Starter";
+let price = "₹99";
+
+if(plan === "199"){
+  planName = "Creator";
+  price = "₹199";
+}
+if(plan === "499"){
+  planName = "Pro";
+  price = "₹499";
+}
+
+document.getElementById("planText").innerText =
+  `Selected Plan: ${planName} (${price})`;
+
+/* ===== SUBMIT ===== */
+document.getElementById("submitBtn").onclick = () => {
+  const link = document.getElementById("yt").value.trim();
   if(!link){
     alert("Please paste your YouTube video link");
     return;
@@ -176,14 +137,16 @@ btn.addEventListener("click", () => {
   const msg = `Hi Shorts AI 👋
 Payment completed successfully ✅
 
-Here is my YouTube video link:
+Plan: ${planName} (${price})
+
+YouTube video link:
 ${link}
 
 Please start my Shorts service 🚀`;
 
   window.location.href =
     "https://wa.me/91" + phone + "?text=" + encodeURIComponent(msg);
-});
+};
 </script>
 
 </body>
