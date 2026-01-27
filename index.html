@@ -3,33 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shorts AI – Viral YouTube Shorts Ideas</title>
+<title>Shorts AI – Turn Videos into Viral Shorts</title>
 
-<meta name="description" content="Turn YouTube videos into viral Shorts ideas. Trusted by 100,000+ creators. Secure Razorpay payments.">
+<!-- SEO -->
+<meta name="description" content="Shorts AI helps YouTube creators generate viral Shorts ideas. Trusted, secure, fast delivery.">
+<meta name="keywords" content="YouTube Shorts, Shorts AI, viral shorts, YouTube growth">
 <meta name="robots" content="index, follow">
 
 <style>
 *{box-sizing:border-box}
 body{
   margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  background:radial-gradient(circle at top,#0f4b45,#041c19);
+  font-family:Inter, Arial, sans-serif;
+  background:radial-gradient(circle at top,#0b3d36,#041c19);
   color:#eaffff;
 }
 
-/* CONTAINER */
-.wrapper{
-  max-width:420px;
-  margin:auto;
-  padding:50px 16px 90px;
+/* ---------- HERO ---------- */
+.hero{
   text-align:center;
+  padding:60px 18px 40px;
 }
 
 /* LOGO */
 .logo{
   width:110px;
-  margin:auto;
-  filter:drop-shadow(0 0 18px #1aff9c);
+  margin:0 auto 18px;
   animation:float 4s ease-in-out infinite;
 }
 @keyframes float{
@@ -38,53 +37,49 @@ body{
 }
 
 /* TITLE */
-h1{
-  margin:18px 0 6px;
-  font-size:32px;
+.hero h1{
+  font-size:34px;
+  margin:10px 0;
 }
-.sub{
-  color:#9fdede;
+.hero h1 span{
+  color:#1aff9c;
+}
+
+/* SUBTITLE */
+.hero p{
   font-size:15px;
+  color:#b9fff1;
+  margin-bottom:22px;
 }
 
 /* TRUST BADGE */
 .trust{
-  margin:18px auto;
-  padding:10px 16px;
-  border-radius:999px;
   display:inline-block;
-  background:rgba(26,255,156,.08);
+  padding:10px 18px;
+  border-radius:14px;
+  background:rgba(26,255,156,.12);
   border:1px solid rgba(26,255,156,.4);
-  box-shadow:0 0 18px rgba(26,255,156,.35);
-  font-size:14px;
+  box-shadow:0 0 18px rgba(26,255,156,.25);
+  margin-bottom:26px;
+  font-weight:600;
 }
 
-/* FEATURES */
-.features{
-  text-align:left;
-  margin:24px auto;
-  max-width:340px;
-}
-.features li{
-  margin:10px 0;
-  font-size:15px;
-}
-
-/* YOUTUBE INPUT */
-.yt-box{
+/* ---------- YOUTUBE SEARCH ---------- */
+.search-box{
+  max-width:420px;
+  margin:0 auto 26px;
   display:flex;
   align-items:center;
-  gap:12px;
-  background:#0b3f3a;
-  padding:14px 18px;
-  border-radius:30px;
-  margin:22px auto;
-  box-shadow:0 0 20px rgba(0,0,0,.4);
+  background:#062925;
+  border-radius:14px;
+  padding:10px 14px;
+  border:1px solid rgba(26,255,156,.4);
 }
-.yt-box img{
+.search-box img{
   width:26px;
+  margin-right:10px;
 }
-.yt-box input{
+.search-box input{
   flex:1;
   background:transparent;
   border:none;
@@ -92,123 +87,166 @@ h1{
   color:#eaffff;
   font-size:14px;
 }
-.yt-box input::placeholder{
-  color:#8fd7cf;
-}
 
-/* CTA BUTTON */
+/* ---------- CTA ---------- */
 .cta{
-  display:block;
-  margin:26px auto 10px;
-  padding:18px;
-  width:100%;
-  max-width:360px;
+  display:inline-block;
+  padding:16px 28px;
+  border-radius:40px;
   background:linear-gradient(135deg,#00ffcc,#1aff9c);
-  color:#003b2a;
-  font-size:18px;
-  font-weight:bold;
-  border-radius:35px;
+  color:#00332b;
+  font-size:17px;
+  font-weight:800;
   text-decoration:none;
-  box-shadow:0 0 35px rgba(26,255,156,.6);
-  transition:.2s;
+  box-shadow:0 0 25px rgba(26,255,156,.55);
+  transition:.25s ease;
 }
-.cta:active{transform:scale(.97)}
-
-/* SUPPORT */
-.support{
-  margin-top:10px;
-  font-size:13px;
-  color:#9fdede;
+.cta:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 40px rgba(26,255,156,.9);
 }
 
-/* FOOTER */
-.footer{
-  margin-top:36px;
+/* ---------- FEATURES ---------- */
+.features{
+  max-width:520px;
+  margin:30px auto 10px;
+  text-align:left;
+  padding:0 10px;
+}
+.features li{
+  list-style:none;
+  margin:10px 0;
   font-size:14px;
 }
-.footer a{
+.features li::before{
+  content:"✔ ";
   color:#1aff9c;
-  text-decoration:none;
-  margin:0 8px;
-  font-weight:bold;
-}
-.footer a:hover{text-decoration:underline}
-.copy{
-  margin-top:14px;
-  font-size:13px;
-  color:#9fdede;
+  font-weight:700;
 }
 
-/* WHATSAPP */
+/* ---------- FOOTER ---------- */
+.footer{
+  margin:50px auto 30px;
+  text-align:center;
+}
+
+/* TEXT LINKS (SIMPLE STYLE) */
+.footer-links{
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  flex-wrap:wrap;
+}
+.footer-links a{
+  position:relative;
+  font-size:15px;
+  font-weight:600;
+  color:#9fffe3;
+  text-decoration:none;
+  padding:6px 2px;
+  transition:.3s;
+}
+.footer-links a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:0%;
+  height:2px;
+  background:linear-gradient(90deg,#00ffcc,#1aff9c);
+  box-shadow:0 0 10px #1aff9c;
+  transition:.3s;
+}
+.footer-links a:hover{
+  color:#fff;
+  text-shadow:0 0 8px #1aff9c;
+}
+.footer-links a:hover::after{
+  width:100%;
+}
+
+.footer-copy{
+  margin-top:14px;
+  font-size:13px;
+  color:#7fcfc4;
+}
+
+/* ---------- WHATSAPP FLOAT ---------- */
 .whatsapp{
   position:fixed;
-  right:16px;
-  bottom:16px;
-  width:60px;
-  height:60px;
+  right:18px;
+  bottom:18px;
+  width:58px;
+  height:58px;
   background:#25D366;
   border-radius:50%;
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:32px;
-  color:#fff;
-  text-decoration:none;
   box-shadow:0 0 25px rgba(37,211,102,.7);
+  animation:pulse 1.8s infinite;
   z-index:999;
+}
+.whatsapp img{width:30px}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(37,211,102,.7)}
+  70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}
+  100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
 }
 </style>
 </head>
 
 <body>
 
-<div class="wrapper">
+<!-- HERO -->
+<div class="hero">
 
   <!-- LOGO -->
   <img src="logo.png" alt="Shorts AI Logo" class="logo">
 
-  <h1>Shorts AI</h1>
-  <div class="sub">Turn your YouTube videos into <b>viral Shorts ideas</b></div>
+  <h1>Shorts <span>AI</span></h1>
+  <p>Turn your YouTube videos into <b>viral Shorts ideas</b></p>
 
   <div class="trust">
-    ✅ 100% Original Platform • 🚀 Trusted by <b>100,000+</b> Active Creators
+    ✔ 100% Original Platform • 🚀 Trusted by 100,000+ Creators
   </div>
 
-  <ul class="features">
-    <li>• Choose a plan ₹99 / ₹199 / ₹499</li>
-    <li>• Secure payment via Razorpay</li>
-    <li>• Submit your YouTube video link</li>
-    <li>• Get daily Shorts ideas within <b>24 hours</b></li>
-  </ul>
-
-  <!-- YOUTUBE INPUT -->
-  <div class="yt-box">
+  <!-- YOUTUBE SEARCH -->
+  <div class="search-box">
     <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg">
-    <input type="text" placeholder="Paste YouTube video link (after payment)">
+    <input type="text" placeholder="Paste YouTube video link here…">
   </div>
+
+  <!-- FEATURES -->
+  <ul class="features">
+    <li>Choose a plan ₹99 / ₹199 / ₹499</li>
+    <li>Secure payment via Razorpay</li>
+    <li>Submit YouTube video link</li>
+    <li>Get daily Shorts ideas within 24 hours</li>
+  </ul>
 
   <!-- CTA -->
   <a href="pricing.html" class="cta">View Plans & Start Growing</a>
 
-  <div class="support">
-    🔒 Secure Payments • 💬 WhatsApp Support
-  </div>
-
-  <!-- FOOTER LINKS -->
-  <div class="footer">
-    <a href="contact.html">Contact</a> |
-    <a href="privacy.html">Privacy</a> |
-    <a href="terms.html">Terms</a> |
-    <a href="refund.html">Refund</a>
-    <div class="copy">
-      © 2026 Shorts AI • Built for Serious YouTube Creators 🚀
-    </div>
-  </div>
-
 </div>
 
-<!-- WHATSAPP FLOAT -->
-<a class="whatsapp" href="https://wa.me/919339942448" target="_blank">💬</a>
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-links">
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="refund.html">Refund</a>
+  </div>
+  <div class="footer-copy">
+    © 2026 Shorts AI • Built for Serious YouTube Creators 🚀
+  </div>
+</div>
+
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/919339942448" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+</a>
 
 </body>
 </html>
