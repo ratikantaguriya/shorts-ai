@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Shorts AI – Grow Faster</title>
+<title>Shorts AI – Grow Faster with Viral Shorts</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- GOOGLE FONT -->
+<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
@@ -14,7 +14,6 @@
   --bg2:#031b19;
   --accent:#20f7c5;
   --text:#eafffa;
-  --card:#0b3b37;
 }
 
 *{
@@ -41,9 +40,15 @@ body{
 
 /* LOGO */
 .logo img{
-  width:110px;
+  width:120px;
   margin-bottom:10px;
-  filter:drop-shadow(0 0 25px rgba(32,247,197,.6));
+  filter:drop-shadow(0 0 25px rgba(32,247,197,.7));
+  animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-8px)}
 }
 
 /* BRAND */
@@ -57,7 +62,7 @@ h1{
 .sub{
   opacity:.85;
   font-size:14px;
-  margin-bottom:30px;
+  margin-bottom:28px;
 }
 
 /* HEADLINE */
@@ -65,19 +70,19 @@ h1{
   font-size:36px;
   font-weight:800;
   line-height:1.25;
-  margin-bottom:15px;
+  margin-bottom:14px;
 }
 
 .desc{
   opacity:.9;
   font-size:15px;
-  margin-bottom:30px;
+  margin-bottom:28px;
 }
 
-/* INPUT */
+/* INPUT (VISUAL TRUST) */
 .input-box{
   max-width:520px;
-  margin:0 auto 30px;
+  margin:0 auto 26px;
   background:rgba(255,255,255,.06);
   border:1px solid rgba(32,247,197,.25);
   border-radius:16px;
@@ -101,7 +106,7 @@ h1{
   display:flex;
   flex-direction:column;
   gap:14px;
-  margin-bottom:35px;
+  margin-bottom:30px;
 }
 
 .step{
@@ -115,20 +120,20 @@ h1{
 /* CTA */
 .cta{
   display:inline-block;
-  margin:25px auto 30px;
-  padding:18px 36px;
+  margin:22px auto 26px;
+  padding:18px 40px;
   border-radius:999px;
   background:linear-gradient(90deg,#20f7c5,#14d1a6);
   color:#00312a;
   font-weight:800;
   text-decoration:none;
-  font-size:16px;
+  font-size:17px;
   box-shadow:0 0 35px rgba(32,247,197,.6);
-  transition:.3s;
+  transition:.25s;
 }
 
 .cta:hover{
-  transform:scale(1.05);
+  transform:scale(1.06);
 }
 
 /* TRUST */
@@ -137,7 +142,6 @@ h1{
   flex-wrap:wrap;
   justify-content:center;
   gap:12px;
-  margin-top:10px;
 }
 
 .trust span{
@@ -195,21 +199,23 @@ footer a{
     Pay once • Send your channel link • Get viral-ready Shorts & Reels ideas
   </div>
 
-  <!-- INPUT -->
+  <!-- INPUT (visual only) -->
   <div class="input-box">
     🔍
-    <input type="text" placeholder="Paste your YouTube or Instagram link">
+    <input type="text" placeholder="Paste your YouTube or Instagram link after payment" disabled>
   </div>
 
   <!-- STEPS -->
   <div class="steps">
-    <div class="step">① Choose a plan & pay securely</div>
-    <div class="step">② Send your YouTube / Instagram link on WhatsApp</div>
+    <div class="step">① Choose a plan & pay securely via Razorpay</div>
+    <div class="step">② WhatsApp opens automatically – send your link</div>
     <div class="step">③ Receive high-quality Shorts ideas on time</div>
   </div>
 
   <!-- CTA -->
-  <a href="pricing.html" class="cta">🚀 Get Viral Shorts Ideas</a>
+  <a href="https://rzp.io/rzp/9N6GKiA" class="cta">
+    🚀 Get Viral Shorts Ideas (₹99)
+  </a>
 
   <!-- TRUST -->
   <div class="trust">
@@ -223,7 +229,6 @@ footer a{
 
   <!-- FOOTER -->
   <footer>
-    <a href="index.html">🏠 Home</a>
     <a href="contact.html">✉️ Contact</a>
     <a href="privacy.html">🔐 Privacy</a>
     <a href="terms.html">📜 Terms</a>
