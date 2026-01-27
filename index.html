@@ -3,142 +3,147 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shorts AI</title>
+<title>Shorts AI – Daily Shorts Ideas</title>
 
 <style>
 body{
   margin:0;
-  font-family:Arial, sans-serif;
-  background:#000;
+  font-family: Arial, sans-serif;
+  background:#062a2a;
   color:#fff;
 }
-.main{
+.card{
   max-width:420px;
-  margin:30px auto;
-  padding:25px;
-  background:linear-gradient(180deg,#0b2f2f,#062424);
-  border-radius:22px;
-  box-shadow:0 0 30px rgba(0,0,0,0.7);
+  margin:40px auto;
+  background:#0b3c3c;
+  padding:25px 20px;
+  border-radius:18px;
   text-align:center;
+  box-shadow:0 0 30px rgba(0,0,0,.5);
 }
 .logo{
   width:70px;
-  margin:10px auto 15px;
+  margin-bottom:10px;
 }
 h1{
   margin:10px 0;
 }
-.tagline{
-  opacity:0.85;
-  font-size:15px;
-}
 .green{
   color:#00ff8c;
-  margin:15px 0;
-  font-weight:bold;
 }
 .hr{
   height:1px;
-  background:#1e4b4b;
+  background:rgba(255,255,255,.2);
   margin:20px 0;
 }
-.work{
+.steps{
   text-align:left;
 }
-.work h2{
-  text-align:center;
-}
-.work p{
-  margin:10px 0;
-  font-size:15px;
+.steps p{
+  margin:8px 0;
 }
 .input-box{
-  margin:18px 0;
-  background:#111;
-  border-radius:14px;
+  background:#062a2a;
   padding:12px;
+  border-radius:30px;
+  margin:20px 0;
   display:flex;
   align-items:center;
-  gap:10px;
+  opacity:.6;
 }
 .input-box img{
-  width:30px;
+  width:22px;
+  margin-right:8px;
 }
-.input-box input{
-  background:none;
-  border:none;
-  outline:none;
-  color:#777;
-  width:100%;
+.input-box span{
+  font-size:14px;
 }
 .btn{
   width:100%;
-  padding:16px;
-  background:#00ff8c;
+  padding:15px;
   border:none;
-  border-radius:16px;
-  font-size:18px;
-  font-weight:bold;
+  border-radius:30px;
+  background:#00ff8c;
+  font-size:16px;
   cursor:pointer;
 }
-.sub{
-  margin-top:12px;
+.info{
+  margin-top:15px;
   font-size:14px;
   color:#00ff8c;
 }
-.footer{
-  margin-top:18px;
-  font-size:14px;
+.links{
+  margin-top:20px;
 }
-.footer a{
+.links a{
   color:#00ff8c;
   text-decoration:none;
   margin:0 6px;
+  font-size:14px;
+}
+footer{
+  margin-top:10px;
+  font-size:13px;
+  opacity:.8;
+}
+.whatsapp{
+  margin-top:10px;
+}
+.whatsapp a{
+  color:#00ff8c;
+  text-decoration:none;
 }
 </style>
 </head>
 
 <body>
 
-<div class="main">
+<div class="card">
+  <img src="logo.png" class="logo">
 
-<img src="logo.png" class="logo" alt="Shorts AI">
+  <h1>Shorts AI</h1>
+  <p>Turn your YouTube videos into <b>high-engagement Shorts ideas</b></p>
+  <p class="green">✔ 100% original website · Trusted by 1 lakh+ users</p>
 
-<h1>Shorts AI</h1>
-<p class="tagline">
-Turn your YouTube videos into <b>high-engagement Shorts ideas</b><br>
-No confusion. No delay. Just results.
-</p>
+  <div class="hr"></div>
 
-<p class="green">✔ 100% original website · Trusted by 1 lakh+ active users</p>
+  <h2>How it Works</h2>
+  <div class="steps">
+    <p>📌 Choose a plan (₹99 / ₹199 / ₹499)</p>
+    <p>🔒 Complete secure payment</p>
+    <p>🔗 Submit your YouTube video link</p>
+    <p>⚡ Get daily Shorts ideas (within 24 hours)</p>
+  </div>
 
-<div class="hr"></div>
+  <div class="input-box">
+    <img src="https://img.icons8.com/color/48/youtube-play.png">
+    <span>Paste YouTube link (available after payment)</span>
+  </div>
 
-<div class="work">
-<h2>How it Works</h2>
-<p>📍 Choose a plan (₹99 / ₹199 / ₹499)</p>
-<p>🔒 Complete secure payment</p>
-<p>🔗 Submit your YouTube video link</p>
-<p>⚡ Get daily Shorts ideas (within 24 hours)</p>
-</div>
+  <!-- ₹99 PLAN -->
+  <button class="btn" onclick="window.location.href='https://rzp.io/rzp/l7lkH8IZ'">
+    Plan & Buy – ₹99
+  </button>
 
-<div class="input-box">
-<img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg">
-<input type="text" placeholder="Paste YouTube link (available after payment)" disabled>
-</div>
+  <div class="info">
+    🔒 Secure payments · 📅 30-day plans · 💬 WhatsApp support
+  </div>
 
-<button class="btn" onclick="location.href='pricing.html'">Plan & Buy</button>
+  <div class="whatsapp">
+    📲 <a href="https://wa.me/919339942448" target="_blank">WhatsApp Support</a>
+  </div>
 
-<p class="sub">🔒 Secure payments · 📅 30-day plans · 💬 WhatsApp support</p>
+  <div class="links">
+    <a href="pricing.html">Pricing</a> |
+    <a href="contact.html">Contact</a> |
+    <a href="privacy.html">Privacy</a> |
+    <a href="terms.html">Terms</a> |
+    <a href="refund.html">Refund</a>
+  </div>
 
-<div class="footer">
-<a href="pricing.html">Pricing</a> |
-<a href="contact.html">Contact</a> |
-<a href="privacy.html">Privacy</a> |
-<a href="refund.html">Refund</a>
-<p>© 2026 Shorts AI</p>
-</div>
-
+  <footer>
+    © 2026 Shorts AI
+  </footer>
 </div>
 
 </body>
