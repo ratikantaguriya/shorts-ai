@@ -1,248 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pricing – Shorts AI</title>
-
-<meta name="description" content="Choose the best Shorts AI plan. Secure Razorpay payments. Trusted by 100,000+ creators.">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pricing Plans – Shorts AI</title>
 
 <style>
 :root{
-  --bg:#041a18;
-  --card:#0b2f2a;
-  --neon:#1affb3;
-  --neon2:#00ffd5;
-  --text:#eafff8;
-  --muted:#9adfd0;
+  --bg:#062a26;
+  --card:#0b3b35;
+  --neon:#19ffb5;
+  --text:#e9fff8;
 }
 
 *{box-sizing:border-box}
 body{
   margin:0;
-  font-family:Inter,system-ui;
-  background:
-    radial-gradient(1200px at top,#0f3f37 0%,var(--bg) 55%);
+  font-family:system-ui,-apple-system,BlinkMacSystemFont;
+  background:radial-gradient(circle at top,#0f4c45,#041d1a 70%);
   color:var(--text);
 }
 
-@keyframes glow{
-  from{box-shadow:0 0 18px rgba(26,255,179,.4)}
-  to{box-shadow:0 0 40px rgba(26,255,179,.9)}
-}
-
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:40px 16px 90px;
+/* ===== HEADER ===== */
+header{
   text-align:center;
+  padding:50px 20px 30px;
+}
+header h1{
+  margin:10px 0;
+  font-size:32px;
+}
+header p{
+  opacity:.8;
 }
 
-.logo img{
-  width:110px;
-  filter:drop-shadow(0 0 25px rgba(26,255,179,.9));
-}
-
-h1{
-  font-size:40px;
-  margin:18px 0 6px;
-}
-.subtitle{
-  color:var(--muted);
-  font-size:15px;
-}
-
-.trust{
-  margin:16px auto 30px;
-  display:inline-block;
-  padding:12px 22px;
-  border-radius:18px;
-  background:rgba(26,255,179,.1);
-  border:1px solid rgba(26,255,179,.35);
-  font-weight:700;
-}
-
-/* Pricing grid */
-.grid{
+/* ===== PLANS ===== */
+.plans{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:22px;
-  margin-top:30px;
+  gap:26px;
+  padding:20px;
+  max-width:420px;
+  margin:auto;
 }
 
 .card{
-  background:var(--card);
-  border-radius:26px;
+  position:relative;
+  background:linear-gradient(180deg,#0e4a42,#072e29);
+  border-radius:22px;
   padding:28px 22px 30px;
-  border:1px solid rgba(255,255,255,.06);
+  box-shadow:0 0 0 1px rgba(25,255,181,.25);
 }
 
-.popular{
-  border:2px solid var(--neon);
-  animation:glow 2.6s infinite alternate;
-  position:relative;
+/* glow (non blocking) */
+.card::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  border-radius:22px;
+  background:linear-gradient(120deg,transparent,rgba(25,255,181,.4),transparent);
+  filter:blur(18px);
+  z-index:0;
+  pointer-events:none;
 }
-.popular::before{
-  content:"MOST POPULAR";
+
+.card *{
+  position:relative;
+  z-index:2;
+}
+
+/* MOST POPULAR */
+.badge{
   position:absolute;
   top:-14px;
   left:50%;
   transform:translateX(-50%);
-  background:linear-gradient(90deg,var(--neon),var(--neon2));
-  color:#002a23;
+  background:var(--neon);
+  color:#022;
+  padding:6px 16px;
   font-size:12px;
-  font-weight:800;
-  padding:6px 14px;
+  font-weight:700;
   border-radius:20px;
 }
 
-.plan{
-  font-size:22px;
-  font-weight:800;
-}
+/* PRICE */
 .price{
-  font-size:44px;
-  font-weight:900;
-  color:var(--neon);
-  margin:10px 0;
-}
-
-.features{
-  text-align:left;
-  margin:18px 0 24px;
-}
-.features li{
-  list-style:none;
-  margin:10px 0;
-  font-size:15px;
-}
-.features li::before{
-  content:"✔";
-  color:var(--neon);
-  margin-right:10px;
-}
-
-.pay{
-  display:block;
-  padding:16px;
-  border-radius:36px;
-  background:linear-gradient(90deg,var(--neon),var(--neon2));
-  color:#002a23;
+  font-size:36px;
   font-weight:800;
-  text-decoration:none;
-  box-shadow:0 0 32px rgba(26,255,179,.9);
+  color:var(--neon);
+  margin:8px 0 14px;
 }
 
-.note{
+/* FEATURES */
+ul{
+  list-style:none;
+  padding:0;
+  margin:0 0 20px;
+}
+li{
+  margin:10px 0;
+  opacity:.95;
+}
+
+/* ===== BUTTON (REAL CLICKABLE) ===== */
+.pay-btn{
+  display:block;
+  text-align:center;
+  padding:16px;
+  border-radius:999px;
+  font-weight:700;
+  text-decoration:none;
+  color:#022;
+  background:linear-gradient(90deg,#1dffb0,#16e9ff);
+  box-shadow:0 0 25px rgba(25,255,181,.6);
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+.pay-btn:active{
+  transform:scale(.97);
+  box-shadow:0 0 14px rgba(25,255,181,.4);
+}
+
+.sub{
+  text-align:center;
   margin-top:10px;
   font-size:13px;
-  color:var(--muted);
+  opacity:.7;
 }
 
-/* Footer */
+/* ===== FOOTER ===== */
 footer{
-  margin-top:50px;
+  text-align:center;
+  padding:35px 20px 50px;
+  font-size:14px;
 }
-.footer-links{
-  display:flex;
-  justify-content:center;
-  gap:26px;
-  flex-wrap:wrap;
-}
-.footer-links a{
+footer a{
   color:var(--neon);
   text-decoration:none;
-  font-weight:600;
+  margin:0 10px;
 }
-.back{
-  display:inline-block;
-  margin-top:20px;
-  color:var(--muted);
-  text-decoration:none;
-}
-small{
-  display:block;
-  margin-top:14px;
-  color:#7fcfc0;
-}
+footer a:active{opacity:.7}
 </style>
 </head>
 
 <body>
 
-<div class="container">
-
-  <div class="logo">
-    <img src="logo.png" alt="Shorts AI">
-  </div>
-
+<header>
   <h1>Pricing Plans</h1>
-  <div class="subtitle">Choose a plan & pay securely via Razorpay</div>
+  <p>Choose a plan & pay securely via Razorpay</p>
+</header>
 
-  <div class="trust">🔒 Secure Payments • 💬 WhatsApp Support • ⚡ Fast Delivery</div>
+<section class="plans">
 
-  <div class="grid">
-
-    <!-- ₹99 -->
-    <div class="card popular">
-      <div class="plan">Starter</div>
-      <div class="price">₹99</div>
-      <ul class="features">
-        <li>2 YouTube video links</li>
-        <li>5 Shorts ideas / day</li>
-        <li>Delivery within 24 hours</li>
-        <li>WhatsApp support</li>
-        <li>Best for beginners</li>
-      </ul>
-      <a class="pay" href="https://rzp.io/l/99LINK">Pay Securely</a>
-      <div class="note">Low risk • High value</div>
-    </div>
-
-    <!-- ₹199 -->
-    <div class="card">
-      <div class="plan">Creator</div>
-      <div class="price">₹199</div>
-      <ul class="features">
-        <li>4 YouTube video links</li>
-        <li>15 Shorts ideas / day</li>
-        <li>Faster delivery</li>
-        <li>Priority WhatsApp support</li>
-        <li>Growth-focused creators</li>
-      </ul>
-      <a class="pay" href="https://rzp.io/l/199LINK">Pay Securely</a>
-      <div class="note">Best value upgrade</div>
-    </div>
-
-    <!-- ₹499 -->
-    <div class="card">
-      <div class="plan">Pro</div>
-      <div class="price">₹499</div>
-      <ul class="features">
-        <li>Unlimited YouTube links</li>
-        <li>30+ Shorts ideas / day</li>
-        <li>Fastest delivery</li>
-        <li>Dedicated WhatsApp support</li>
-        <li>Agencies & brands</li>
-      </ul>
-      <a class="pay" href="https://rzp.io/l/499LINK">Pay Securely</a>
-      <div class="note">Maximum growth</div>
-    </div>
-
+  <!-- ₹99 -->
+  <div class="card">
+    <div class="badge">MOST POPULAR</div>
+    <h2>Starter</h2>
+    <div class="price">₹99</div>
+    <ul>
+      <li>✔ 2 YouTube links</li>
+      <li>✔ 5 Shorts ideas / day</li>
+      <li>✔ 24h delivery</li>
+      <li>✔ WhatsApp support</li>
+    </ul>
+    <a class="pay-btn" href="https://rzp.io/rzp/ycxj3Zb">Pay Securely</a>
+    <div class="sub">Low risk • Best for beginners</div>
   </div>
 
-  <footer>
-    <div class="footer-links">
-      <a href="contact.html">📧 Contact</a>
-      <a href="privacy.html">🔐 Privacy</a>
-      <a href="terms.html">📜 Terms</a>
-      <a href="refund.html">💸 Refund</a>
-    </div>
-    <a class="back" href="index.html">← Back to Home</a>
-    <small>© 2026 Shorts AI • Built for Serious YouTube Creators 🚀</small>
-  </footer>
+  <!-- ₹199 -->
+  <div class="card">
+    <h2>Creator</h2>
+    <div class="price">₹199</div>
+    <ul>
+      <li>✔ 4 YouTube links</li>
+      <li>✔ 15 Shorts ideas / day</li>
+      <li>✔ Faster delivery</li>
+      <li>✔ Priority WhatsApp support</li>
+    </ul>
+    <a class="pay-btn" href="https://rzp.io/rzp/CREATOR_LINK">Pay Securely</a>
+    <div class="sub">Best value upgrade</div>
+  </div>
 
-</div>
+  <!-- ₹499 -->
+  <div class="card">
+    <h2>Pro</h2>
+    <div class="price">₹499</div>
+    <ul>
+      <li>✔ Unlimited YouTube links</li>
+      <li>✔ 30+ Shorts ideas / day</li>
+      <li>✔ Fastest delivery</li>
+      <li>✔ Dedicated WhatsApp support</li>
+    </ul>
+    <a class="pay-btn" href="https://rzp.io/rzp/PRO_LINK">Pay Securely</a>
+    <div class="sub">Maximum growth</div>
+  </div>
+
+</section>
+
+<footer>
+  <div>
+    <a href="contact.html">📩 Contact</a>
+    <a href="privacy.html">🔒 Privacy</a>
+    <a href="terms.html">📜 Terms</a>
+    <a href="refund.html">💸 Refund</a>
+  </div>
+  <div style="margin-top:14px;">
+    <a href="index.html">← Back to Home</a>
+  </div>
+  <div style="margin-top:14px;opacity:.6">
+    © 2026 Shorts AI • Built for Serious YouTube Creators 🚀
+  </div>
+</footer>
 
 </body>
 </html>
