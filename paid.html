@@ -6,86 +6,127 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+:root{
+  --green:#00ffb2;
+  --cyan:#00e0ff;
+  --dark:#031f1a;
+}
+
 *{box-sizing:border-box}
+
 body{
   margin:0;
   font-family:system-ui,-apple-system,BlinkMacSystemFont;
-  background:radial-gradient(circle at top,#0f3f36,#021b17);
+  background:
+    radial-gradient(circle at top,#0f3f36 0%,#031f1a 55%,#021412 100%);
   color:#eafff7;
+  min-height:100vh;
   display:flex;
   align-items:center;
   justify-content:center;
-  min-height:100vh;
+  padding:20px;
 }
+
+/* MAIN CARD */
 .card{
-  width:92%;
-  max-width:460px;
-  background:rgba(255,255,255,.06);
+  width:100%;
+  max-width:440px;
+  background:rgba(255,255,255,0.05);
   border:1px solid rgba(0,255,200,.25);
   border-radius:26px;
-  padding:36px 22px 34px;
+  padding:34px 24px 38px;
   text-align:center;
-  box-shadow:0 0 50px rgba(0,255,200,.35);
-  animation:fadeUp .6s ease;
+  box-shadow:
+    0 0 30px rgba(0,255,200,.25),
+    inset 0 0 40px rgba(0,255,200,.05);
+  backdrop-filter:blur(10px);
+  animation:fadeUp .7s ease;
 }
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(18px)}
-  to{opacity:1;transform:none}
-}
+
+/* LOGO */
 .logo{
-  width:74px;
-  margin-bottom:14px;
-  filter:drop-shadow(0 0 18px rgba(0,255,200,.8));
+  width:90px;
+  margin:0 auto 14px;
+  animation:float 3s ease-in-out infinite;
+  filter:drop-shadow(0 0 18px rgba(0,255,200,.7));
 }
+
 h1{
-  margin:10px 0 6px;
-  color:#00ffb2;
+  margin:10px 0 8px;
   font-size:28px;
+  color:var(--green);
 }
+
 .sub{
-  opacity:.85;
   font-size:15px;
+  opacity:.9;
+  line-height:1.5;
   margin-bottom:22px;
 }
+
+/* INPUT */
 input{
   width:100%;
   padding:16px 18px;
   border-radius:14px;
   border:1px solid rgba(0,255,200,.35);
-  background:rgba(0,0,0,.25);
+  background:rgba(0,0,0,.35);
   color:#eafff7;
-  font-size:15px;
   outline:none;
+  font-size:15px;
+  margin-bottom:18px;
 }
-input::placeholder{color:#9adfd0}
+
+input::placeholder{
+  color:#9adfd1;
+}
+
+/* BUTTON */
 button{
   width:100%;
-  margin-top:16px;
   padding:16px;
-  border:none;
   border-radius:40px;
+  border:none;
   font-size:16px;
   font-weight:700;
-  cursor:pointer;
   color:#00332b;
-  background:linear-gradient(90deg,#00ffb2,#00e0ff);
-  box-shadow:0 0 30px rgba(0,255,200,.6);
+  cursor:pointer;
+  background:linear-gradient(90deg,var(--green),var(--cyan));
+  box-shadow:0 0 25px rgba(0,255,200,.7);
+  transition:.25s;
 }
-button:active{transform:scale(.98)}
+
+button:hover{
+  transform:translateY(-1px);
+  box-shadow:0 0 40px rgba(0,255,200,.9);
+}
+
 .note{
   margin-top:14px;
   font-size:13px;
-  opacity:.75;
+  opacity:.8;
 }
+
+/* WHATSAPP */
 .wa{
-  margin-top:14px;
-  color:#00ffb2;
-  font-weight:600;
+  margin-top:16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  color:var(--green);
+  font-size:14px;
 }
-.lock{
-  margin-top:10px;
-  font-size:12px;
-  opacity:.65;
+
+/* ANIMATIONS */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:none}
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-6px)}
 }
 </style>
 </head>
@@ -93,33 +134,37 @@ button:active{transform:scale(.98)}
 <body>
 
 <div class="card">
-  <img src="logo.png" class="logo" alt="Shorts AI">
+
+  <!-- LOGO -->
+  <img src="logo.png" alt="Shorts AI Logo" class="logo">
 
   <h1>Payment Successful 🎉</h1>
+
   <div class="sub">
     Submit your <b>YouTube video link</b><br>
-    We’ll start working immediately
+    We’ll start working immediately 🚀
   </div>
 
-  <input id="yt" type="url" placeholder="Paste YouTube video link">
+  <input type="text" placeholder="Paste YouTube video link">
 
-  <button id="submitBtn">Submit</button>
+  <button>Submit & Continue</button>
 
   <div class="note">
     You’ll receive Shorts ideas within <b>24 hours</b>
   </div>
 
-  <div class="wa">💬 WhatsApp Support Available</div>
-
-  <div class="lock">
-    🔒 Secure payment verified • Priority WhatsApp support
+  <div class="wa">
+    💬 Priority WhatsApp Support
   </div>
+
 </div>
 
+<!-- SCRIPT (DO NOT TOUCH) -->
 <script>
 const phone = "9339942448";
-const btn = document.getElementById("submitBtn");
-const input = document.getElementById("yt");
+
+const btn = document.querySelector("button");
+const input = document.querySelector("input");
 
 btn.addEventListener("click", () => {
   const link = input.value.trim();
