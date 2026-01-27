@@ -3,112 +3,148 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Pricing Plans – Shorts AI</title>
+<meta name="description" content="Choose the best Shorts AI plan. Secure payments via Razorpay. Trusted by 100,000+ YouTube creators.">
+<meta name="keywords" content="YouTube Shorts ideas, Shorts AI pricing, viral shorts, creator tools">
+<meta name="robots" content="index, follow">
 
 <style>
-*{
-  box-sizing:border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 body{
   margin:0;
-  background:linear-gradient(180deg,#062f2f,#041c1c);
+  font-family:Arial,Helvetica,sans-serif;
+  background:linear-gradient(160deg,#062f2f,#031919);
   color:#fff;
 }
 
+/* CONTAINER */
 .container{
-  max-width:1100px;
-  margin:auto;
-  padding:40px 16px;
-  text-align:center;
+  max-width:420px;
+  margin:0 auto;
+  padding:30px 16px 120px;
 }
 
+/* HEADER */
 .logo{
-  font-size:26px;
-  font-weight:800;
-  margin-bottom:10px;
+  text-align:center;
+  margin-bottom:20px;
 }
-
+.logo img{
+  width:60px;
+}
 h1{
-  font-size:34px;
+  text-align:center;
+  font-size:28px;
   margin:10px 0;
 }
-
-.sub{
-  color:#9fffe0;
-  margin-bottom:40px;
+.subtitle{
+  text-align:center;
+  color:#9beee0;
+  font-size:14px;
 }
 
-.plans{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:24px;
-}
-
+/* PLAN CARD */
 .plan{
-  background:#083838;
-  border-radius:18px;
-  padding:30px 24px;
-  box-shadow:0 0 30px rgba(0,0,0,.4);
-  position:relative;
+  background:#0c3a3a;
+  border-radius:20px;
+  padding:22px;
+  margin-top:25px;
+  box-shadow:0 0 20px rgba(0,0,0,.4);
+}
+.plan.popular{
+  border:2px solid #00ffb0;
+}
+.badge{
+  background:#00ffb0;
+  color:#003a2a;
+  display:inline-block;
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:bold;
+  margin-bottom:10px;
+}
+.price{
+  font-size:36px;
+  color:#00ffb0;
+  font-weight:bold;
+  margin:10px 0;
+}
+ul{
+  padding:0;
+  list-style:none;
+}
+ul li{
+  margin:8px 0;
+  font-size:14px;
+}
+ul li::before{
+  content:"✔ ";
+  color:#00ffb0;
 }
 
-.plan.popular{
-  border:2px solid #1dff9b;
+/* BUTTON */
+.btn{
+  display:block;
+  text-align:center;
+  margin-top:18px;
+  padding:16px;
+  background:#00ffb0;
+  color:#003a2a;
+  text-decoration:none;
+  font-weight:bold;
+  border-radius:30px;
+  transition:.3s;
+}
+.btn:hover{
   transform:scale(1.03);
 }
 
-.badge{
-  position:absolute;
-  top:-14px;
-  left:50%;
-  transform:translateX(-50%);
-  background:#1dff9b;
-  color:#003b2f;
-  padding:6px 16px;
-  border-radius:20px;
-  font-weight:700;
+/* FOOTER */
+.footer{
+  text-align:center;
+  margin-top:40px;
   font-size:13px;
 }
-
-.price{
-  font-size:40px;
-  color:#1dff9b;
-  margin:10px 0;
-}
-
-ul{
-  list-style:none;
-  padding:0;
-  text-align:left;
-}
-
-ul li{
-  margin:10px 0;
-}
-
-.btn{
-  display:block;
-  margin-top:20px;
-  padding:14px;
-  background:#1dff9b;
-  color:#003b2f;
-  border-radius:30px;
+.footer a{
+  color:#00ffb0;
   text-decoration:none;
-  font-weight:700;
+  margin:6px;
+  padding:8px 14px;
+  border-radius:20px;
+  background:rgba(0,255,176,.1);
+  display:inline-block;
 }
-
-.trust{
+.footer a:hover{
+  background:rgba(0,255,176,.25);
+}
+.copy{
   margin-top:14px;
-  font-size:14px;
-  color:#b9ffe9;
+  color:#9beee0;
 }
 
-.footer{
-  margin-top:40px;
-  font-size:14px;
-  color:#9fffe0;
+/* WHATSAPP FLOAT */
+.whatsapp{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  background:#25D366;
+  color:#fff;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:30px;
+  text-decoration:none;
+  box-shadow:0 0 20px rgba(0,0,0,.5);
+  animation:pulse 2s infinite;
+}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(37,211,102,.7);}
+  70%{box-shadow:0 0 0 20px rgba(37,211,102,0);}
+  100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
 }
 </style>
 </head>
@@ -117,69 +153,75 @@ ul li{
 
 <div class="container">
 
-  <div class="logo">🚀 Shorts AI</div>
-  <h1>Pricing Plans</h1>
-  <p class="sub">Choose a plan & pay securely via Razorpay (UPI / PhonePe / GPay)</p>
-
-  <div class="plans">
-
-    <!-- ₹99 PLAN -->
-    <div class="plan popular">
-      <div class="badge">MOST POPULAR</div>
-      <h2>Starter</h2>
-      <div class="price">₹99</div>
-      <ul>
-        <li>✅ 2 YouTube video links</li>
-        <li>✅ 5 Shorts ideas per day</li>
-        <li>✅ Delivery within 24 hours</li>
-        <li>✅ Basic WhatsApp support</li>
-        <li>✅ Best for new creators</li>
-      </ul>
-      <a href="https://rzp.io/rzp/ycxj3Zb" class="btn">Pay Securely (UPI / PhonePe / GPay)</a>
-      <div class="trust">✔ PhonePe / GPay supported<br>✔ 100% Secure via Razorpay</div>
-    </div>
-
-    <!-- ₹199 PLAN -->
-    <div class="plan">
-      <h2>Creator <span style="color:#1dff9b">(BEST VALUE)</span></h2>
-      <div class="price">₹199</div>
-      <ul>
-        <li>✅ 4 YouTube video links</li>
-        <li>✅ 15 Shorts ideas per day</li>
-        <li>✅ Faster delivery</li>
-        <li>✅ Priority WhatsApp support</li>
-        <li>✅ Growth-focused creators</li>
-      </ul>
-      <a href="https://rzp.io/rzp/VPhmqa0" class="btn">Pay Securely (UPI / PhonePe / GPay)</a>
-      <div class="trust">✔ PhonePe / GPay supported<br>✔ 100% Secure via Razorpay</div>
-    </div>
-
-    <!-- ₹499 PLAN -->
-    <div class="plan">
-      <h2>Pro</h2>
-      <div class="price">₹499</div>
-      <ul>
-        <li>✅ Unlimited YouTube links</li>
-        <li>✅ 30+ Shorts ideas per day</li>
-        <li>✅ Fastest delivery</li>
-        <li>✅ Dedicated WhatsApp support</li>
-        <li>🚀 Growth Boost Features</li>
-        <li>📈 Viral hook & trend analysis</li>
-        <li>🏆 Best for agencies & brands</li>
-      </ul>
-      <a href="https://rzp.io/rzp/rEycRed0" class="btn">Pay Securely (UPI / PhonePe / GPay)</a>
-      <div class="trust">✔ PhonePe / GPay supported<br>✔ 100% Secure via Razorpay</div>
-    </div>
-
+  <div class="logo">
+    <img src="https://i.imgur.com/4M7IWwP.png" alt="Shorts AI">
   </div>
 
+  <h1>Pricing Plans</h1>
+  <div class="subtitle">Choose a plan & pay securely via Razorpay</div>
+
+  <!-- STARTER -->
+  <div class="plan popular">
+    <div class="badge">MOST POPULAR</div>
+    <h2>Starter</h2>
+    <div class="price">₹99</div>
+    <ul>
+      <li>2 YouTube video links</li>
+      <li>5 Shorts ideas per day</li>
+      <li>Delivery within 24 hours</li>
+      <li>Basic WhatsApp support</li>
+      <li>Best for beginners</li>
+    </ul>
+    <a class="btn" href="https://rzp.io/rzp/l7lkH8IZ">Pay Securely (UPI / PhonePe / GPay)</a>
+  </div>
+
+  <!-- CREATOR -->
+  <div class="plan">
+    <h2>Creator (Best Value)</h2>
+    <div class="price">₹199</div>
+    <ul>
+      <li>4 YouTube video links</li>
+      <li>15 Shorts ideas per day</li>
+      <li>Faster delivery</li>
+      <li>Priority WhatsApp support</li>
+      <li>Growth-focused creators</li>
+    </ul>
+    <a class="btn" href="https://rzp.io/rzp/VPhmqa0">Pay Securely (UPI / PhonePe / GPay)</a>
+  </div>
+
+  <!-- PRO -->
+  <div class="plan">
+    <h2>Pro</h2>
+    <div class="price">₹499</div>
+    <ul>
+      <li>Unlimited YouTube links</li>
+      <li>30+ Shorts ideas per day</li>
+      <li>Fastest delivery</li>
+      <li>Dedicated WhatsApp support</li>
+      <li>Growth Boost features</li>
+      <li>Viral hook & trend analysis</li>
+      <li>Best for agencies & brands</li>
+    </ul>
+    <a class="btn" href="https://rzp.io/rzp/rEycRed0">Pay Securely (UPI / PhonePe / GPay)</a>
+  </div>
+
+  <!-- FOOTER -->
   <div class="footer">
-    🔒 Secure payments • 💬 WhatsApp support <br><br>
-    Home | Contact | Privacy | Terms | Refund <br>
-    © 2026 Shorts AI
+    <a href="index.html">← Back to Home</a><br><br>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="refund.html">Refund</a>
+
+    <div class="copy">
+      © 2026 Shorts AI • Built for Serious YouTube Creators 🚀
+    </div>
   </div>
 
 </div>
+
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/919339942448" target="_blank">💬</a>
 
 </body>
 </html>
