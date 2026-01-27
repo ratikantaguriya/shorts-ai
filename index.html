@@ -2,195 +2,264 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Shorts AI – Grow Faster on YouTube & Reels</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shorts AI – Viral Shorts for YouTube & Instagram</title>
+
+<!-- SEO -->
+<meta name="description" content="Shorts AI helps YouTube Shorts & Instagram Reels creators grow faster with viral-ready ideas. Trusted by 100,000+ creators." />
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --bg1:#062e2b;
-  --bg2:#021917;
-  --neon:#22f5c3;
-  --soft:#9fffe8;
+  --bg:#041f1a;
+  --card:#0b3a31;
+  --accent:#19ffb0;
+  --accent2:#00e0ff;
+  --text:#eafff7;
+  --muted:#a7dcd0;
 }
-*{box-sizing:border-box;font-family:Inter,system-ui,Arial}
+
+*{box-sizing:border-box;margin:0;padding:0}
 body{
-  margin:0;
-  background:radial-gradient(1200px 600px at top,var(--bg1),var(--bg2));
-  color:#eafff9;
+  font-family:Inter,system-ui;
+  background:
+    radial-gradient(circle at top, #0e4d3f, #031412 70%);
+  color:var(--text);
+  min-height:100vh;
+  overflow-x:hidden;
 }
-.container{
-  max-width:900px;
-  margin:auto;
-  padding:48px 20px 80px;
+
+/* ====== HERO ====== */
+.hero{
+  padding:60px 20px 40px;
   text-align:center;
 }
 
 /* LOGO */
-.logo-wrap{
-  display:flex;
-  justify-content:center;
-  margin-bottom:14px;
-}
 .logo{
-  font-size:48px;
-  font-weight:800;
-  letter-spacing:1px;
-  color:var(--neon);
-  text-shadow:0 0 25px rgba(34,245,195,.7);
+  width:120px;
+  height:auto;
+  margin:0 auto 14px;
+  filter:drop-shadow(0 0 25px rgba(25,255,176,.6));
+  animation:float 5s ease-in-out infinite;
 }
+
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-8px)}
+}
+
+.brand{
+  font-size:34px;
+  font-weight:800;
+  color:var(--accent);
+  letter-spacing:.4px;
+}
+
 .tagline{
-  opacity:.9;
-  margin-bottom:28px;
+  margin-top:6px;
+  color:var(--muted);
+  font-size:14px;
 }
 
 /* HEADLINE */
 h1{
-  font-size:38px;
-  line-height:1.2;
-  margin:10px 0 16px;
-}
-.sub{
-  color:#b9fff0;
-  font-size:15px;
-  margin-bottom:34px;
+  margin-top:26px;
+  font-size:32px;
+  font-weight:800;
+  line-height:1.25;
 }
 
-/* SEARCH BAR */
-.search-box{
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(34,245,195,.25);
-  border-radius:16px;
-  padding:14px;
-  display:flex;
-  gap:10px;
-  align-items:center;
-  margin-bottom:26px;
-}
-.search-box input{
-  flex:1;
-  background:transparent;
-  border:none;
-  outline:none;
-  color:#eafff9;
+.sub{
+  margin:14px auto 26px;
+  max-width:520px;
+  color:#c8f6ea;
   font-size:15px;
 }
-.icon{
-  width:22px;
-  height:22px;
-  fill:var(--neon);
+
+/* SEARCH BAR (FAKE TRUST UI) */
+.search{
+  max-width:420px;
+  margin:0 auto 26px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:14px;
+  padding:14px 16px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  backdrop-filter:blur(8px);
+}
+.search span{
+  font-size:18px;
+}
+.search div{
+  opacity:.7;
+  font-size:14px;
 }
 
 /* STEPS */
 .steps{
+  max-width:520px;
+  margin:0 auto 28px;
   display:grid;
-  gap:14px;
-  margin:34px 0;
+  gap:12px;
 }
 .step{
-  padding:16px;
+  background:linear-gradient(180deg, rgba(25,255,176,.12), rgba(0,0,0,.2));
+  border:1px solid rgba(25,255,176,.25);
   border-radius:16px;
-  background:rgba(255,255,255,.05);
-  border:1px solid rgba(34,245,195,.18);
+  padding:14px;
+  font-size:14px;
 }
 
 /* CTA */
 .cta{
+  margin-top:10px;
+}
+.btn{
   display:inline-block;
-  padding:16px 42px;
-  border-radius:999px;
-  background:linear-gradient(135deg,#22f5c3,#18cfa5);
-  color:#01201c;
-  font-weight:700;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  color:#00332b;
+  padding:16px 34px;
+  border-radius:40px;
+  font-weight:800;
+  font-size:16px;
   text-decoration:none;
-  box-shadow:0 0 35px rgba(34,245,195,.7);
-  margin:20px 0;
+  box-shadow:0 0 35px rgba(25,255,176,.6);
+  transition:.25s;
+}
+.btn:hover{
+  transform:scale(1.05);
 }
 
-/* TRUST */
+/* TRUST BAR */
 .trust{
+  margin:26px auto 10px;
   display:flex;
   flex-wrap:wrap;
-  justify-content:center;
   gap:12px;
-  margin-top:26px;
+  justify-content:center;
 }
-.badge{
-  padding:10px 16px;
-  border-radius:999px;
-  background:rgba(255,255,255,.05);
-  border:1px solid rgba(34,245,195,.25);
+.trust div{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.15);
+  padding:10px 14px;
+  border-radius:30px;
   font-size:13px;
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+
+/* PLATFORMS */
+.platforms{
+  margin-top:18px;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  font-size:14px;
+}
+.platforms span{
+  display:flex;
+  align-items:center;
+  gap:6px;
 }
 
 /* FOOTER */
 footer{
-  margin-top:70px;
-  opacity:.85;
+  margin-top:50px;
+  padding:30px 20px 20px;
+  border-top:1px solid rgba(255,255,255,.12);
+  text-align:center;
 }
-footer a{
-  color:var(--soft);
+.footer-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  justify-content:center;
+  margin-bottom:14px;
+}
+.footer-links a{
+  color:var(--accent);
   text-decoration:none;
-  margin:0 10px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.15);
+  padding:10px 16px;
+  border-radius:30px;
   font-size:14px;
+}
+.copy{
+  font-size:12px;
+  opacity:.6;
 }
 </style>
 </head>
 
 <body>
-<div class="container">
 
-  <!-- LOGO CENTER -->
-  <div class="logo-wrap">
-    <div class="logo">Shorts AI</div>
-  </div>
+<section class="hero">
+
+  <!-- LOGO -->
+  <img src="shorts-ai-logo.png" alt="Shorts AI Logo" class="logo">
+
+  <div class="brand">Shorts AI</div>
   <div class="tagline">Built for serious YouTube & Instagram creators</div>
 
-  <h1>Daily Shorts & Reels Ideas That<br>Actually Grow Channels</h1>
+  <h1>Daily Shorts Ideas That<br>Actually Grow Channels</h1>
+
   <div class="sub">
-    Pay once • Send your channel link • Get viral-ready content ideas
+    Pay once • Send your channel link • Get viral-ready Shorts & Reels ideas
   </div>
 
-  <!-- SEARCH BAR -->
-  <div class="search-box">
-    <!-- YouTube Icon -->
-    <svg class="icon" viewBox="0 0 24 24">
-      <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.6 3.6 12 3.6 12 3.6s-7.6 0-9.4.5A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.8.5 9.4.5 9.4.5s7.6 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8zM9.6 15.6V8.4l6.4 3.6z"/>
-    </svg>
-
-    <!-- Instagram Icon -->
-    <svg class="icon" viewBox="0 0 24 24">
-      <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5.5A4.5 4.5 0 1 0 16.5 12 4.5 4.5 0 0 0 12 7.5zm0 7.3A2.8 2.8 0 1 1 14.8 12 2.8 2.8 0 0 1 12 14.8zM17.8 6.2a1 1 0 1 0 1 1 1 1 0 0 0-1-1z"/>
-    </svg>
-
-    <input placeholder="Paste YouTube or Instagram link after payment" disabled />
+  <!-- Fake Search Bar -->
+  <div class="search">
+    <span>🔍</span>
+    <div>Paste your YouTube or Instagram link…</div>
   </div>
 
-  <!-- STEPS -->
+  <!-- Steps -->
   <div class="steps">
-    <div class="step">① Choose a plan & pay securely</div>
+    <div class="step">① Choose a plan & pay securely via Razorpay</div>
     <div class="step">② Send your YouTube / Instagram link on WhatsApp</div>
-    <div class="step">③ Receive high-quality Shorts & Reels ideas</div>
+    <div class="step">③ Receive high-quality Shorts ideas on time</div>
   </div>
 
   <!-- CTA -->
-  <a class="cta" href="https://rzp.io/rzp/9N6GKiA">Plan & Buy</a>
-
-  <!-- TRUST -->
-  <div class="trust">
-    <div class="badge">🔒 100% Secure Payments</div>
-    <div class="badge">👥 Trusted by 1,00,000+ Active Creators</div>
-    <div class="badge">⚡ Fast Delivery</div>
-    <div class="badge">💬 WhatsApp Support</div>
+  <div class="cta">
+    <a href="pricing.html" class="btn">🚀 Get Viral Shorts Ideas</a>
   </div>
 
-  <!-- FOOTER -->
-  <footer>
-    <a href="#">Contact</a> |
-    <a href="#">Privacy</a> |
-    <a href="#">Terms</a> |
-    <a href="#">Refund</a>
-  </footer>
+  <!-- Trust -->
+  <div class="trust">
+    <div>⭐ 1,00,000+ Active Creators</div>
+    <div>📈 10M+ Shorts Ideas Delivered</div>
+    <div>🔒 100% Secure Payments</div>
+    <div>💬 WhatsApp Support</div>
+  </div>
 
-</div>
+  <!-- Platforms -->
+  <div class="platforms">
+    <span>▶️ YouTube Shorts</span>
+    <span>📸 Instagram Reels</span>
+  </div>
+
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">🏠 Home</a>
+    <a href="contact.html">📧 Contact</a>
+    <a href="privacy.html">🔐 Privacy</a>
+    <a href="terms.html">📜 Terms</a>
+    <a href="refund.html">💸 Refund</a>
+  </div>
+  <div class="copy">
+    © Shorts AI • Secure payments powered by Razorpay
+  </div>
+</footer>
+
 </body>
 </html>
