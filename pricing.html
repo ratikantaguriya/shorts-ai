@@ -3,163 +3,143 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pricing | Shorts AI</title>
+<title>Pricing – Shorts AI</title>
 
 <style>
 body{
   margin:0;
+  background:#063131;
   font-family:Arial, sans-serif;
-  background:#062a2a;
   color:#fff;
 }
 
-/* CONTAINER */
-.card{
+.container{
   max-width:420px;
   margin:40px auto;
-  background:#0b3c3c;
-  padding:30px 20px;
-  border-radius:24px;
-  box-shadow:0 0 25px rgba(0,0,0,.45);
+  padding:20px;
+}
+
+h1{
   text-align:center;
+  margin-bottom:5px;
 }
 
-/* HEADINGS */
-h1{margin-bottom:5px;}
-.sub{opacity:.85;font-size:14px;margin-bottom:20px;}
+.subtitle{
+  text-align:center;
+  color:#9fdede;
+  margin-bottom:25px;
+}
 
-/* PLANS */
-.plan{
-  background:#072727;
-  padding:18px;
+.card{
+  background:#0e3a3a;
   border-radius:20px;
-  margin-bottom:18px;
+  padding:22px;
+  margin-bottom:25px;
+  box-shadow:0 0 15px rgba(0,0,0,0.4);
 }
-.plan h2{margin:0;}
-.price{
-  font-size:28px;
-  color:#00ff8c;
-  margin:8px 0;
-}
-.plan ul{
-  list-style:none;
-  padding:0;
-  margin:10px 0 15px;
-  font-size:14px;
-}
-.plan ul li{margin:6px 0;}
 
-/* BUTTONS */
+.card h2{
+  margin-top:0;
+}
+
+.price{
+  font-size:36px;
+  color:#00ff99;
+}
+
+ul{
+  padding-left:18px;
+}
+
+li{
+  margin-bottom:8px;
+}
+
 .btn{
   display:block;
-  width:100%;
+  text-align:center;
+  margin-top:18px;
   padding:14px;
-  border-radius:35px;
-  text-decoration:none;
-  font-size:16px;
-  font-weight:bold;
-  margin-top:10px;
-}
-.pay{
-  background:#00ff8c;
+  background:#00ff99;
   color:#003333;
-}
-.back{
-  background:#0e3a3a;
-  color:#00ff8c;
-  border:1px solid #00ff8c;
-}
-
-/* NOTE */
-.note{
-  font-size:13px;
-  color:#9fffdc;
-  margin-top:8px;
-}
-
-/* FOOTER */
-.footer{
-  margin-top:20px;
-  font-size:14px;
-}
-.footer a{
-  color:#00ff8c;
+  font-weight:bold;
+  border-radius:30px;
   text-decoration:none;
-  margin:0 6px;
+}
+
+.info{
+  margin-top:12px;
+  font-size:14px;
+  color:#b6f7f7;
 }
 </style>
 </head>
 
 <body>
 
-<div class="card">
+<div class="container">
 
   <h1>Pricing Plans</h1>
-  <p class="sub">Choose a plan & pay securely</p>
+  <div class="subtitle">Choose a plan & pay securely</div>
 
-  <!-- ₹99 PLAN -->
-  <div class="plan">
+  <!-- STARTER -->
+  <div class="card">
     <h2>Starter</h2>
     <div class="price">₹99</div>
     <ul>
-      <li>✔ Daily Shorts ideas</li>
-      <li>✔ 24 hour delivery</li>
-      <li>✔ Basic support</li>
+      <li>Daily Shorts ideas</li>
+      <li>24 hour delivery</li>
+      <li>Basic support</li>
     </ul>
-    <a href="https://rzp.io/rzp/ycxj3Zb" class="btn pay">
+
+    <a href="https://rzp.io/rzp/ycxj3Zb" class="btn">
       Pay Securely (UPI / PhonePe / GPay)
     </a>
-    <div class="note">
+
+    <div class="info">
       ✔ PhonePe / GPay supported<br>
       ✔ 100% Secure via Razorpay
     </div>
   </div>
 
-  <!-- ₹199 PLAN -->
-  <div class="plan">
+  <!-- CREATOR -->
+  <div class="card">
     <h2>Creator</h2>
     <div class="price">₹199</div>
     <ul>
-      <li>✔ More Shorts ideas</li>
-      <li>✔ Faster delivery</li>
-      <li>✔ Priority support</li>
+      <li>More Shorts ideas</li>
+      <li>Faster delivery</li>
+      <li>Priority support</li>
     </ul>
-    <a href="https://rzp.io/rzp/VPhmqa0" class="btn pay">
+
+    <a href="https://rzp.io/rzp/VPhmqa0" class="btn">
       Pay Securely (UPI / PhonePe / GPay)
     </a>
-    <div class="note">
+
+    <div class="info">
       ✔ PhonePe / GPay supported<br>
       ✔ 100% Secure via Razorpay
     </div>
   </div>
 
-  <!-- ₹499 PLAN -->
-  <div class="plan">
+  <!-- PRO -->
+  <div class="card">
     <h2>Pro</h2>
     <div class="price">₹499</div>
     <ul>
-      <li>✔ Daily premium ideas</li>
-      <li>✔ WhatsApp support</li>
-      <li>✔ Best for growth</li>
+      <li>Unlimited Shorts ideas</li>
+      <li>Fastest delivery</li>
+      <li>VIP support</li>
     </ul>
-    <a href="https://rzp.io/rzp/rEycRed0" class="btn pay">
+
+    <a href="https://rzp.io/rzp/rEycRed0" class="btn">
       Pay Securely (UPI / PhonePe / GPay)
     </a>
-    <div class="note">
+
+    <div class="info">
       ✔ PhonePe / GPay supported<br>
       ✔ 100% Secure via Razorpay
     </div>
-  </div>
-
-  <!-- BACK -->
-  <a href="index.html" class="btn back">
-    ← Back to Home
-  </a>
-
-  <div class="footer">
-    <a href="privacy.html">Privacy</a> |
-    <a href="terms.html">Terms</a> |
-    <a href="refund.html">Refund</a>
   </div>
 
 </div>
